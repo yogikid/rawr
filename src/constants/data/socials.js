@@ -41,7 +41,7 @@ export const Socials = [
         icon: Github,
         boxIcon: 'github',
         background: '#000',
-        link: 'https://github.com/dwi-wijaya',
+        link: 'https://github.com/dwiwijaya',
         eventName: 'Social: Github',
         label: 'Github',
     },

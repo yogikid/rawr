@@ -1,10 +1,7 @@
-import { GetStaticProps, NextPage } from 'next';
 import { NextSeo } from 'next-seo';
 import { SWRConfig } from 'swr';
 import { getGithubUser } from '@/services/GithubServices';
 import { getLeetcode } from '@/services/LeetcodeService';
-import { LEETCODE_ACCOUNTS } from '@/constants/leetcode';
-import { GITHUB_ACCOUNTS } from '@/constants/github';
 import Container from '@/components/layouts/partials/Container';
 import Dashboard from '@/components/views/dashboard/Dashboard';
 import PageHeading from '@/components/common/PageHeading';

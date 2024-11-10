@@ -40,8 +40,8 @@ const Dashboard = ({ githubEndpoint, leetcodeEndpoint }) => {
           title="Contributions"
           description={t('Dashboard.githubSubtitle')}
           icon="bx bxl-github"
-          linkText='@dwi-wijaya'
-          link='https://github.com/dwi-wijaya'
+          linkText='@dwiwijaya'
+          link='https://github.com/dwiwijaya'
           tintIcon={false}
         />
         <>
