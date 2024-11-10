@@ -53,3 +53,11 @@ const Fallback = () => {
 };
 
 export default Fallback;
+
+export const getStaticProps = async () => {
+
+  return {
+      props: {
+      },
+  };
+};
