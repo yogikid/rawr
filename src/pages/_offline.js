@@ -25,7 +25,7 @@ const Fallback = () => {
         {/* Page Heading with Icon */}
         <div className="flex flex-col gap-6">
 
-          <div className="">
+          <div className="mb-1">
             <h2 className="mb-1 relative font-bold text-3xl text-title">{t('title')}</h2>
             <p className="leading-5 text-subtext">
               {t('subtitle')}
@@ -34,7 +34,7 @@ const Fallback = () => {
 
           <i className="text-primary text-7xl fa-duotone fa-solid fa-wifi-exclamation"></i>
 
-          <p className="max-w-[26rem] mx-auto text-subtext text-lg">{t('message')}</p>
+          <p className="max-w-[26rem] mx-auto text-subtext text-base">{t('message')}</p>
 
           <div className="flex justify-center">
             <button
