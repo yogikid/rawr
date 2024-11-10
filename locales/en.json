@@ -91,5 +91,11 @@
             "security": "Security of Your Information",
             "contact": "Contact Us"
         }
+    },
+    "Offline": {
+        "title": "You're Offline",
+        "subtitle": "No internet connection detected.",
+        "message": "It looks like you are currently offline. Please check your internet connection and try again.",
+        "retry": "Try Again"
     }
 }

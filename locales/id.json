@@ -91,5 +91,11 @@
             "security": "Keamanan Informasi Anda",
             "contact": "Hubungi Kami"
         }
+    },
+    "Offline": {
+        "title": "Anda Sedang Offline",
+        "subtitle": "Koneksi internet tidak terdeteksi.",
+        "message": "Sepertinya Anda sedang offline. Periksa koneksi internet Anda dan coba lagi.",
+        "retry": "Coba Lagi"
     }
 }
