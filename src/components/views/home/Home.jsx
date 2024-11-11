@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-import Profile from '@/assets/avatar-profile.jpg'
+import Profile from '@/assets/avatar-profile.webp'
 import HomeSocials from './HomeSocials'
 import Image from '@/components/elements/Image'
 import Router  from 'next/router'
