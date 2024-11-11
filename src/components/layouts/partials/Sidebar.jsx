@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import LogoDark from '@/assets/logo-dark.svg';
 import LogoLight from '@/assets/logo-light.svg';
-import 'simple-line-icons'
 import { MENU_ITEMS } from '@/constants/data/menu';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
