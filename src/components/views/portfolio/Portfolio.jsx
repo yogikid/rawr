@@ -77,7 +77,7 @@ const Portfolio = ({ portfolios }) => {
                     </div>
                     <div className="p-5 flex flex-col h-full gap-1 bg-container border border-stroke">
                       <div className="">
-                        <p className="text-subtext text-xs flex gap-1 items-center mb-1"><i className={PORTFOLIO_TYPES_ICON[type]}></i> {PORTFOLIO_TYPES[type]}</p>
+                        <p className="text-subtext text-xs flex gap-1 items-center mb-1"><span className="text-primary">{PORTFOLIO_TYPES_ICON[type]}</span>{PORTFOLIO_TYPES[type]}</p>
                         <h3 className="font-semibold group-hover/portfolio:text-primary">{name}</h3>
                       </div>
                       <p className="text-sm overflow-hidden whitespace-normal overflow-ellipsis line-clamp-2 text-subtext">{excerpt}</p>
