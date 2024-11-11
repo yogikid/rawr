@@ -11,6 +11,8 @@ import Letcode from "./leetcode/Leetcode";
 import Overview from "./contributions/Overview";
 import Calendar from "./contributions/Calendar";
 import { useTranslations } from "next-intl";
+import { RiGithubFill, RiSpeedUpLine } from "react-icons/ri";
+import { SiLeetcode } from "react-icons/si";
 
 
 const Dashboard = ({ githubEndpoint, leetcodeEndpoint }) => {
@@ -27,7 +29,7 @@ const Dashboard = ({ githubEndpoint, leetcodeEndpoint }) => {
         <PageSubHeading
           title="Pagespeed Insight"
           description={t('Dashboard.pagespeedSubtitle')}
-          icon="bx bx-tachometer"
+          reactIcon={<RiSpeedUpLine/>}
           linkText='@pagespeed'
           link='https://pagespeed.web.dev/'
           tintIcon={false}
@@ -39,7 +41,7 @@ const Dashboard = ({ githubEndpoint, leetcodeEndpoint }) => {
         <PageSubHeading
           title="Contributions"
           description={t('Dashboard.githubSubtitle')}
-          icon="bx bxl-github"
+          reactIcon={<RiGithubFill/>}
           linkText='@dwiwijaya'
           link='https://github.com/dwiwijaya'
           tintIcon={false}
@@ -60,7 +62,7 @@ const Dashboard = ({ githubEndpoint, leetcodeEndpoint }) => {
         <PageSubHeading
           title="LeetCode Statistics"
           description={t('Dashboard.leetcodeSubtitle')}
-          icon="bx bx-code"
+          reactIcon={<SiLeetcode size={16}/>}
           linkText='@dwi-wijaya'
           link='https://leetcode.com/dwi-wijaya'
           tintIcon={false}

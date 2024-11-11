@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { BiCalendar } from 'react-icons/bi';
 
 const WorkDuration = ({ startMonth, endMonth }) => {
     const [duration, setDuration] = useState(null);
@@ -29,7 +30,7 @@ const WorkDuration = ({ startMonth, endMonth }) => {
     }, [startMonth, endMonth]);
 
     return (
-        <p className='text-sm text-subtext mt-1'><i className='text-primary bx bx-calendar' ></i> {duration}</p>
+        <p className='text-sm text-subtext mt-1 flex items-center gap-1'><BiCalendar className='text-primary'/>{duration}</p>
     );
 };
 

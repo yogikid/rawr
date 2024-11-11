@@ -3,11 +3,14 @@ import Instagram from '@/assets/socials/instagram.svg'
 import Linkedin from '@/assets/socials/linkedin.svg'
 import Github from '@/assets/socials/github.svg'
 import Whatsapp from '@/assets/socials/whatsapp.svg'
+import { RiGithubLine, RiInstagramLine, RiLinkedinLine, RiWhatsappLine } from 'react-icons/ri'
+import { MdOutlineAlternateEmail } from 'react-icons/md'
 
 export const Socials = [
     {
         icon: Email,
-        boxIcon: 'gmail',
+        reactIcon : <MdOutlineAlternateEmail/>,
+        boxIcon: 'circle-envelope',
         background: '#16a34c',
         link: 'mailto:work.dwiwijaya@gmail.com',
         eventName: 'Contact: Email',
@@ -15,6 +18,7 @@ export const Socials = [
     },
     {
         icon: Instagram,
+        reactIcon : <RiInstagramLine/>,
         boxIcon: 'instagram',
         background: '#c2410c',
         link: 'https://www.instagram.com/_dwiwijaya_/',
@@ -23,7 +27,8 @@ export const Socials = [
     },
     {
         icon: Linkedin,
-        boxIcon: 'linkedin',
+        reactIcon : <RiLinkedinLine/>,
+        boxIcon: 'linked-in',
         background: '#3b82f6',
         link: 'https://www.linkedin.com/in/dwi-wijaya/',
         eventName: 'Social: Linkedin',
@@ -31,6 +36,7 @@ export const Socials = [
     },
     {
         icon: Whatsapp,
+        reactIcon : <RiWhatsappLine/>,
         boxIcon: 'whatsapp',
         background: '#075e54',
         link: 'https://wa.me/6287700304010',
@@ -39,6 +45,7 @@ export const Socials = [
     },
     {
         icon: Github,
+        reactIcon : <RiGithubLine/>,
         boxIcon: 'github',
         background: '#000',
         link: 'https://github.com/dwiwijaya',

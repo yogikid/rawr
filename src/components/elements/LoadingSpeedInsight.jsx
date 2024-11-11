@@ -1,4 +1,5 @@
 import React from 'react';
+import { BiDotsHorizontalRounded } from 'react-icons/bi';
 
 export default function LoadingSpeedInsight() {
   const DummyCategory = [
@@ -15,7 +16,7 @@ export default function LoadingSpeedInsight() {
           <div className="whitespace-nowrap">{item.title}</div>
           <div className="h-16 !mt-0 w-16 animate-pulse rounded-full bg-transparent p-2 md:h-20 md:w-20">
             <div className="flex h-full w-full items-center outline outline-slate-300 dark:outline-container !outline-[0.5rem] justify-center rounded-full bg-transparent">
-              <i className='outline-slate-400 dark:outline-slate-400 text-xl bx bx-dots-horizontal-rounded' ></i>
+              <BiDotsHorizontalRounded size={20} className='outline-slate-400 dark:outline-slate-400 text-xl' />
             </div>
           </div>
         </div>

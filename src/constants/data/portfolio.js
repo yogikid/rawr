@@ -1,3 +1,5 @@
+import { BiBook, BiBriefcase, BiBuilding, BiCodeAlt, BiCustomize, BiGroup, BiLogoFlask, BiPalette, BiPen, BiUser } from "react-icons/bi";
+
 export const PORTFOLIO_CATEGORIES = {
     code: "Code",
     uiux: "UI-UX",
@@ -5,10 +7,10 @@ export const PORTFOLIO_CATEGORIES = {
     other: "Other",
 };
 export const PORTFOLIO_CATEGORIES_ICON = {
-    code: "bx bx-code-alt",
-    uiux: "bx bx-palette",
-    design: "bx bx-pen",
-    others: "bx bx-customize",
+    code: <BiCodeAlt/>,
+    uiux: <BiPalette/>,
+    design: <BiPen />,
+    others: <BiCustomize />,
 }
 export const PORTFOLIO_TYPES = {
     office: "Office Project",
@@ -20,11 +22,11 @@ export const PORTFOLIO_TYPES = {
     academic: "Academic Project",
 }
 export const PORTFOLIO_TYPES_ICON = {
-    office: "bx bx-building",
-    personal: "bx bx-user",
-    team: "bx bx-group",
-    client: "bx-briefcase",
-    open_source: "bx bx-code-alt",
-    research: "bx bx-flask",
-    academic: "bx bx-book",
+    office: <BiBuilding/>,
+    personal: <BiUser/>,
+    team: <BiGroup/>,
+    client: <BiBriefcase/>,
+    open_source: <BiCodeAlt/>,
+    research: <BiLogoFlask/>,
+    academic: <BiBook/>,
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import { BiUpArrowAlt } from 'react-icons/bi';
 
 const ScrollUpToggle = () => {
     window.addEventListener('scroll', function() {
@@ -11,7 +12,7 @@ const ScrollUpToggle = () => {
     })
     return (
         <a aria-label='go to top' href='#' className="scrollup toggle scrollup__toggle">
-            <i className='bx bx-up-arrow-alt' ></i>
+            <BiUpArrowAlt/>
         </a>
     )
 }

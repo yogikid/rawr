@@ -5,6 +5,7 @@ import HomeSocials from './HomeSocials'
 import Image from '@/components/elements/Image'
 import Router  from 'next/router'
 import { useTranslations } from 'next-intl'
+import { BiCode, BiCodeAlt } from 'react-icons/bi'
 
 const Home = () => {
     const t = useTranslations();
@@ -31,7 +32,7 @@ const Home = () => {
 
             </div>
             <p className="flex items-center gap-2 my-2 text-text">
-                {t('Home.introduction')} <i className="bx bx-code-alt text-primary"></i> &nbsp;
+                {t('Home.introduction')} <BiCodeAlt className='text-primary'/> &nbsp;
             </p>
             <p className='text-subtext text-sm'>
                 {t('Home.passion')}

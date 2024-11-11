@@ -7,6 +7,8 @@ import React, { useState } from 'react'
 import "@uiw/react-md-editor/markdown-editor.css";
 import "@uiw/react-markdown-preview/markdown.css";
 import { PORTFOLIO_CATEGORIES, PORTFOLIO_CATEGORIES_ICON, PORTFOLIO_TYPES, PORTFOLIO_TYPES_ICON } from '@/constants/data/portfolio';
+import { BiChevronRight, BiLinkExternal } from 'react-icons/bi';
+import { BsGithub } from 'react-icons/bs';
 
 const MDEditorPreview = dynamic(
     () => import("@uiw/react-markdown-preview").then((module) => module.default),
@@ -24,12 +26,12 @@ const DetailPortfolio = ({ portfolio }) => {
             <div className="flex item-center gap-2 justify-center sm:justify-normal">
                 {portfolio.demoLink &&
                     <a data-umami-event={`Click Live Demo - ${portfolio.name}`} href={portfolio.demoLink} className="badge text-sm mb-5">
-                        <i className='bx bx-link-external'></i> Live Demo
+                        <BiLinkExternal/> Live Demo
                     </a>
                 }
                 {portfolio.githubLink &&
                     <a data-umami-event={`Click Source Code - ${portfolio.name}`} href={portfolio.githubLink} className={`badge text-sm mb-5`}>
-                        <i className='bx bxl-github'></i> Source Code
+                        <BsGithub/> Source Code
                     </a>
                 }
             </div>
@@ -59,8 +61,9 @@ const DetailPortfolio = ({ portfolio }) => {
                 source={portfolio.content}
                 className="md:p-4 rounded-lg mb-3"
             />
-            <p className='text-sm text-subtext flex items-center gap-2'><i className='bx bx-chevron-right'></i> Category:  <i className={PORTFOLIO_CATEGORIES_ICON[portfolio.category]}></i> {PORTFOLIO_CATEGORIES[portfolio.category]}</p>
-            <p className='text-sm text-subtext flex items-center gap-2'><i className='bx bx-chevron-right'></i> Type:  <i className={PORTFOLIO_TYPES_ICON[portfolio.type]}></i> {PORTFOLIO_TYPES[portfolio.type]} </p>
+            {portfolio.category}
+            <p className='text-sm text-subtext flex items-center gap-2'><BiChevronRight/> Category:  {PORTFOLIO_CATEGORIES_ICON[portfolio.category]} {PORTFOLIO_CATEGORIES[portfolio.category]}</p>
+            <p className='text-sm text-subtext flex items-center gap-2'><BiChevronRight/> Type: {PORTFOLIO_TYPES_ICON[portfolio.type]} {PORTFOLIO_TYPES[portfolio.type]} </p>
         </div>
     )
 }

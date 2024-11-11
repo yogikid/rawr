@@ -6,6 +6,7 @@ import Link from "next/link";
 import { motion } from 'framer-motion';
 import Image from "@/components/elements/Image";
 import { useRouter } from "next/router";
+import { BiRightArrowAlt } from "react-icons/bi";
 
 const Portfolio = ({ portfolios }) => {
   const [items, setItems] = useState(portfolios);
@@ -70,7 +71,7 @@ const Portfolio = ({ portfolios }) => {
                       <div className="relative">
                         <Image src={thumbnail} alt="" width={999} height={999} className={`aspect-thumbnail object-cover `} quality={100} />
                         <div className="flex gap-1 absolute top-0 left-0 w-full h-full bg-black opacity-0 transition-opacity duration-300 justify-center items-center text-white group-hover/portfolio:opacity-80 ">
-                          View Project<i className="bx bx-right-arrow-alt"></i>
+                          View Project <BiRightArrowAlt/>
                         </div>
                       </div>
                     </div>

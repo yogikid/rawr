@@ -4,6 +4,7 @@ import { Socials } from '@/constants/data/socials';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+import { BiLoader, BiLoaderAlt, BiMailSend } from 'react-icons/bi';
 
 const Contact = () => {
     const t = useTranslations();
@@ -72,9 +73,9 @@ const Contact = () => {
                         </div>
                         <button data-data-umami-event='Send Contact Message' disabled={loading} className={`${loading ? 'cursor-not-allowed' : ''} btn !w-full md:!w-fit text-center justify-center`} >
                             {loading ? (
-                                <i className="bx bx-loader bx-spin"></i>
+                                <BiLoaderAlt className='animate-spin'/>
                             ) : (
-                                <i className="bx bx-mail-send"></i>
+                                <BiMailSend/>
                             )}{" "}
                             {loading ? "Sending..." : t('Contact.sendMsg')}
                         </button>
