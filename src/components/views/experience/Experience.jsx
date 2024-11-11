@@ -3,6 +3,8 @@ import PageHeading from '../../common/PageHeading';
 import { _Experience, experienceData } from '@/constants/data/experience';
 import WorkDuration from '@/components/elements/WorkDuration';
 import { motion } from "framer-motion";
+import { SlGraduation } from 'react-icons/sl';
+import { SlBriefcase } from 'react-icons/sl';
 
 const Experience = ({ experience }) => {
     return (
@@ -16,7 +18,7 @@ const Experience = ({ experience }) => {
                         if (val.type === "education") {
                             return (
                                 <div key={id} className="relative pl-8 pb-8 md:pl-12 timeline">
-                                    <i className="absolute -left-[0.6rem] -top-1 text-xl text-primary bg-container p-1 icon-graduation"></i>
+                                    <SlGraduation size={28} className="absolute -left-[0.6rem] -top-1 text-xl text-primary bg-container p-1 icon-graduation"></SlGraduation>
                                     <span className="text-sm text-subtext">{val.startMonth} - {val.endMonth ? val.endMonth : 'present'}</span>
                                     <p className='text-sm text-subtext mt-3'><i className='text-primary bx bx-map-pin'></i> {val.location}</p>
                                     <p className="text-sm text-subtext mt-1"><i className='text-primary bx bx-book'></i> {val.degree}</p>
@@ -39,7 +41,7 @@ const Experience = ({ experience }) => {
                         if (val.type === "work") {
                             return (
                                 <div key={id} className="relative pl-8 pb-8 md:pl-12 timeline">
-                                    <i className="absolute -left-[0.6rem] -top-1 text-xl text-primary bg-container p-1 icon-briefcase"></i>
+                                    <SlBriefcase size={26} className="absolute -left-[0.6rem] -top-1 text-xl text-primary bg-container p-1 icon-briefcase"/>
                                     <span className="text-sm text-subtext">{val.startMonth} - {val.endMonth ? val.endMonth : 'present'}</span>
                                     <p className='text-sm text-subtext mt-3'><i className='text-primary bx bx-map-pin'></i> {val.location}</p>
                                     <WorkDuration startMonth={val.startMonth} endMonth={val.endMonth} />
