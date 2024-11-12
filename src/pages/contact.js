@@ -22,7 +22,7 @@ const ContactPage = () => {
       <Head>
         <link rel="canonical" href={canonicalUrl} />
       </Head>
-      <NextSeo title={`${t('Contact.title')} - Dwi Wijaya`} />
+      <NextSeo title={`${t('Contact.title')} - Dwi Wijaya`} description={t('Contact.metaDesc')} />
 
       <Container data-aos='fade-up'>
         <PageHeading

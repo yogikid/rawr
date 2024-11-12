@@ -19,6 +19,7 @@
     },
     "About": {
         "title": "About",
+        "metaDesc": "Discover more about Dwi Wijaya, an experienced Fullstack Developer with skills in coding, UI/UX design, and app development. Let's get to know each other better!",
         "subtitle": "Get to know me a better and discover more beyond the resume.",
         "journeyTitle": "My Journey",
         "valuesTitle": "Values and Philosophy",
@@ -30,10 +31,12 @@
     },
     "Services": {
         "title": "Services",
+        "metaDesc": "Explore the specialized services Dwi Wijaya offers, from web development, app development, UI/UX, design to consulting. Tailored solutions to bring your digital vision to life.",
         "subtitle": "Learn about the specialized services I offer to clients."
     },
     "Contact": {
         "title": "Get in Touch",
+        "metaDesc": "Reach out to Dwi Wijaya for potential collaborations or inquiries. Connect via social media or send a direct message.",
         "subtitle": "Reach out and start a conversation about potential collaborations or inquiries.",
         "findSocial": "Find me on social media",
         "orsendMsg": "Or send me a message",
@@ -47,10 +50,12 @@
     },
     "Guestbook": {
         "title": "Guestbook",
+        "metaDesc": "Share your thoughts, suggestions, or questions in the guestbook. Let's keep the conversation going!",
         "subtitle": "Leave whatever you like to say, suggestions, questions or anything!"
     },
     "Blog": {
         "title": "Blog",
+        "metaDesc": "Dive into articles on code, creativity, and learning by Dwi Wijaya. Insights and updates from a Full-stack Developer's journey.",
         "subtitle": "Exploring the world of code, creativity, and constant learning."
     },
     "Common": {
@@ -59,6 +64,7 @@
     },
     "Dashboard": {
         "title": "Dashboard",
+        "metaDesc": "Explore the personal dashboard of Dwi Wijaya, showcasing page speed insights, GitHub contributions, and LeetCode progress.",
         "subtitle": "This is my personal website dashboard built with serverless function",
         "pagespeedSubtitle": "Page Speed Index by Google API",
         "githubSubtitle": "My contributions from last year on github.",
@@ -66,20 +72,24 @@
     },
     "Skillset": {
         "title": "Skillset",
+        "metaDesc": "Discover Dwi Wijaya's technical skills, professional tools, and certificates that highlight his expertise in Full-stack development.",
         "subtitle": "Discover related my technical skills and professional tools.",
         "certificateTitle": "Certificates",
         "certificateSubtitle": "A showcase of my professional certificates."
     },
     "Experience": {
         "title": "Experience",
+        "metaDesc": "Explore the professional background of Dwi Wijaya, highlighting key experiences and career achievements.",
         "subtitle": "Find out my professional background and valuable experiences."
     },
     "Portfolio": {
         "title": "Portfolio",
+        "metaDesc": "Browse the portfolio of Dwi Wijaya, showcasing his latest projects and creative achievements in web development, app development, UI/UX design, Design and more.",
         "subtitle": "Explore my latest projects and creations."
     },
     "Privacy": {
         "title": "Privacy Policy",
+        "metaDesc": "Understand the privacy practices of Dwi Wijaya's website, including data collection, usage, and security measures.",
         "subtitle": "This privacy policy explains how we collect, use, and protect your information.",
         "information_collected": "We collect information that you provide to us directly, such as your name and email address.",
         "usage": "We use this information to improve our services and communicate with you.",
@@ -94,6 +104,7 @@
     },
     "Offline": {
         "title": "You're Offline",
+        "metaDesc": "You are currently offline. Please check your internet connection and try again to access the website content.",
         "subtitle": "No internet connection detected.",
         "message": "It looks like you are currently offline. Please check your internet connection and try again.",
         "retry": "Try Again"

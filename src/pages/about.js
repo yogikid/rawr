@@ -21,7 +21,7 @@ const AboutPage = () => {
             <Head>
                 <link rel="canonical" href={canonicalUrl} />
             </Head>
-            <NextSeo title={`${t('About.title')} - Dwi Wijaya`} />
+            <NextSeo title={`${t('About.title')} - Dwi Wijaya`} description={t('About.metaDesc')} />
 
             <Container data-aos='fade-up'>
                 <PageHeading

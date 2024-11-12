@@ -19,7 +19,7 @@ const Fallback = () => {
       <Head>
         <link rel="canonical" href={canonicalUrl} />
       </Head>
-      <NextSeo title={`${t('title')} - Dwi Wijaya`} />
+      <NextSeo title={`${t('title')} - Dwi Wijaya`} description={t('metaDesc')} />
 
       <Blank className='text-center flex justify-center !items-center !h-[100dvh]'>
         {/* Page Heading with Icon */}

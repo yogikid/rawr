@@ -25,7 +25,7 @@ const DashboardPage = ({ fallback }) => {
                 <Head>
                     <link rel="canonical" href={canonicalUrl} />
                 </Head>
-                <NextSeo title={`${PAGE_TITLE} - Dwi Wijaya`} />
+                <NextSeo title={`${PAGE_TITLE} - Dwi Wijaya`} description={t('Dashboard.metaDesc')} />
 
                 <Container data-aos='fade-up'>
                     <PageHeading

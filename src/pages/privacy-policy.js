@@ -17,7 +17,7 @@ const PrivacyPolicyPage = () => {
             <Head>
                 <link rel="canonical" href={canonicalUrl} />
             </Head>
-            <NextSeo title={`${t('title')} - Dwi Wijaya`} />
+            <NextSeo title={`${t('title')} - Dwi Wijaya`} description={t('metaDesc')} />
 
             <Container data-aos="fade-up" >
                 <PageHeading
