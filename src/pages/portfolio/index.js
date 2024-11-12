@@ -22,7 +22,7 @@ const PortfolioPage = ({ portfolios }) => {
             <Head>
                 <link rel="canonical" href={canonicalUrl} />
             </Head>
-            <NextSeo title={`${PAGE_TITLE} - Dwi Wijaya`} />
+            <NextSeo title={`${PAGE_TITLE} - Dwi Wijaya`} description={t('Portfolio.metaDesc')} />
             <Container data-aos='fade-up'>
                 <PageHeading
                     title={PAGE_TITLE}
