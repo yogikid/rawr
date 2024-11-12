@@ -10,7 +10,7 @@ export const schemaMarkup = {
             "sameAs": [
                 "https://www.linkedin.com/in/dwi-wijaya",
                 "https://github.com/dwiwijaya",
-                "https://www.instagram.com/_dwiwijaya_/",
+                "https://www.instagram.com/_dwiwijaya_/"
             ]
         },
         {
@@ -39,6 +39,21 @@ export const schemaMarkup = {
             ]
         },
         {
+            "@type": "ItemList",
+            "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "url": "https://dwiwijaya.com/" },
+                { "@type": "ListItem", "position": 2, "name": "Dashboard", "url": "https://dwiwijaya.com/dashboard" },
+                { "@type": "ListItem", "position": 3, "name": "About", "url": "https://dwiwijaya.com/about" },
+                { "@type": "ListItem", "position": 4, "name": "Skillset", "url": "https://dwiwijaya.com/skillset" },
+                { "@type": "ListItem", "position": 5, "name": "Experience", "url": "https://dwiwijaya.com/experience" },
+                { "@type": "ListItem", "position": 6, "name": "Services", "url": "https://dwiwijaya.com/services" },
+                { "@type": "ListItem", "position": 7, "name": "Portfolio", "url": "https://dwiwijaya.com/portfolio" },
+                { "@type": "ListItem", "position": 8, "name": "Blog", "url": "https://dwiwijaya.com/blog" },
+                { "@type": "ListItem", "position": 9, "name": "Contact", "url": "https://dwiwijaya.com/contact" },
+                { "@type": "ListItem", "position": 10, "name": "Guestbook", "url": "https://dwiwijaya.com/guestbook" }
+            ]
+        },
+        {
             "@type": "FAQPage",
             "mainEntity": [
                 {
@@ -46,7 +61,7 @@ export const schemaMarkup = {
                     "name": "What services do you offer?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "I offer web development,app development, UI/UX design, and consulting services tailored to clients' needs."
+                        "text": "I offer web development, app development, UI/UX design, and consulting services tailored to clients' needs."
                     }
                 },
                 {
@@ -54,7 +69,7 @@ export const schemaMarkup = {
                     "name": "What projects have you worked on?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "I’ve worked on various web development projects, including e-commerce sites, personal blogs, applications, ui/ux design projects, and more."
+                        "text": "I’ve worked on various web development projects, including e-commerce sites, personal blogs, applications, UI/UX design projects, and more."
                     }
                 },
                 {
@@ -73,7 +88,6 @@ export const schemaMarkup = {
                         "text": "I’d love to hear about your project! You can reach out through my social media channels or send me a message via the contact form. I’ll make sure to respond within 24 hours to discuss how we can bring your vision to life."
                     }
                 }
-
             ]
         }
     ]
