@@ -7,6 +7,7 @@ import CollabsToggle from "@/components/toggles/CollabsToggle";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Overlay from "@/components/layouts/partials/Overlay";
+import { schemaMarkup } from "@/lib/schema-markup";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,6 +20,10 @@ export default function Home() {
     <>
       <Head>
         <link rel="canonical" href={canonicalUrl} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}
+        />
       </Head>
       <NextSeo title='Dwi Wijaya - Personal Website' />
 
