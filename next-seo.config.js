@@ -58,7 +58,7 @@ const defaultSEOConfig = {
     },
     {
       name: 'keywords',
-      content: 'Dwi Wijaya, Dwi, Wijaya , Full-Stack Developer, Web Developer, Portfolio, Personal Website'
+      content: 'programer, portfolio, web, developer, personal, design, dwi wijaya, dwiwijaya, developer, backend, fullstack, frontend, ui ux'
     },
     {
       name: 'author',
