@@ -24,24 +24,6 @@ const defaultSEOConfig = {
         width: 600,
         height: 600,
       },
-      {
-        url: metaImage,
-        alt: 'Dwi Wijaya - og:image',
-        width: 800,
-        height: 600,
-      },
-      {
-        url: metaImage,
-        alt: 'Dwi Wijaya - og:image',
-        width: 1200,
-        height: 630,
-      },
-      {
-        url: metaImage,
-        alt: 'Dwi Wijaya - og:image',
-        width: 1600,
-        height: 900,
-      },
     ],
     
   },
