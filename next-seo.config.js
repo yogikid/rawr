@@ -1,4 +1,4 @@
-const metaDescription = 'Dwi Wijaya is a Full-Stack Developer dedicated to creating efficient, scalable, and visually engaging web applications. Passionate about bringing digital visions to life with seamless user experiences (@dwiwijaya).';
+const metaDescription = 'Dwi Wijaya, Full-Stack Developer, specializes in creating innovative web applications with a focus on seamless user experiences and high performance.';
 const metaSquareImage = 'https://zyhdjqkdvsbxnpngpvkc.supabase.co/storage/v1/object/public/seo/squre-ogimage.png'
 const metaImage = 'https://firebasestorage.googleapis.com/v0/b/portfolio-dwiwijaya.appspot.com/o/meta-image.jpg?alt=media&token=45e644b5-1655-40e7-83b6-dc73bf3ecfa6';
 
