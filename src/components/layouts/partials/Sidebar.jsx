@@ -84,7 +84,7 @@ const Sidebar = ({ className, lastUpdate }) => {
         <>
             <aside {...handlers} className={`sidebar ${className} ${toggle && '!left-0'} max-h-[100dvh] min-h-[100dvh] scrollbar-hide overflow-x-auto fixed -left-64 lg:left-0 top-0 bg-container border border-stroke pl-0 p-6 w-64 flex flex-col gap-8 justify-between text-center transition-3s z-10 lg:z-0 shadow-sm`}>
                 <div className="flex flex-col gap-8">
-                    <div className="ml-6 flex flex-col gap-8">
+                    <header className="ml-6 flex flex-col gap-8">
                         <button
                             data-umami-event={`Click Logo`}
                             onClick={() => { setToggle(false); Router.push('/'); }}
@@ -95,20 +95,20 @@ const Sidebar = ({ className, lastUpdate }) => {
                         </button>
                         <div className="text-left mt-4 sm:mt-8">
                             <h2 className='text-2xl mb-2 leading-6 font-se'>{t('Sidebar.welcome')}</h2>
-                            <span className="text-sm text-subtext">
+                            <time className="text-sm text-subtext">
                                 {t("Sidebar.lastupdate")} : {new Date(lastUpdate).toLocaleDateString(locale, {
                                     day: 'numeric',
                                     month: 'short',
                                     year: 'numeric'
                                 })}
-                            </span>
+                            </time>
                         </div>
 
                         <div className="flex gap-2 flex-col">
                             <ThemeToggle />
                             <LanguageToggle handleClick={() => setToggle(false)} />
                         </div>
-                    </div>
+                    </header>
                     <nav className="nav">
                         <div className="nav__menu p-6 bg-background rounded-l-none rounded-2xl">
                             <ul className="flex flex-col items-center">
@@ -123,9 +123,9 @@ const Sidebar = ({ className, lastUpdate }) => {
                         </div>
                     </nav>
                 </div>
-                <div className="nav__footer text-left pl-6">
+                <footer className="nav__footer text-left pl-6">
                     <span className="text-subtext text-sm transform rotate-180 ">&copy; {new Date().getFullYear()} Dwi Wijaya</span>
-                </div>
+                </footer>
                 <div onClick={() => setToggle(!toggle)} className={`toggle lg:-left-64 left-5 sidebar__toggle ${toggle ? '!left-[17rem]' : ''}`}>
                     <i className="fa-duotone fa-bars text-primary"></i>
                 </div>

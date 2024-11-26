@@ -3,14 +3,14 @@ import React from 'react'
 import Profile from '@/assets/avatar-profile.webp'
 import HomeSocials from './HomeSocials'
 import Image from '@/components/elements/Image'
-import Router  from 'next/router'
+import Router from 'next/router'
 import { useTranslations } from 'next-intl'
 import { BiCode, BiCodeAlt } from 'react-icons/bi'
 
 const Home = () => {
     const t = useTranslations();
     return (
-        <div className='absolute -top-[175%] w-[calc(100%-40px)] '>
+        <section className='absolute -top-[175%] w-[calc(100%-40px)] '>
             <div className="flex justify-between gap-2 items-end  mb-8">
                 <div className="!min-w-[108px] max-w-[108px] outline outline-[.5rem] outline-background rounded-2xl bg-container">
                     <Image
@@ -25,15 +25,12 @@ const Home = () => {
                 </div>
             </div>
             <h2 className='text-xl text-subtext mb-0 flex items-center gap-1 '>{t('Home.greeting')}  <span className="">👋</span> </h2>
-            <div className="flex gap-2 self-center items-center">
-                <h1 className="font-bold text-3xl text-text">
-                    {t('Home.iam')} <span className='text-primary'>Dwi Wijaya</span>
-                </h1>
-
-            </div>
-            <p className="flex items-center gap-2 my-2 text-text">
-                {t('Home.introduction')} <BiCodeAlt className='text-primary'/> &nbsp;
-            </p>
+            <h1 className="font-bold text-3xl text-text">
+                {t('Home.iam')} <span className='text-primary'>Dwi Wijaya</span>
+            </h1>
+            <h3 className="flex items-center gap-2 my-2 text-text">
+                {t('Home.introduction')} <BiCodeAlt className='text-primary' /> &nbsp;
+            </h3>
             <p className='text-subtext text-sm'>
                 {t('Home.passion')}
             </p>
@@ -45,7 +42,7 @@ const Home = () => {
             <div className='card mb-6 !pb-4'>
                 <div className='flex gap-3 items-center'>
                     <i className='fad fa-rocket-launch text-primary'></i>
-                    <h2 className='text-xl text-title font-medium'>{t('Home.collaboration')}</h2>
+                    <h3 className='text-xl text-title font-medium'>{t('Home.collaboration')}</h3>
                 </div>
                 <p className='text-subtext mt-2 mb-5'>
                     {t('Home.freelance')}
@@ -72,7 +69,7 @@ const Home = () => {
                 </div>
 
             </div>
-        </div>
+        </section>
     )
 }
 

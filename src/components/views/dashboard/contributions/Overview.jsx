@@ -26,12 +26,12 @@ const Overview = ({ style, data }) => {
   const averageContribution = totalContributions / totalContributionList.length;
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 mb-6 mt-4 gap-2">
+    <ul className="grid grid-cols-2 md:grid-cols-4 mb-6 mt-4 gap-2">
       <DashboardCard title="Total" value={totalContributions} />
       <DashboardCard title={locale == "en" ? "This Week" : "Minggu Ini"} value={totalThisWeekContribution} />
       <DashboardCard title={locale == "en" ? "Best Day" : "Hari Terbaik"} value={bestContribution} />
       <DashboardCard title={locale == "en" ? "Average" : "Rata-rata"} value={averageContribution} unit={locale == "en" ? "/ day" : "/ hari"} />
-    </div>
+    </ul>
   );
 };
 

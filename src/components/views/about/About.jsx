@@ -1,30 +1,35 @@
 import { useTranslations } from 'next-intl';
-import PageSubHeading from '../../common/PageSubHeading'
+import PageSubHeading from '../../common/PageSubHeading';
 
 const About = () => {
-    const t = useTranslations();
-    return (
+  const t = useTranslations();
+
+  return (
     <>
-      <div className="">
-        <p className='mb-6'>
-          {t('About.intro')}
-        </p>
+      <div className="about-page">
+        <section className="intro mb-6">
+          <p>{t('About.intro')}</p>
+        </section>
 
-        <PageSubHeading icon={'fad fa-route'} title={t('About.journeyTitle')} />
-        <p className='mb-6'>{t('About.journey')}</p>
+        <section className="journey mb-6">
+          <PageSubHeading icon="fad fa-route" title={t('About.journeyTitle')} />
+          <p>{t('About.journey')}</p>
+        </section>
 
-        <PageSubHeading icon={'fad fa-lightbulb'} title={t('About.valuesTitle')} />
-        <p className='mb-6'>{t('About.values')}</p>
+        <section className="values mb-6">
+          <PageSubHeading icon="fad fa-lightbulb" title={t('About.valuesTitle')} />
+          <p>{t('About.values')}</p>
+        </section>
 
-        <PageSubHeading icon={'fad fa-laugh-beam'} title={t('About.funTitle')} />
-
-        <ul>
-          <li>{t('About.funfact')}</li>
-        </ul>
-
+        <section className="fun-facts">
+          <PageSubHeading icon="fad fa-laugh-beam" title={t('About.funTitle')} />
+          <ul aria-label="Fun Facts">
+            <li>{t('About.funfact')}</li>
+          </ul>
+        </section>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default About
+export default About;

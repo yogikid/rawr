@@ -6,10 +6,10 @@ const Layout = ({ lastUpdate, children }) => {
     return (
         <>
             <Sidebar lastUpdate={lastUpdate}/>
-            <div className='group/main main ml-0 lg:ml-64 '>
+            <main className='group/main main ml-0 lg:ml-64 '>
                 <Overlay />
                 {children}
-            </div>
+            </main>
         </>
     )
 }

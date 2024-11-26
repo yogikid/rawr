@@ -18,17 +18,19 @@ const Contact = () => {
 
     return (
         <>
-            <div className="contact__container">
+            <section className="contact__container">
                 <div className="mb-8">
                     <h3 className="mb-4 font-semibold">{t('Contact.findSocial')}</h3>
-                    <div className="flex md:flex-row gap-2 justify-center">
+                    <ul className="flex md:flex-row gap-2 justify-center">
                         {Socials.map((social, index) => (
-                            <button onClick={() => window.open(social.link, '_blank')} data-umami-event={social.eventName} title={social.label} className={`w-full flex gap-2 justify-center items-center p-2 text-white rounded-md`} style={{ backgroundColor: social.background }} key={index}>
-                                <Image src={social.icon} alt="" srcSet="" />
-                                <div className="hidden md:block">{social.label}</div>
-                            </button>
+                            <li key={index} className='flex w-full'>
+                                <button onClick={() => window.open(social.link, '_blank')} data-umami-event={social.eventName} title={social.label} className={`w-full flex gap-2 justify-center items-center p-2 text-white rounded-md`} style={{ backgroundColor: social.background }}>
+                                    <Image src={social.icon} alt="" srcSet="" />
+                                    <div className="hidden md:block">{social.label}</div>
+                                </button>
+                            </li>
                         ))}
-                    </div>
+                    </ul>
                 </div>
                 <div className="relative">
                     <h3 className="mb-4 font-semibold">{t('Contact.orsendMsg')}</h3>
@@ -73,15 +75,15 @@ const Contact = () => {
                         </div>
                         <button data-data-umami-event='Send Contact Message' disabled={loading} className={`${loading ? 'cursor-not-allowed' : ''} btn !w-full md:!w-fit text-center justify-center`} >
                             {loading ? (
-                                <BiLoaderAlt className='animate-spin'/>
+                                <BiLoaderAlt className='animate-spin' />
                             ) : (
-                                <BiMailSend/>
+                                <BiMailSend />
                             )}{" "}
                             {loading ? "Sending..." : t('Contact.sendMsg')}
                         </button>
                     </form>
                 </div>
-            </div>
+            </section>
         </>
     )
 }

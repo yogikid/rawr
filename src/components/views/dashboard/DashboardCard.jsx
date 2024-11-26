@@ -9,7 +9,7 @@ const Number = ({ className, value }) => (
 );
 
 const DashboardCard = ({ title, value, isMultiple = false, unit = '' }) => (
-    <div className="card  !px-3 !py-2 !rounded-lg">
+    <li className="card  !px-3 !py-2 !rounded-lg">
         <span className="leading-5 text-xs whitespace-nowrap">{title}</span>
         <div className="mb-1">
             {isMultiple ? (
@@ -23,7 +23,7 @@ const DashboardCard = ({ title, value, isMultiple = false, unit = '' }) => (
             )}
             {unit && <span className="text-xs text-subtext"> {unit}</span>}
         </div>
-    </div>
+    </li>
 );
 
 export default DashboardCard;

@@ -48,8 +48,8 @@ export const GuestbookMessages = ({ initialMessages, onDeleteMessage, session })
     }, [session]);
 
     return (
-        <div className="rounded-lg px-1">
-            <div
+        <section className="rounded-lg px-1">
+            <ol
                 ref={scrollableContainerRef}
                 className="space-y-5 overflow-y-auto pb-4 max-h-[50svh] scrollbar- sm:max-h-[55svh] overflow-auto pr-2"
             >
@@ -61,7 +61,7 @@ export const GuestbookMessages = ({ initialMessages, onDeleteMessage, session })
                         onPopupToggle={handlePopupToggle}
                         isActivePopup={activePopup === msg.id} />
                 ))}
-            </div>
-        </div>
+            </ol>
+        </section>
     );
 };

@@ -36,9 +36,12 @@ const Portfolio = ({ portfolios }) => {
 
   return (
     <>
-      <PortfolioCategory filter={filterItems} active={activeCategory} />
+      <nav>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-5">
+        <PortfolioCategory filter={filterItems} active={activeCategory} />
+      </nav>
+
+      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-5">
         {typeof items === 'string' ? (
           // Handle case when items is a string
           <p className="text-subtext">{items}</p>
@@ -71,7 +74,7 @@ const Portfolio = ({ portfolios }) => {
                       <div className="relative">
                         <Image src={thumbnail} alt="" width={999} height={999} className={`aspect-thumbnail object-cover `} quality={100} />
                         <div className="flex gap-1 absolute top-0 left-0 w-full h-full bg-black opacity-0 transition-opacity duration-300 justify-center items-center text-white group-hover/portfolio:opacity-80 ">
-                          View Project <BiRightArrowAlt/>
+                          View Project <BiRightArrowAlt />
                         </div>
                       </div>
                     </div>
@@ -89,7 +92,7 @@ const Portfolio = ({ portfolios }) => {
           })
         )}
 
-      </div>
+      </ul>
     </>
   );
 };

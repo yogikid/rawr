@@ -107,7 +107,7 @@ const ChatItem = ({
   };
 
   return (
-    <div className='group flex items-start gap-3'>
+    <li className='group flex items-start gap-3'>
       {avatar && (
         <Image
           src={avatar}
@@ -224,7 +224,7 @@ const ChatItem = ({
           <ChatTime datetime={created_at} />
         </div>
       </div>
-    </div>
+    </li>
   );
 };
 
