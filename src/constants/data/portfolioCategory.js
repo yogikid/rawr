@@ -32,11 +32,11 @@ export const portfolioCategory = [
         }
     },
     {
-        icon: 'fad fa-grid-2-plus',
-        slug: 'others',
+        icon: 'fad fa-cube',
+        slug: 'product',
         label: {
-            en: 'Others',
-            id: 'Lainnya',
+            en: 'Product',
+            id: 'Produk',
         }
     }
 ];
