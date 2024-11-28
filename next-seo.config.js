@@ -11,7 +11,7 @@ const defaultSEOConfig = {
     description: metaDescription,
     url: 'https://dwiwijaya.com/',
     type: 'profile',
-    siteName: 'Dwi Wijaya - Personal Website',
+    siteName: 'Dwi Wijaya',
     locale: 'en_US',
     profile: {
       first_name: 'Dwi',
