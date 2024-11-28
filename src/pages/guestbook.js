@@ -5,6 +5,7 @@ import { fetcher } from "@/services/fetcher";
 import { useTranslations } from "next-intl";
 import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
+import { SWRConfig } from "swr";
 
 const GuestbookPage = ({ fallback }) => {
     const t = useTranslations('Guestbook');
