@@ -4,6 +4,7 @@ import BackToggle from '@/components/toggles/BackToggle'
 import DetailPortfolio from '@/components/views/portfolio/DetailPortfolio'
 import { fetcher } from '@/services/fetcher'
 import { NextSeo } from 'next-seo'
+import { useRouter } from 'next/router'
 import React from 'react'
 
 const DetailPortfolioPage = ({ portfolio }) => {
