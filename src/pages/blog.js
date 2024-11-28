@@ -3,30 +3,32 @@ import Container from "@/components/layouts/partials/Container"
 import Blog from "@/components/views/blog/Blog"
 import { useTranslations } from "next-intl";
 import { NextSeo } from "next-seo";
-import Head from "next/head";
 import { useRouter } from "next/router";
 
 
 const BlogPage = () => {
-
-    const t = useTranslations();
-    const router = useRouter();
-    const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}${router.asPath}`;
-
-    const PAGE_TITLE = t('Blog.title');
-    const PAGE_DESCRIPTION = t('Blog.subtitle');
+    
+    const t = useTranslations('Blog');
+    const { locale, asPath } = useRouter();
+    const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL;
+    const lang = locale == 'en' ? '/en' : ''
 
     return (
         <>
-            <Head>
-                <link rel="canonical" href={canonicalUrl} />
-            </Head>
-            <NextSeo title={`${PAGE_TITLE} - Dwi Wijaya`} description={t('Blog.metaDesc')} />
-
+            <NextSeo
+                title={`${t('title')} - Dwi Wijaya`}
+                description={t('metaDesc')}
+                canonical={SITE_URL + lang + asPath}
+                additionalLinkTags={[
+                    { rel: 'alternate', hreflang: 'id', href: `${SITE_URL}${asPath}` },
+                    { rel: 'alternate', hreflang: 'en', href: `${SITE_URL}/en${asPath}` },
+                    { rel: 'alternate', hreflang: 'x-default', href: `${SITE_URL}${asPath}` },
+                ]}
+            />
             <Container data-aos='fade-up'>
                 <PageHeading
-                    title={PAGE_TITLE}
-                    description={PAGE_DESCRIPTION}
+                    title={t('title')}
+                    description={t('subtitle')}
                 />
                 <Blog />
             </Container>

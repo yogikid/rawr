@@ -3,30 +3,32 @@ import Container from '@/components/layouts/partials/Container'
 import Services from '@/components/views/service/Services'
 import { useTranslations } from 'next-intl';
 import { NextSeo } from 'next-seo';
-import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React from 'react'
 
-const PAGE_TITLE = 'Services';
-const PAGE_DESCRIPTION = "Learn about the specialized services I offer to clients.";
-
 const ServicesPage = () => {
 
-    const t = useTranslations();
-    const router = useRouter();
-    const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}${router.asPath}`;
+    const t = useTranslations('Services');
+    const { locale, asPath } = useRouter();
+    const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL;
+    const lang = locale == 'en' ? '/en' : ''
 
     return (
         <>
-            <Head>
-                <link rel="canonical" href={canonicalUrl} />
-            </Head>
-            <NextSeo title={`${t('Services.title')} - Dwi Wijaya`} description={t('Services.metaDesc')} />
-
+            <NextSeo
+                title={`${t('title')} - Dwi Wijaya`}
+                description={t('metaDesc')}
+                canonical={SITE_URL + lang + asPath}
+                additionalLinkTags={[
+                    { rel: 'alternate', hreflang: 'id', href: `${SITE_URL}${asPath}` },
+                    { rel: 'alternate', hreflang: 'en', href: `${SITE_URL}/en${asPath}` },
+                    { rel: 'alternate', hreflang: 'x-default', href: `${SITE_URL}${asPath}` },
+                ]}
+            />
             <Container data-aos='fade-up'>
                 <PageHeading
-                    title={t('Services.title')}
-                    description={t('Services.subtitle')}
+                    title={t('title')}
+                    description={t('subtitle')}
                 />
                 <Services />
             </Container>

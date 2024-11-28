@@ -4,31 +4,33 @@ import Skill from '@/components/views/skill/Skill';
 import { fetcher } from '@/services/fetcher';
 import { useTranslations } from 'next-intl';
 import { NextSeo } from 'next-seo';
-import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React from 'react'
 
 
 const SkillsetPage = ({ skills, certificates }) => {
 
-    const t = useTranslations();
-    const router = useRouter();
-    const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}${router.asPath}`;
+    const t = useTranslations('Skillset');
+    const { locale, asPath } = useRouter();
+    const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL;
+    const lang = locale == 'en' ? '/en' : ''
 
-    const PAGE_TITLE = t('Skillset.title');
-    const PAGE_DESCRIPTION = t('Skillset.subtitle');
-    
     return (
         <>
-            <Head>
-                <link rel="canonical" href={canonicalUrl} />
-            </Head>
-            <NextSeo title={`${PAGE_TITLE} - Dwi Wijaya`} />
-
+            <NextSeo
+                title={`${t('title')} - Dwi Wijaya`}
+                description={t('metaDesc')}
+                canonical={SITE_URL + lang + asPath}
+                additionalLinkTags={[
+                    { rel: 'alternate', hreflang: 'id', href: `${SITE_URL}${asPath}` },
+                    { rel: 'alternate', hreflang: 'en', href: `${SITE_URL}/en${asPath}` },
+                    { rel: 'alternate', hreflang: 'x-default', href: `${SITE_URL}${asPath}` },
+                ]}
+            />
             <Container data-aos='fade-up'>
                 <PageHeading
-                    title={PAGE_TITLE}
-                    description={PAGE_DESCRIPTION}
+                    title={t('title')}
+                    description={t('subtitle')}
                 />
                 <Skill skills={skills} certificates={certificates} />
             </Container>

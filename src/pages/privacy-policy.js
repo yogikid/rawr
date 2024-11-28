@@ -9,15 +9,22 @@ import React from 'react';
 
 const PrivacyPolicyPage = () => {
     const t = useTranslations('Privacy');
-    const router = useRouter();
-    const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}${router.asPath}`;
+    const { locale, asPath } = useRouter();
+    const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL;
+    const lang = locale == 'en' ? '/en' : ''
 
     return (
         <>
-            <Head>
-                <link rel="canonical" href={canonicalUrl} />
-            </Head>
-            <NextSeo title={`${t('title')} - Dwi Wijaya`} description={t('metaDesc')} />
+            <NextSeo
+                title={`${t('title')} - Dwi Wijaya`}
+                description={t('metaDesc')}
+                canonical={SITE_URL + lang + asPath}
+                additionalLinkTags={[
+                    { rel: 'alternate', hreflang: 'id', href: `${SITE_URL}${asPath}` },
+                    { rel: 'alternate', hreflang: 'en', href: `${SITE_URL}/en${asPath}` },
+                    { rel: 'alternate', hreflang: 'x-default', href: `${SITE_URL}${asPath}` },
+                ]}
+            />
 
             <Container data-aos="fade-up" >
                 <PageHeading

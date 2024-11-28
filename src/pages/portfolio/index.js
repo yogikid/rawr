@@ -4,29 +4,32 @@ import Portfolio from '@/components/views/portfolio/Portfolio'
 import { fetcher } from '@/services/fetcher';
 import { useTranslations } from 'next-intl';
 import { NextSeo } from 'next-seo';
-import Head from 'next/head';
 import { useRouter } from 'next/router';
 
 
 const PortfolioPage = ({ portfolios }) => {
-    
-    const t = useTranslations();
-    const router = useRouter();
-    const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}${router.asPath}`;
-    
-    const PAGE_TITLE = t('Portfolio.title');
-    const PAGE_DESCRIPTION = t('Portfolio.subtitle');
+
+    const t = useTranslations('Portfolio');
+    const { locale, asPath } = useRouter();
+    const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL;
+    const lang = locale == 'en' ? '/en' : ''
 
     return (
         <>
-            <Head>
-                <link rel="canonical" href={canonicalUrl} />
-            </Head>
-            <NextSeo title={`${PAGE_TITLE} - Dwi Wijaya`} description={t('Portfolio.metaDesc')} />
+            <NextSeo
+                title={`${t('title')} - Dwi Wijaya`}
+                description={t('metaDesc')}
+                canonical={SITE_URL + lang + asPath}
+                additionalLinkTags={[
+                    { rel: 'alternate', hreflang: 'id', href: `${SITE_URL}${asPath}` },
+                    { rel: 'alternate', hreflang: 'en', href: `${SITE_URL}/en${asPath}` },
+                    { rel: 'alternate', hreflang: 'x-default', href: `${SITE_URL}${asPath}` },
+                ]}
+            />
             <Container data-aos='fade-up'>
                 <PageHeading
-                    title={PAGE_TITLE}
-                    description={PAGE_DESCRIPTION}
+                    title={t('title')}
+                    description={t('subtitle')}
                 />
                 <Portfolio portfolios={portfolios} />
             </Container>
@@ -36,7 +39,7 @@ const PortfolioPage = ({ portfolios }) => {
 
 export default PortfolioPage
 export const getStaticProps = async () => {
-    
+
     const portfolios = await fetcher(`${process.env.API_URL}/portfolio`)
 
     return {

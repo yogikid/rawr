@@ -7,19 +7,26 @@ import Blank from '@/components/layouts/partials/Blank';
 
 const Fallback = () => {
   const t = useTranslations('Offline');
-  const router = useRouter();
-  const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}${router.asPath}`;
-
   const handleRetry = () => {
     window.location.reload();
   };
 
+  const { locale, asPath } = useRouter();
+  const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL;
+  const lang = locale == 'en' ? '/en' : ''
+
   return (
     <>
-      <Head>
-        <link rel="canonical" href={canonicalUrl} />
-      </Head>
-      <NextSeo title={`${t('title')} - Dwi Wijaya`} description={t('metaDesc')} />
+      <NextSeo
+        title={`${t('title')} - Dwi Wijaya`}
+        description={t('metaDesc')}
+        canonical={SITE_URL + lang + asPath}
+        additionalLinkTags={[
+          { rel: 'alternate', hreflang: 'id', href: `${SITE_URL}${asPath}` },
+          { rel: 'alternate', hreflang: 'en', href: `${SITE_URL}/en${asPath}` },
+          { rel: 'alternate', hreflang: 'x-default', href: `${SITE_URL}${asPath}` },
+        ]}
+      />
 
       <Blank className='text-center flex justify-center !items-center !h-[100dvh]'>
         {/* Page Heading with Icon */}
@@ -57,7 +64,7 @@ export default Fallback;
 export const getStaticProps = async () => {
 
   return {
-      props: {
-      },
+    props: {
+    },
   };
 };

@@ -3,31 +3,32 @@ import Container from '@/components/layouts/partials/Container'
 import Contact from '@/components/views/contact/Contact'
 import { useTranslations } from 'next-intl';
 import { NextSeo } from 'next-seo'
-import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React from 'react'
 
-const PAGE_TITLE = 'Get in touch';
-const PAGE_DESCRIPTION = "Reach out and start a conversation about potential collaborations or inquiries.";
-
-
 const ContactPage = () => {
 
-  const t = useTranslations();
-  const router = useRouter();
-  const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}${router.asPath}`;
+  const t = useTranslations('Contact');
+  const { locale, asPath } = useRouter();
+  const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL;
+  const lang = locale == 'en' ? '/en' : ''
 
   return (
     <>
-      <Head>
-        <link rel="canonical" href={canonicalUrl} />
-      </Head>
-      <NextSeo title={`${t('Contact.title')} - Dwi Wijaya`} description={t('Contact.metaDesc')} />
-
+      <NextSeo
+        title={`${t('title')} - Dwi Wijaya`}
+        description={t('metaDesc')}
+        canonical={SITE_URL + lang + asPath}
+        additionalLinkTags={[
+          { rel: 'alternate', hreflang: 'id', href: `${SITE_URL}${asPath}` },
+          { rel: 'alternate', hreflang: 'en', href: `${SITE_URL}/en${asPath}` },
+          { rel: 'alternate', hreflang: 'x-default', href: `${SITE_URL}${asPath}` },
+        ]}
+      />
       <Container data-aos='fade-up'>
         <PageHeading
-          title={t('Contact.title')}
-          description={t('Contact.subtitle')}
+          title={t('title')}
+          description={t('subtitle')}
         />
         <Contact />
       </Container>
@@ -39,7 +40,7 @@ export default ContactPage
 export const getStaticProps = async () => {
 
   return {
-      props: {
-      },
+    props: {
+    },
   };
 };

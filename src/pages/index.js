@@ -13,19 +13,21 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
 
-  const router = useRouter();
-  const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}${router.asPath}`;
+  const { locale, asPath } = useRouter();
+  const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL;
+  const lang = locale == 'en' ? '/en' : ''
 
   return (
     <>
-      <Head>
-        <link rel="canonical" href={canonicalUrl} />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}
-        />
-      </Head>
-      <NextSeo title='Dwi Wijaya - Personal Website' />
+      <NextSeo
+        title="Dwi Wijaya - Personal Website"
+        canonical={SITE_URL + lang + asPath}
+        additionalLinkTags={[
+          { rel: 'alternate', hreflang: 'id', href: `${SITE_URL}${asPath}` },
+          { rel: 'alternate', hreflang: 'en', href: `${SITE_URL}/en${asPath}` },
+          { rel: 'alternate', hreflang: 'x-default', href: `${SITE_URL}${asPath}` },
+        ]}
+      />
 
       <div className="group-[.sidebar-expanded]/main:blur-[1px] z-[-1] bg-container border border-b border-stroke top-0 left-0 w-full h-[24vh] bg-endless-clouds"></div>
       <section data-section className="group-[.sidebar-expanded]/main:blur-[2px] relative p-[15px] pl-5 mx-auto max-w-[1024px]">

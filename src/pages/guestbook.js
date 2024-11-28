@@ -4,33 +4,33 @@ import Guestbook from "@/components/views/guestbook/Guestbook";
 import { fetcher } from "@/services/fetcher";
 import { useTranslations } from "next-intl";
 import { NextSeo } from "next-seo";
-import Head from "next/head";
 import { useRouter } from "next/router";
-import useSWR, { SWRConfig } from 'swr';
 
 const GuestbookPage = ({ fallback }) => {
-    const t = useTranslations();
-    const router = useRouter();
-    const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}${router.asPath}`;
-
-    const PAGE_TITLE = t('Guestbook.title');
-    const PAGE_DESCRIPTION = t('Guestbook.subtitle');
+    const t = useTranslations('Guestbook');
+    const { locale, asPath } = useRouter();
+    const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL;
+    const lang = locale == 'en' ? '/en' : ''
 
     return (
         <>
+            <NextSeo
+                title={`${t('title')} - Dwi Wijaya`}
+                description={t('metaDesc')}
+                canonical={SITE_URL + lang + asPath}
+                additionalLinkTags={[
+                    { rel: 'alternate', hreflang: 'id', href: `${SITE_URL}${asPath}` },
+                    { rel: 'alternate', hreflang: 'en', href: `${SITE_URL}/en${asPath}` },
+                    { rel: 'alternate', hreflang: 'x-default', href: `${SITE_URL}${asPath}` },
+                ]}
+            />
             <SWRConfig value={{ fallback }}>
-
-                <Head>
-                    <link rel="canonical" href={canonicalUrl} />
-                </Head>
-                <NextSeo title={`${PAGE_TITLE} - Dwi Wijaya`} description={t('Guestbook.metaDesc')} />
-
                 <Container data-aos='fade-up'>
                     <PageHeading
-                        title={PAGE_TITLE}
-                        description={PAGE_DESCRIPTION}
+                        title={t('title')}
+                        description={t('subtitle')}
                     />
-                    <Guestbook/>
+                    <Guestbook />
                 </Container>
             </SWRConfig>
         </>

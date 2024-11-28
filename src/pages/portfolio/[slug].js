@@ -6,13 +6,26 @@ import { fetcher } from '@/services/fetcher'
 import { NextSeo } from 'next-seo'
 import React from 'react'
 
-const DetailPortfolioPage = ({portfolio}) => {
+const DetailPortfolioPage = ({ portfolio }) => {
+    const { locale, asPath } = useRouter();
+    const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL;
+    const lang = locale == 'en' ? '/en' : ''
+
     return (
         <>
-            <NextSeo title={`${portfolio.name} - Dwi Wijaya`} />
-            <BackToggle/>
+            <NextSeo
+                title={`${portfolio.name} - Dwi Wijaya`}
+                description={portfolio.excerpt}
+                canonical={SITE_URL + lang + asPath}
+                additionalLinkTags={[
+                    { rel: 'alternate', hreflang: 'id', href: `${SITE_URL}${asPath}` },
+                    { rel: 'alternate', hreflang: 'en', href: `${SITE_URL}/en${asPath}` },
+                    { rel: 'alternate', hreflang: 'x-default', href: `${SITE_URL}${asPath}` },
+                ]}
+            />
+            <BackToggle />
             <Container data-aos='fade-up'>
-                <DetailPortfolio portfolio={portfolio}/>
+                <DetailPortfolio portfolio={portfolio} />
             </Container>
         </>
     )

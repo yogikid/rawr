@@ -6,31 +6,33 @@ import Container from '@/components/layouts/partials/Container';
 import Dashboard from '@/components/views/dashboard/Dashboard';
 import PageHeading from '@/components/common/PageHeading';
 import { useRouter } from 'next/router';
-import Head from 'next/head';
 import { useTranslations } from 'next-intl';
 
 
 const DashboardPage = ({ fallback }) => {
-    
-    const t = useTranslations();
-    const router = useRouter();
-    const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}${router.asPath}`;
 
-    const PAGE_TITLE = t('Dashboard.title');
-    const PAGE_DESCRIPTION = t('Dashboard.subtitle');
+    const t = useTranslations('Dashboard');
+    const { locale, asPath } = useRouter();
+    const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL;
+    const lang = locale == 'en' ? '/en' : ''
 
     return (
         <>
+            <NextSeo
+                title={`${t('title')} - Dwi Wijaya`}
+                description={t('metaDesc')}
+                canonical={SITE_URL + lang + asPath}
+                additionalLinkTags={[
+                    { rel: 'alternate', hreflang: 'id', href: `${SITE_URL}${asPath}` },
+                    { rel: 'alternate', hreflang: 'en', href: `${SITE_URL}/en${asPath}` },
+                    { rel: 'alternate', hreflang: 'x-default', href: `${SITE_URL}${asPath}` },
+                ]}
+            />
             <SWRConfig value={{ fallback }}>
-                <Head>
-                    <link rel="canonical" href={canonicalUrl} />
-                </Head>
-                <NextSeo title={`${PAGE_TITLE} - Dwi Wijaya`} description={t('Dashboard.metaDesc')} />
-
                 <Container data-aos='fade-up'>
                     <PageHeading
-                        title={PAGE_TITLE}
-                        description={PAGE_DESCRIPTION}
+                        title={t('title')}
+                        description={t('subtitle')}
                     />
                     <Dashboard leetcodeEndpoint='/api/leetcode' githubEndpoint='/api/github' />
                 </Container>

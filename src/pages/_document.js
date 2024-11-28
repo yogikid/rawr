@@ -35,8 +35,6 @@ export default function Document() {
           href='/favicon/favicon-16.png'
         />
         <meta name="theme-color" content="#ff774d" />
-        <link rel="alternate" hreflang="id" href="https://dwiwijaya.com/" />
-        <link rel="alternate" hreflang="en" href="https://dwiwijaya.com/en" />
         <script defer src="https://analytics.dwiwijaya.com/script.js" data-website-id="7e71a6f6-f863-400e-806f-1af37e845ad1"></script>
       </Head>
       <body>
