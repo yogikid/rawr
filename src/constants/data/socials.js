@@ -12,7 +12,7 @@ export const Socials = [
         reactIcon : <MdOutlineAlternateEmail/>,
         boxIcon: 'circle-envelope',
         background: '#16a34c',
-        link: 'mailto:work.dwiwijaya@gmail.com',
+        link: 'mailto:hello@dwiwijaya.com',
         eventName: 'Contact: Email',
         label: 'Email',
     },
