@@ -44,7 +44,6 @@ const defaultSEOConfig = {
         height: 900,
       },
     ],
-    
   },
   twitter: {
     handle: '@DwiWijaya',
@@ -64,6 +63,65 @@ const defaultSEOConfig = {
     {
       name: 'author',
       content: 'Dwi Wijaya',
+    },
+    {
+      name: 'theme-color',
+      content: '#ff774d',
+    },
+    {
+      name: 'mobile-web-app-capable',
+      content: 'yes',
+    },
+    {
+      name: 'apple-mobile-web-app-capable',
+      content: 'yes',
+    },
+    {
+      name: 'application-name',
+      content: 'Dwi Wijaya',
+    },
+    {
+      name: 'apple-mobile-web-app-title',
+      content: 'Dwi Wijaya',
+    },
+    {
+      name: 'apple-mobile-web-app-status-bar-style',
+      content: 'default',
+    },
+  ],
+  additionalLinkTags: [
+    {
+      rel: 'icon',
+      type: 'image/png',
+      sizes: '16x16',
+      href: '/favicon/favicon-16.png',
+    },
+    {
+      rel: 'icon',
+      type: 'image/png',
+      sizes: '32x32',
+      href: '/favicon/favicon-32.png',
+    },
+    {
+      rel: 'icon',
+      type: 'image/png',
+      sizes: '48x48',
+      href: '/favicon/favicon-48.png',
+    },
+    {
+      rel: 'icon',
+      type: 'image/png',
+      sizes: '180x180',
+      href: '/favicon/favicon-180.png',
+    },
+    {
+      rel: 'apple-touch-icon',
+      sizes: '180x180',
+      href: '/favicon/apple-touch-icon.png',
+    },
+    {
+      rel: 'manifest',
+      href: '/manifest.json',
     },
   ],
 };
