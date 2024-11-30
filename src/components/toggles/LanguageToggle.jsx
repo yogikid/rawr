@@ -8,6 +8,7 @@ const LanguageToggle = () => {
 
     useEffect(() => {
         setLanguage(locale);
+        document.documentElement.lang = locale;
     }, [locale]);
 
     const toggleLanguage = () => {
