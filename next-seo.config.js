@@ -2,14 +2,15 @@ const metaDescription = 'Dwi Wijaya is a Full-Stack Developer, specializes in bu
 const metaSquareImage = 'https://zyhdjqkdvsbxnpngpvkc.supabase.co/storage/v1/object/public/seo/squre-ogimage.png'
 const metaImage = 'https://firebasestorage.googleapis.com/v0/b/portfolio-dwiwijaya.appspot.com/o/meta-image.jpg?alt=media&token=45e644b5-1655-40e7-83b6-dc73bf3ecfa6';
 
-const getDefaultSEOConfig = (locale) => ({
+const getDefaultSEOConfig = (locale, currentPageURL) => ({
   title: 'Dwi Wijaya - Personal Website',
   defaultTitle: 'Dwi Wijaya - Personal Website',
+  canonical: currentPageURL,
   description: metaDescription,
   openGraph: {
     title: 'Dwi Wijaya - Personal Website',
     description: metaDescription,
-    url: 'https://dwiwijaya.com/',
+    url: currentPageURL,
     type: 'profile',
     siteName: 'Dwi Wijaya',
     locale: locale === 'id' ? 'id_ID' : 'en_US',
