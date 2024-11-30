@@ -10,7 +10,7 @@ import { BiCode, BiCodeAlt } from 'react-icons/bi'
 const Home = () => {
     const t = useTranslations();
     return (
-        <section className='absolute -top-[175%] w-[calc(100%-40px)] '>
+        <div className='absolute -top-[175%] w-[calc(100%-40px)] '>
             <div className="flex justify-between gap-2 items-end  mb-8">
                 <div className="!min-w-[108px] max-w-[108px] outline outline-[.5rem] outline-background rounded-2xl bg-container">
                     <Image
@@ -24,17 +24,16 @@ const Home = () => {
                     <i className="fad fa-location-dot text-primary"></i> {t('Home.based')}
                 </div>
             </div>
-            <h2 className='text-xl text-subtext mb-0 flex items-center gap-1 '>{t('Home.greeting')}  <span className="">👋</span> </h2>
             <h1 className="font-bold text-3xl text-text">
-                {t('Home.iam')} <span className='text-primary'>Dwi Wijaya</span>
+                Dwi Wijaya
             </h1>
-            <h3 className="flex items-center gap-2 my-2 text-text">
+            <h2 className="flex items-center gap-2 my-2 text-text">
                 {t('Home.introduction')} <BiCodeAlt className='text-primary' /> &nbsp;
-            </h3>
+            </h2>
             <p className='text-subtext text-sm'>
                 {t('Home.passion')}
             </p>
-            <p className='text-subtext text-sm'>
+            <p className='text-text text-sm mt-1'>
                 ~ {t('Home.motto')}
             </p>
             <HomeSocials />
@@ -69,7 +68,7 @@ const Home = () => {
                 </div>
 
             </div>
-        </section>
+        </div>
     )
 }
 
