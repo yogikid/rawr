@@ -2,7 +2,7 @@ const metaDescription = 'Dwi Wijaya is a Full-Stack Developer, specializes in bu
 const metaSquareImage = 'https://zyhdjqkdvsbxnpngpvkc.supabase.co/storage/v1/object/public/seo/squre-ogimage.png'
 const metaImage = 'https://firebasestorage.googleapis.com/v0/b/portfolio-dwiwijaya.appspot.com/o/meta-image.jpg?alt=media&token=45e644b5-1655-40e7-83b6-dc73bf3ecfa6';
 
-const defaultSEOConfig = {
+const getDefaultSEOConfig = (locale) => ({
   title: 'Dwi Wijaya - Personal Website',
   defaultTitle: 'Dwi Wijaya - Personal Website',
   description: metaDescription,
@@ -12,7 +12,7 @@ const defaultSEOConfig = {
     url: 'https://dwiwijaya.com/',
     type: 'profile',
     siteName: 'Dwi Wijaya',
-    locale: 'en_US',
+    locale: locale === 'id' ? 'id_ID' : 'en_US',
     profile: {
       first_name: 'Dwi',
       last_name: 'Wijaya',
@@ -124,6 +124,6 @@ const defaultSEOConfig = {
       href: '/manifest.json',
     },
   ],
-};
+});
 
-export default defaultSEOConfig;
+export default getDefaultSEOConfig;
