@@ -15,7 +15,7 @@ const TechnologyList = () => (
   <div className="">
     <ul className="space-y-3">
       {technologies.map((tech, index) => (
-        <li key={index} className="flex items-center text-gray-700">
+        <li key={index} className="flex items-center text-text">
           <div className={`mr-3 ${tech.color}`}>{tech.icon}</div>
           <span>{tech.name}</span>
         </li>

@@ -36,7 +36,7 @@ const Toolbar = () => {
                     <div className="">
                         {/* Header */}
                         <div className="mb-4">
-                            <h3 className="text font-bold text-title">Website Personal Saya</h3>
+                            <h3 className="font-bold text-title">Website Personal Saya</h3>
                             <p className="text-sm text-text">Terima kasih sudah mengunjungi ! Yuk, bagikan dengan teman-temanmu.</p>
                         </div>
 
@@ -67,8 +67,8 @@ const Toolbar = () => {
                     <i className="fal fa-lg fa-microchip"></i>
                 </button>
                 <Popup isVisible={showInfoPopup}>
-                    <div className="text-sm">
-                        <p className="font-semibold text-gray-900 mb-2">Teknologi yang digunakan</p>
+                    <div className="">
+                        <p className="font-bold text-title mb-2">Teknologi yang dipakai</p>
                         <TechnologyList />
                     </div>
 
