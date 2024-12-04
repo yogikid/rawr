@@ -11,11 +11,11 @@ import 'aos/dist/aos.css';
 import Aos from "aos";
 import dynamic from "next/dynamic";
 import { DefaultSeo } from "next-seo";
-import defaultSEOConfig from '../../next-seo.config';
 import { getLastCommitDate } from "@/services/GithubServices";
 import Layout from "@/components/layouts/Layout";
 import { NextIntlClientProvider } from 'next-intl';
 import { useRouter } from "next/router";
+import getDefaultSEOConfig from "../../next-seo.config";
 const onest = Onest({
   subsets: ['latin'],
 })
@@ -26,6 +26,9 @@ const ProgressBar = dynamic(
 
 export default function App({ Component, pageProps, lastCommitDate, messages }) {
   const router = useRouter();
+  const lang = router.locale == 'en' ? '/en' : ''
+  const currentPageURL = process.env.NEXT_PUBLIC_SITE_URL + lang + router.asPath;
+  const seoConfig = getDefaultSEOConfig(router.locale, currentPageURL);
   useEffect(() => {
     Aos.init({
       duration: 800,
@@ -40,8 +43,7 @@ export default function App({ Component, pageProps, lastCommitDate, messages }) 
       messages={messages}
     >
 
-
-      <DefaultSeo {...defaultSEOConfig} />
+      <DefaultSeo {...seoConfig} />
 
       <style jsx global>
         {`

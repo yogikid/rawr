@@ -17,7 +17,6 @@ const DetailPortfolioPage = ({ portfolio }) => {
             <NextSeo
                 title={`${portfolio.name} - Dwi Wijaya`}
                 description={portfolio.excerpt}
-                canonical={SITE_URL + lang + asPath}
                 additionalLinkTags={[
                     { rel: 'alternate', hreflang: 'id', href: `${SITE_URL}${asPath}` },
                     { rel: 'alternate', hreflang: 'en', href: `${SITE_URL}/en${asPath}` },
