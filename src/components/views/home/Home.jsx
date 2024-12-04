@@ -20,22 +20,28 @@ const Home = () => {
                         className=""
                     />
                 </div>
-                <div className="badge text-sm h-fit w-full sm:w-fit text-end !gap-3 !py-[.7rem] !px-4 !rounded-xl">
-                    <i className="fad fa-location-dot text-primary"></i> {t('Home.based')}
+            </div>
+            <div className="flex flex-col gap-2">
+                <h1 className="font-bold text-3xl text-text">
+                    Dwi Wijaya
+                </h1>
+                <div className="flex flex-col">
+                    <h2 className="flex items-center gap-2 mb-1 text-text">
+                        {t('Home.introduction')} <BiCodeAlt className='text-primary' /> &nbsp;
+                    </h2>
+                    <p className='text-text text-sm'>
+                        {t('Home.passion')} <i className="fal fa-leaf text-primary ml-2"></i>
+                    </p>
+                </div>
+                <div className="flex flex-col ">
+                    <p className='text-subtext text-sm'>
+                        {t('Home.based')}<i className="text-primary fal fa-location-dot ml-2"></i>
+                    </p>
+                    <p className='text-subtext text-sm'>
+                        {t('Home.motto')}<i className="text-primary fal fa-quote-right ml-2"></i>
+                    </p>
                 </div>
             </div>
-            <h1 className="font-bold text-3xl text-text">
-                Dwi Wijaya
-            </h1>
-            <h2 className="flex items-center gap-2 my-2 text-text">
-                {t('Home.introduction')} <BiCodeAlt className='text-primary' /> &nbsp;
-            </h2>
-            <p className='text-subtext text-sm'>
-                {t('Home.passion')}
-            </p>
-            <p className='text-text text-sm mt-1'>
-                ~ {t('Home.motto')}
-            </p>
             <HomeSocials />
             <hr className="hr" />
             <div className='card mb-6 !pb-4'>
