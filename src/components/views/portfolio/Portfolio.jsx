@@ -63,7 +63,7 @@ const Portfolio = ({ portfolios }) => {
                       <div className="absolute flex items-center top-2 right-2 gap-2 z-[1]">
                         {isFeatured && (
                           <span className="flex items-center gap-1 px-2 py-1 bg-orange-300 text-black rounded-md z-10">
-                            <Image src={Pin} alt="" srcSet="" />
+                            <Image src={Pin} alt="pin" srcSet="" />
                             {locale === "en" ? "Featured" : "Unggulan"}
                           </span>
                         )}
@@ -72,7 +72,7 @@ const Portfolio = ({ portfolios }) => {
                         </div>
                       </div>
                       <div className="relative">
-                        <Image src={thumbnail} alt="" width={999} height={999} className={`aspect-thumbnail object-cover `} quality={100} />
+                        <Image src={thumbnail} alt={slug} width={999} height={999} className={`aspect-thumbnail object-cover `} quality={100} />
                         <div className="flex gap-1 absolute top-0 left-0 w-full h-full bg-black opacity-0 transition-opacity duration-300 justify-center items-center text-white group-hover/portfolio:opacity-80 ">
                           View Project <BiRightArrowAlt />
                         </div>

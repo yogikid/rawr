@@ -7,7 +7,7 @@ module.exports = {
       hreflang: 'en',
     },
     {
-      href: 'https://dwiwijaya.com/',
+      href: 'https://dwiwijaya.com',
       hreflang: 'id',
     },
   ],
