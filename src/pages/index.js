@@ -20,9 +20,9 @@ export default function Home() {
       <NextSeo
         title="Dwi Wijaya - Personal Website"
         additionalLinkTags={[
+          { rel: 'alternate', hreflang: 'x-default', href: `${SITE_URL}` },
           { rel: 'alternate', hreflang: 'id', href: `${SITE_URL}` },
           { rel: 'alternate', hreflang: 'en', href: `${SITE_URL}/en` },
-          { rel: 'alternate', hreflang: 'x-default', href: `${SITE_URL}` },
         ]}
       />
 

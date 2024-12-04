@@ -18,9 +18,9 @@ const AboutPage = () => {
                 title={`${t('title')} - Dwi Wijaya`}
                 description={t('metaDesc')}
                 additionalLinkTags={[
+                    { rel: 'alternate', hreflang: 'x-default', href: `${SITE_URL}${asPath}` },
                     { rel: 'alternate', hreflang: 'id', href: `${SITE_URL}${asPath}` },
                     { rel: 'alternate', hreflang: 'en', href: `${SITE_URL}/en${asPath}` },
-                    { rel: 'alternate', hreflang: 'x-default', href: `${SITE_URL}${asPath}` },
                 ]}
             />
             <Container data-aos='fade-up'>

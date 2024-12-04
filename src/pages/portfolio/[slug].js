@@ -18,9 +18,9 @@ const DetailPortfolioPage = ({ portfolio }) => {
                 title={`${portfolio.name} - Dwi Wijaya`}
                 description={portfolio.excerpt}
                 additionalLinkTags={[
+                    { rel: 'alternate', hreflang: 'x-default', href: `${SITE_URL}${asPath}` },
                     { rel: 'alternate', hreflang: 'id', href: `${SITE_URL}${asPath}` },
                     { rel: 'alternate', hreflang: 'en', href: `${SITE_URL}/en${asPath}` },
-                    { rel: 'alternate', hreflang: 'x-default', href: `${SITE_URL}${asPath}` },
                 ]}
             />
             <BackToggle />
