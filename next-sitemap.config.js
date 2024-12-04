@@ -3,11 +3,11 @@ module.exports = {
   generateRobotsTxt: true,
   alternateRefs: [
     {
-      href: 'https://dwiwijaya.com/en/',
+      href: 'https://dwiwijaya.com/en',
       hreflang: 'en',
     },
     {
-      href: 'https://dwiwijaya.com/',
+      href: 'https://dwiwijaya.com',
       hreflang: 'id',
     },
   ],

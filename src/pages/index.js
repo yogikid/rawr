@@ -13,18 +13,16 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
 
-  const { locale, asPath } = useRouter();
   const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL;
-  const lang = locale == 'en' ? '/en' : ''
 
   return (
     <>
       <NextSeo
         title="Dwi Wijaya - Personal Website"
         additionalLinkTags={[
-          { rel: 'alternate', hreflang: 'id', href: `${SITE_URL}${asPath}` },
-          { rel: 'alternate', hreflang: 'en', href: `${SITE_URL}/en${asPath}` },
-          { rel: 'alternate', hreflang: 'x-default', href: `${SITE_URL}${asPath}` },
+          { rel: 'alternate', hreflang: 'id', href: `${SITE_URL}` },
+          { rel: 'alternate', hreflang: 'en', href: `${SITE_URL}/en` },
+          { rel: 'alternate', hreflang: 'x-default', href: `${SITE_URL}` },
         ]}
       />
 
