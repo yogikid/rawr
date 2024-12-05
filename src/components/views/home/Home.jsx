@@ -8,7 +8,7 @@ import { useTranslations } from 'next-intl'
 import { BiCode, BiCodeAlt } from 'react-icons/bi'
 
 const Home = () => {
-    const t = useTranslations();
+    const t = useTranslations('Home');
     return (
         <div className='absolute -top-[175%] w-[calc(100%-40px)] '>
             <div className="flex justify-between gap-2 items-end  mb-8">
@@ -27,18 +27,18 @@ const Home = () => {
                 </h1>
                 <div className="flex flex-col">
                     <h2 className="flex items-center gap-2 mb-1 text-text">
-                        {t('Home.introduction')} <BiCodeAlt className='text-primary' /> &nbsp;
+                        {t('introduction')} <BiCodeAlt className='text-primary' /> &nbsp;
                     </h2>
                     <p className='text-text text-sm'>
-                        {t('Home.passion')} <i className="fal fa-leaf text-primary ml-2"></i>
+                        {t('passion')} <i className="fal fa-leaf text-primary ml-2"></i>
                     </p>
                 </div>
                 <div className="flex flex-col ">
                     <p className='text-subtext text-sm'>
-                        {t('Home.based')}<i className="text-primary fal fa-location-dot ml-2"></i>
+                        {t('based')}<i className="text-primary fal fa-location-dot ml-2"></i>
                     </p>
                     <p className='text-subtext text-sm'>
-                        {t('Home.motto')}<i className="text-primary fal fa-quote-right ml-2"></i>
+                        {t('motto')}<i className="text-primary fal fa-quote-right ml-2"></i>
                     </p>
                 </div>
             </div>
@@ -47,10 +47,10 @@ const Home = () => {
             <div className='card mb-6 !pb-4'>
                 <div className='flex gap-3 items-center'>
                     <i className='fad fa-rocket-launch text-primary'></i>
-                    <h3 className='text-xl text-title font-medium'>{t('Home.collaboration')}</h3>
+                    <h3 className='text-xl text-title font-medium'>{t('collaboration')}</h3>
                 </div>
                 <p className='text-subtext mt-2 mb-5'>
-                    {t('Home.freelance')}
+                    {t('freelance')}
                 </p>
                 <div className="flex gap-2">
                     <button
@@ -59,7 +59,7 @@ const Home = () => {
                         aria-label='contact me'
                         className='btn sm:!gap-3 justify-center !w-1/2 sm:!w-fit whitespace-nowrap text-sm sm:text-base !py-3 sm:!py-2'
                     >
-                        <i className="fad fa-envelope"></i>{t('Home.getInTouch')}
+                        <i className="fad fa-envelope"></i>{t('getInTouch')}
                     </button>
                     <Link
                         href="https://bit.ly/cv-dwiwijaya"
@@ -69,7 +69,7 @@ const Home = () => {
                         target='_blank'
                         className="btn sm:!gap-3 justify-center !w-1/2 sm:!w-fit whitespace-nowrap text-sm sm:text-base !py-3 sm:!py-2"
                     >
-                        <i className="fad fa-file-lines"></i>{t('Home.getResume')}
+                        <i className="fad fa-file-lines"></i>{t('getResume')}
                     </Link>
                 </div>
 

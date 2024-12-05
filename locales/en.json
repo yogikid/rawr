@@ -15,7 +15,12 @@
         "collaboration": "Let's collaborate!",
         "freelance": "I'm open for freelance work. Don't hesitate to contact me if you want to work together.",
         "getInTouch": "Get in Touch",
-        "getResume": "Get Resume"
+        "getResume": "Get Resume",
+        "share_title": "My Personal Website",
+        "thank_you_message": "Thank you for visiting ! 😊 Feel free to share with your friends. 🎉",
+        "share_link": "Share Link",
+        "link_copied": "Link Copied!",
+        "techstack": "Technologies Used"
     },
     "About": {
         "title": "About",

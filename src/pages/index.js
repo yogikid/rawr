@@ -1,14 +1,7 @@
-import Image from "next/image";
 import { Inter } from "next/font/google";
-import Container from "@/components/layouts/partials/Container";
 import Homepage from "@/components/views//home/Home";
 import { NextSeo } from "next-seo";
-import CollabsToggle from "@/components/toggles/CollabsToggle";
-import Head from "next/head";
-import { useRouter } from "next/router";
-import Overlay from "@/components/layouts/partials/Overlay";
-import { schemaMarkup } from "@/lib/schema-markup";
-import Toolbar from "@/components/layouts/partials/Toolbar";
+import Toolbar from "@/components/views/home/toolbar/Toolbar";
 
 const inter = Inter({ subsets: ["latin"] });
 

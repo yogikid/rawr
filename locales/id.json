@@ -15,7 +15,12 @@
         "collaboration": "Mari bekerja sama!",
         "freelance": "Saya terbuka untuk proyek freelance, jangan ragu untuk mengirim email kepada saya untuk melihat bagaimana kita bisa berkolaborasi.",
         "getInTouch": "Hubungi Saya",
-        "getResume": "Unduh Resume"
+        "getResume": "Unduh Resume",
+        "share_title": "Website Personal Saya",
+        "thank_you_message": "Terima kasih sudah mengunjungi ! 😊 Yuk, bagikan dengan teman-temanmu. 🎉",
+        "share_link": "Bagikan Link",
+        "link_copied": "Link Tersalin!",
+        "techstack": "Teknologi yang dipakai"
     },
     "About": {
         "title": "Tentang",
