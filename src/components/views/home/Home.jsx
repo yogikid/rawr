@@ -35,10 +35,10 @@ const Home = () => {
                 </div>
                 <div className="flex flex-col ">
                     <p className='text-subtext text-sm'>
-                        {t('based')}<i className="text-primary fal fa-location-dot ml-2"></i>
+                        {t('motto')}<i className="text-primary fal fa-quote-right ml-2"></i>
                     </p>
                     <p className='text-subtext text-sm'>
-                        {t('motto')}<i className="text-primary fal fa-quote-right ml-2"></i>
+                        {t('based')}<i className="text-primary fal fa-location-dot ml-2"></i>
                     </p>
                 </div>
             </div>
