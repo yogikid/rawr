@@ -44,9 +44,9 @@ const SocialShare = () => {
             <div className="flex mb-3 justify-start">
                 <button
                     onClick={handleCopyLink}
-                    className="min-w-[8.75rem] mr-3 text-slate-500 flex items-center justify-center gap-2 px-3 py-2 text-sm bg-gray-100 rounded-md border border-gray-300 hover:bg-gray-200"
+                    className="min-w-[8.75rem] mr-3 text-slate-600 flex items-center justify-center gap-2 px-3 py-2 text-sm bg-gray-100 rounded-md border border-gray-300 hover:bg-gray-200"
                 >
-                    <i className={`fal ${isLinkCopied ? "fa-check text-green-500" : "fa-copy text-slate-500"}`}></i>
+                    <i className={`fal ${isLinkCopied ? "fa-check text-green-500" : "fa-copy text-slate-600"}`}></i>
                     {isLinkCopied ? t('link_copied'):  t('share_link')}
                 </button>
 
@@ -54,7 +54,7 @@ const SocialShare = () => {
                     onClick={handleEmailShare}
                     className="flex items-center gap-2 px-3 py-2 text-sm font-medium bg-gray-100 rounded-md border border-gray-300 hover:bg-gray-200 "
                 >
-                    <i className="fal fa-envelope text-slate-500"></i>
+                    <i className="fal fa-envelope text-slate-600"></i>
                 </button>
             </div>
             <div className="grid grid-cols-4 gap-3">
