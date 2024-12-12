@@ -67,11 +67,19 @@ const Sidebar = ({ className, lastUpdate }) => {
         };
     }, [toggle]);
 
-    const handlers = useSwipeable({
+    const handlersClose = useSwipeable({
         delta: 50,
         trackMouse: true,
         trackTouch: true,
         onSwipedLeft: () => setToggle(false),
+        preventScrollOnSwipe: true,
+        touchEventOptions: { passive: true },
+    });
+    const handlersOpen = useSwipeable({
+        delta: 24,
+        trackMouse: true,
+        trackTouch: true,
+        onSwipedRight: () => setToggle(true),
         preventScrollOnSwipe: true,
         touchEventOptions: { passive: true },
     });
@@ -82,7 +90,8 @@ const Sidebar = ({ className, lastUpdate }) => {
 
     return (
         <>
-            <aside {...handlers} className={`sidebar ${className} ${toggle && '!left-0'} max-h-[100dvh] min-h-[100dvh] scrollbar-hide overflow-x-auto fixed -left-64 lg:left-0 top-0 bg-container border border-stroke pl-0 p-6 w-64 flex flex-col gap-8 justify-between text-center transition-3s z-10 lg:z-0 shadow-sm`}>
+            <div  {...handlersOpen} className="w-6 h-full absolute top-0 left-0 lg:hidden z-10" />
+            <aside {...handlersClose} className={`sidebar ${className} ${toggle && '!left-0'} max-h-[100dvh] min-h-[100dvh] scrollbar-hide overflow-x-auto fixed -left-64 lg:left-0 top-0 bg-container border border-stroke pl-0 p-6 w-64 flex flex-col gap-8 justify-between text-center transition-3s z-10 lg:z-0 shadow-sm`}>
                 <div className="flex flex-col gap-8">
                     <header className="ml-6 flex flex-col gap-8">
                         <button
