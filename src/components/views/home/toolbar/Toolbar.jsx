@@ -31,27 +31,38 @@ const Toolbar = () => {
             {/* Tombol Share */}
             <div className="relative flex gap-2" ref={PopupRef}>
                 <button
+                    onClick={() => window.open("https://github.com/sponsors/dwiwijaya", "_blank")}
+                    aria-label="Sponsor"
+                    title="Sponsor"
+                    data-umami-event="Sponsor"
+                    target="_blank"
+                    className="bg-container px-3 h-full rounded-lg text-primary border border-stroke"
+                >
+                    <i className="fal fa-heart"></i>
+                </button>
+                <button
+                    data-umami-event="Share"
+                    aria-label="Share"
+                    title="Share"
                     className="bg-container px-3 h-10 rounded-lg text-primary border border-stroke"
                     onClick={() => { setShowSharePopup((prev) => !prev), setShowInfoPopup(false) }}
-                    aria-label="Share content"
-                    data-umami-event="toolbar-share-clicked"
                 >
                     <i className="fal fa-up-right-from-square"></i>
+                </button>
+                <button
+                    data-umami-event="Info"
+                    aria-label="Info"
+                    title="Info"
+                    className="bg-container px-3 h-10 rounded-lg text-primary border border-stroke"
+                    onClick={() => { setShowInfoPopup((prev) => !prev); setShowSharePopup(false) }}
+                >
+                    <i className="fal fa-lg fa-microchip"></i>
                 </button>
                 <Popup isVisible={showSharePopup}>
                     <div className="">
                         <SocialShare />
                     </div>
                 </Popup>
-
-                <button
-                    className="bg-container px-3 h-10 rounded-lg text-primary border border-stroke"
-                    onClick={() => { setShowInfoPopup((prev) => !prev); setShowSharePopup(false) }}
-                    aria-label="Show tech stack information"
-                    data-umami-event="toolbar-info-techstack-clicked"
-                >
-                    <i className="fal fa-lg fa-microchip"></i>
-                </button>
                 <Popup isVisible={showInfoPopup}>
                     <div className="">
                         <TechStack />
