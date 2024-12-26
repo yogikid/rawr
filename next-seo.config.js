@@ -67,7 +67,7 @@ const getDefaultSEOConfig = (locale, currentPageURL) => ({
     },
     {
       name: 'theme-color',
-      content: '#ff774d',
+      content: '#222831',
     },
     {
       name: 'mobile-web-app-capable',
