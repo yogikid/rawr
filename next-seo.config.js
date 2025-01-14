@@ -67,7 +67,7 @@ const getDefaultSEOConfig = (locale, currentPageURL) => ({
     },
     {
       name: 'theme-color',
-      content: '#ff774d',
+      content: '#222831',
     },
     {
       name: 'mobile-web-app-capable',
@@ -88,6 +88,10 @@ const getDefaultSEOConfig = (locale, currentPageURL) => ({
     {
       name: 'apple-mobile-web-app-status-bar-style',
       content: 'default',
+    },
+    {
+      name: 'msapplication-TileColor',
+      content: '#bdcee9',
     },
   ],
   additionalLinkTags: [
