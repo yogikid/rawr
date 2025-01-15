@@ -1,6 +1,5 @@
 const metaDescription = 'Dwi Wijaya is a Full-Stack Developer, specializes in building efficient, scalable web & apps with seamless user experiences. Let’s bring your vision to life!';
-const metaSquareImage = 'https://zyhdjqkdvsbxnpngpvkc.supabase.co/storage/v1/object/public/seo/squre-ogimage.png'
-const metaImage = 'https://firebasestorage.googleapis.com/v0/b/portfolio-dwiwijaya.appspot.com/o/meta-image.jpg?alt=media&token=45e644b5-1655-40e7-83b6-dc73bf3ecfa6';
+const metaImage = 'https://dwiwijaya.com/og-image.png';
 
 const getDefaultSEOConfig = (locale, currentPageURL) => ({
   title: 'Dwi Wijaya - Personal Website',
@@ -20,12 +19,7 @@ const getDefaultSEOConfig = (locale, currentPageURL) => ({
       username: 'dwiwijaya',
     },
     images: [
-      {
-        url: metaSquareImage,
-        alt: 'Dwi Wijaya - og:image',
-        width: 600,
-        height: 600,
-      },
+      
       {
         url: metaImage,
         alt: 'Dwi Wijaya - og:image',
@@ -127,7 +121,7 @@ const getDefaultSEOConfig = (locale, currentPageURL) => ({
       rel: 'icon',
       type: 'image/png',
       sizes: '512x512',
-      href: '/favicon/dark-512.png',
+      href: '/favicon/logo.png',
       media: '(prefers-color-scheme: dark)',
     },
     {
@@ -162,7 +156,7 @@ const getDefaultSEOConfig = (locale, currentPageURL) => ({
       rel: 'icon',
       type: 'image/png',
       sizes: '512x512',
-      href: '/favicon/light-512.png',
+      href: '/favicon/logo2.png',
       media: '(prefers-color-scheme: light)',
     },
     {

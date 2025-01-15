@@ -7,7 +7,12 @@ const nextConfig = {
     defaultLocale: 'id', // Set the default locale
   },
   images: {
-    domains: ['firebasestorage.googleapis.com', 'lh3.googleusercontent.com','avatars.githubusercontent.com'],
+    domains: [
+      'firebasestorage.googleapis.com', 
+      'lh3.googleusercontent.com',
+      'avatars.githubusercontent.com',
+      'dwiwijaya.com'
+    ],
   },
 };
 
