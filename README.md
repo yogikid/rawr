@@ -1,40 +1,82 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# dwiwijaya.com
 
-First, run the development server:
+A sleek and modern personal portfolio website showcasing my skills, projects, and experience as a Full-Stack Developer.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This project is a personal portfolio website designed to highlight my expertise in full-stack development. It serves as a platform to present my professional background, showcase my projects, and provide a means for potential collaborators or employers to get in touch.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Screenshot
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+![Homepage Screenshot](https://www.dwiwijaya.com/screenshot.png)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Responsive Design**: Optimized for various devices and screen sizes.
+- **Project Showcase**: Detailed presentations of selected projects.
+- **Contact Form**: Easy-to-use form for direct communication.
+- **Blog Section**: Insights and articles on web development.
+- **Multilingual Support**: Available in multiple languages for a broader audience.
 
-## Learn More
+## Pages
 
-To learn more about Next.js, take a look at the following resources:
+- **Home**: Introduction and overview.
+- **About**: Detailed information about my background and skills.
+- **Projects**: Showcase of my work and accomplishments.
+- **Blog**: Articles and insights on various topics.
+- **Contact**: Form to reach out to me directly.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Installation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Prerequisites
 
-## Deploy on Vercel
+- Node.js (v14 or higher)
+- npm or yarn package manager
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Setup
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. **Clone the repository**:
+
+   ```bash
+   git clone https://github.com/dwiwijaya/dwiwijaya.com.git
+   cd dwiwijaya.com
+   ```
+
+2. **Install dependencies**:
+
+   Using npm:
+
+   ```bash
+   npm install
+   ```
+
+   Or using yarn:
+
+   ```bash
+   yarn install
+   ```
+
+3. **Run the development server**:
+
+   Using npm:
+
+   ```bash
+   npm run dev
+   ```
+
+   Or using yarn:
+
+   ```bash
+   yarn dev
+   ```
+
+   Open [http://localhost:3000](http://localhost:3000) to view the website in your browser.
+
+## Deployment
+
+This project can be deployed to various hosting platforms that support Next.js applications, such as Vercel, Netlify, or a custom server. Ensure that all environment variables are properly configured before deployment.
+
+## License
+
+This project is licensed under the GNU General Public License v3.0. See the [LICENSE](https://github.com/dwiwijaya/dwiwijaya.com/blob/main/LICENSE) file for details.
