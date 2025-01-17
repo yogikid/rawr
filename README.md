@@ -42,9 +42,6 @@ Here are the key features that make this website unique:
 - ### 💬 Realtime Guestbook  
   A dynamic chat-powered guestbook built with Firebase. Visitors can leave messages that appear instantly on the website.
 
-- ### 🕗 Wakatime Statistics  
-  View real-time coding statistics fetched through the Wakatime API and displayed on the dashboard.
-
 - ### 🗳 Projects  
   This section showcases projects fetched from a Supabase PostgreSQL database using Prisma. Data is retrieved with ISR (Incremental Static Regeneration) and SSR (Server-Side Rendering) for project details.
 <br /><br />
