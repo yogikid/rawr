@@ -1,82 +1,129 @@
+<div align="center">
+  <h1>dwiwijaya.com</h1>
+  <p>🔥 A personal website thoughtfully crafted using Next.js, Tailwind CSS, SWR, and Supabase</p>
+</div>
+<br />
 
-# dwiwijaya.com
+![Preview](/assets/preview.png)
 
-A sleek and modern personal portfolio website showcasing my skills, projects, and experience as a Full-Stack Developer.
+## Introduction
 
-## Overview
+Welcome to my personal website repository! This platform is more than just a website—it's a space to share knowledge, insights, and tools. Built from scratch starting in June 2024, it incorporates cutting-edge technologies and draws inspiration from <a href="https://aulianza.id/" target="_blank" rel="noopener noreferrer">Aulianza's website</a>.  
 
-This project is a personal portfolio website designed to highlight my expertise in full-stack development. It serves as a platform to present my professional background, showcase my projects, and provide a means for potential collaborators or employers to get in touch.
+This is an evolving project where I constantly strive to enhance features and deliver better functionality. Feel free to explore, use, or modify it as a reference for your own projects.  
 
-## Screenshot
+If you find this repository useful, show your support with a ⭐. Got suggestions or questions? I'd love to hear from you! 🧑‍💻  
+<br /><br />
 
-![Homepage Screenshot](https://www.dwiwijaya.com/screenshot.png)
+## Tech Stack
+
+This project leverages the following technologies and tools:  
+
+- ◼️ Next.js 13.5.6
+- ⚛️ React 18
+- 💠 Tailwind CSS 3
+- 🅰️ Font Awesome Pro
+- 💢 React Icons
+- ➰ Framer Motion
+- 〰️ SWR
+- 🔥 Supabase
+- 📧 EmailJS
+- 📱 PWA
+- 🧿 Absolute Import and Path Alias
+- 📏 ESLint
+- ✨ Prettier
+- 📌 Conventional Commit Lint
+<br />
 
 ## Features
 
-- **Responsive Design**: Optimized for various devices and screen sizes.
-- **Project Showcase**: Detailed presentations of selected projects.
-- **Contact Form**: Easy-to-use form for direct communication.
-- **Blog Section**: Insights and articles on web development.
-- **Multilingual Support**: Available in multiple languages for a broader audience.
+Here are the key features that make this website unique:
 
-## Pages
+- ### 💬 Realtime Guestbook  
+  A dynamic chat-powered guestbook built with Firebase. Visitors can leave messages that appear instantly on the website.
 
-- **Home**: Introduction and overview.
-- **About**: Detailed information about my background and skills.
-- **Projects**: Showcase of my work and accomplishments.
-- **Blog**: Articles and insights on various topics.
-- **Contact**: Form to reach out to me directly.
+- ### 🕗 Wakatime Statistics  
+  View real-time coding statistics fetched through the Wakatime API and displayed on the dashboard.
 
-## Installation
+- ### 🗳 Projects  
+  This section showcases projects fetched from a Supabase PostgreSQL database using Prisma. Data is retrieved with ISR (Incremental Static Regeneration) and SSR (Server-Side Rendering) for project details.
+<br /><br />
 
-### Prerequisites
+## Performance
 
-- Node.js (v14 or higher)
-- npm or yarn package manager
+- **PageSpeed Insights**  
+  [Performance report](https://pagespeed.web.dev/analysis/https-dwiwijaya-com/spw0h9zc7j?form_factor=desktop)  
 
-### Setup
+  ![PageSpeed Insights](/assets/pagespeed.png)
 
-1. **Clone the repository**:
+- **GTmetrix**  
+  [Performance report](https://gtmetrix.com/reports/dwiwijaya.com/K78O0zLh/)  
 
-   ```bash
-   git clone https://github.com/dwiwijaya/dwiwijaya.com.git
-   cd dwiwijaya.com
-   ```
+  ![GTmetrix](/assets/gtmetrix.png)
+<br /><br />
 
-2. **Install dependencies**:
+## Future Development Plans
 
-   Using npm:
+Here’s what’s on the horizon for this project:  
 
-   ```bash
-   npm install
-   ```
+1. **Migration to Supabase**  
+   Complete migration of backend functionalities to Supabase for improved scalability and performance.  
+   *Status: Not started yet.*  
 
-   Or using yarn:
+2. **Feature Blog**  
+   The blog feature is in maintenance and temporarily accessible at [https://dev.dwiwijaya.com](https://dev.dwiwijaya.com).  
+   *Status: On hold due to other priorities.*  
 
-   ```bash
-   yarn install
-   ```
+3. **Redesign Homepage Layout**  
+   Revamp the homepage for a cleaner and more modern look, optimizing user experience while keeping it visually appealing.  
+   *Status: Planned.*  
+<br /><br />
 
-3. **Run the development server**:
+## Getting Started
 
-   Using npm:
+Follow these simple steps to get the project running locally:
 
-   ```bash
-   npm run dev
-   ```
+### 1. Clone the Repository  
 
-   Or using yarn:
+You can clone this repository in three different ways:  
 
-   ```bash
-   yarn dev
-   ```
+- **Using Git**  
+  ```bash
+  git clone https://github.com/dwiwijaya/dwiwijaya.com
+  ```
 
-   Open [http://localhost:3000](http://localhost:3000) to view the website in your browser.
+- **Using `create-next-app`**  
+  ```bash
+  npx create-next-app -e https://github.com/dwiwijaya/dwiwijaya.com project-name
+  ```
 
-## Deployment
+- **Using `degit`**  
+  ```bash
+  npx degit dwiwijaya/dwiwijaya.com YOUR_APP_NAME
+  ```
 
-This project can be deployed to various hosting platforms that support Next.js applications, such as Vercel, Netlify, or a custom server. Ensure that all environment variables are properly configured before deployment.
+### 2. Install Dependencies  
 
-## License
+To ensure proper setup, it's recommended to use **yarn** for installing dependencies:  
+```bash
+yarn install
+```  
 
-This project is licensed under the GNU General Public License v3.0. See the [LICENSE](https://github.com/dwiwijaya/dwiwijaya.com/blob/main/LICENSE) file for details.
+### 3. Configure `.env`  
+
+Copy the `.env.example` file to `.env` and replace placeholders with your credentials. For third-party integrations like Spotify, Firebase, and Supabase, refer to their respective documentation.  
+
+### 4. Start Development Server  
+
+Launch the server locally using this command:  
+```bash
+yarn dev
+```  
+
+Then, open [http://localhost:3000](http://localhost:3000) to view the website. You can start customizing it by modifying files in the `src` directory.
+<br /><br />
+
+## License  
+
+This project is licensed under the [GPL-3.0 license](https://github.com/dwiwijaya/dwiwijaya.com/blob/master/LICENSE).  
+Feel free to use, modify, and share it while adhering to the terms.
