@@ -11,7 +11,7 @@ const Home = () => {
     const t = useTranslations('Home');
     return (
         <div className='absolute -top-[175%] w-[calc(100%-40px)] '>
-            <div className="flex justify-between gap-2 items-end  mb-8">
+            <div className="flex justify-between gap-4 items-end  mb-8">
                 <div className="!min-w-[108px] max-w-[108px] outline outline-[.5rem] outline-background rounded-2xl bg-container">
                     <Image
                         src={Profile}
@@ -20,27 +20,33 @@ const Home = () => {
                     />
                 </div>
             </div>
-            <div className="flex flex-col gap-2">
-                <h1 className="font-bold text-3xl text-text">
+            <div className="flex flex-col gap-4">
+                <h1 className="font-bold text-3xl text-text flex items-center gap-3 group">
                     Dwi Wijaya
+                    <i className="text-green-500 dark:text-green-300 fad fa-check-circle fa-2xs transition-all duration-100 transform group-hover:scale-110"></i>
                 </h1>
+
                 <div className="flex flex-col">
-                    <h2 className="flex items-center gap-2 mb-1 text-text">
-                        {t('introduction')} <BiCodeAlt className='text-primary' /> &nbsp;
+                    <h2 className="flex items-center mb-2 text-text font-semibold text-lg">
+                        {t('introduction')}
                     </h2>
-                    <p className='text-text text-sm'>
-                        {t('passion')} <i className="fal fa-leaf text-primary ml-2"></i>
+                    <p className='text-text text-sm leading-relaxed'>
+                        {t('passion')}
                     </p>
                 </div>
-                <div className="flex flex-col ">
-                    <p className='text-subtext text-sm'>
-                        - {t('openToOpportunities')}<i className="text-primary fal fa-bolt ml-2"></i>
+
+                <div className="flex flex-col space-y-1">
+                    <p className='text-subtext gap-2 text-sm flex items-center hover:text-primary transition-all duration-100 group'>
+                        <span className="text-primary">-</span> {t('openToOpportunities')}
+                        <i className="text-primary fal fa-bolt"></i>
                     </p>
-                    <p className='text-subtext text-sm'>
-                        - {t('motto')}<i className="text-primary fal fa-quote-right ml-2"></i>
+                    <p className='text-subtext gap-2 text-sm flex items-center hover:text-primary transition-all duration-100 group'>
+                        <span className="text-primary">-</span> {t('motto')}
+                        <i className="text-primary fal fa-quote-right"></i>
                     </p>
-                    <p className='text-subtext text-sm'>
-                        - {t('based')}<i className="text-primary fal fa-location-dot ml-2"></i>
+                    <p className='text-subtext gap-2 text-sm flex items-center hover:text-primary transition-all duration-100 group'>
+                        <span className="text-primary">-</span> {t('based')}
+                        <i className="text-primary fal fa-location-dot"></i>
                     </p>
                 </div>
             </div>
