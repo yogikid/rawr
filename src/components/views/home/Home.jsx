@@ -15,9 +15,8 @@ const Home = () => {
                 <div className="!min-w-[108px] max-w-[108px] outline outline-[.5rem] outline-background rounded-2xl bg-container">
                     <Image
                         src={Profile}
-                        alt='Dwi Wijaya'
-                        rounded='rounded-2xl'
-                        className=""
+                        alt="Dwi Wijaya"
+                        className="rounded-2xl"
                     />
                 </div>
             </div>
@@ -35,10 +34,13 @@ const Home = () => {
                 </div>
                 <div className="flex flex-col ">
                     <p className='text-subtext text-sm'>
-                        {t('motto')}<i className="text-primary fal fa-quote-right ml-2"></i>
+                        - {t('openToOpportunities')}<i className="text-primary fal fa-bolt ml-2"></i>
                     </p>
                     <p className='text-subtext text-sm'>
-                        {t('based')}<i className="text-primary fal fa-location-dot ml-2"></i>
+                        - {t('motto')}<i className="text-primary fal fa-quote-right ml-2"></i>
+                    </p>
+                    <p className='text-subtext text-sm'>
+                        - {t('based')}<i className="text-primary fal fa-location-dot ml-2"></i>
                     </p>
                 </div>
             </div>
