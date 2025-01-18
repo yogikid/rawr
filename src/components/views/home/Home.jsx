@@ -23,7 +23,7 @@ const Home = () => {
             <div className="flex flex-col gap-4">
                 <h1 className="font-bold text-3xl text-text flex items-center gap-3 group">
                     Dwi Wijaya
-                    <i className="text-green-500 dark:text-green-300 fad fa-check-circle fa-2xs transition-all duration-100 transform group-hover:animate-flip"></i>
+                    <i className="text-green-400 dark:text-green-300 fad fa-check-circle fa-2xs transition-all duration-100 transform group-hover:animate-flip active:scale-150"></i>
                 </h1>
 
                 <div className="flex flex-col">
