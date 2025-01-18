@@ -31,6 +31,11 @@ module.exports = {
       aspectRatio: {
         'thumbnail': '2',
       },
+      animation: {
+        'loop-1' : 'scroll var(--time) linear infinite',
+        'loop-2' : 'scroll2 var(--time) linear infinite',
+        flip: 'flip 0.6s ease-in-out forwards',
+      },
       keyframes: {
         scroll: {
           '0%': {
@@ -48,10 +53,17 @@ module.exports = {
             transform: 'translateX(-200%)',
           },
         },
-      },
-      animation: {
-        'loop-1' : 'scroll var(--time) linear infinite',
-        'loop-2' : 'scroll2 var(--time) linear infinite',
+        flip: {
+          '0%': {
+            transform: 'rotateY(0deg)',
+          },
+          '50%': {
+            transform: 'rotateY(180deg)',
+          },
+          '100%': {
+            transform: 'rotateY(360deg)',
+          },
+        },
       },
     }
   },
