@@ -131,7 +131,7 @@ const Calendar = ({ style, data }) => {
                         'rounded  px-2 text-sm bg-container border border-stroke'
                     )}
                 >
-                    <span className="text-green-500">{selectContribution?.count}</span> { locale === 'en' ? 'contributions on' : 'kontribusi pada' + ' '}
+                    <span className="text-green-500">{selectContribution?.count}</span> { locale === 'en' ? 'contributions on ' : 'kontribusi pada '}
                     {selectContribution?.date}
                 </div>
             </div>
