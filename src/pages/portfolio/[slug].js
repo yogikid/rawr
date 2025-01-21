@@ -8,19 +8,19 @@ import { useRouter } from 'next/router'
 import React from 'react'
 
 const DetailPortfolioPage = ({ portfolio }) => {
-    const { locale, asPath } = useRouter();
+    const { locale, pathname } = useRouter();
     const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL;
     const lang = locale == 'en' ? '/en' : ''
-    const currentPageURL = `${SITE_URL}${lang}${asPath}`
+    const currentPageURL = `${SITE_URL}${lang}${pathname}`
     return (
         <>
             <NextSeo
                 title={`${portfolio.name} - Dwi Wijaya`}
                 description={portfolio.excerpt}
                 additionalLinkTags={[
-                    { rel: 'alternate', hreflang: 'x-default', href: `${SITE_URL}${asPath}` },
-                    { rel: 'alternate', hreflang: 'id', href: `${SITE_URL}${asPath}` },
-                    { rel: 'alternate', hreflang: 'en', href: `${SITE_URL}/en${asPath}` },
+                    { rel: 'alternate', hreflang: 'x-default', href: `${SITE_URL}${pathname}` },
+                    { rel: 'alternate', hreflang: 'id', href: `${SITE_URL}${pathname}` },
+                    { rel: 'alternate', hreflang: 'en', href: `${SITE_URL}/en${pathname}` },
                 ]}
                 canonical={currentPageURL}
                 openGraph={{

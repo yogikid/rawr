@@ -11,10 +11,10 @@ const Fallback = () => {
     window.location.reload();
   };
 
-  const { locale, asPath } = useRouter();
+  const { locale, pathname } = useRouter();
   const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL;
   const lang = locale == 'en' ? '/en' : ''
-  const currentPageURL = `${SITE_URL}${lang}${asPath}`
+  const currentPageURL = `${SITE_URL}${lang}${pathname}`
 
   return (
     <>
@@ -22,9 +22,9 @@ const Fallback = () => {
         title={`${t('title')} - Dwi Wijaya`}
         description={t('metaDesc')}
         additionalLinkTags={[
-          { rel: 'alternate', hreflang: 'x-default', href: `${SITE_URL}${asPath}` },
-          { rel: 'alternate', hreflang: 'id', href: `${SITE_URL}${asPath}` },
-          { rel: 'alternate', hreflang: 'en', href: `${SITE_URL}/en${asPath}` },
+          { rel: 'alternate', hreflang: 'x-default', href: `${SITE_URL}${pathname}` },
+          { rel: 'alternate', hreflang: 'id', href: `${SITE_URL}${pathname}` },
+          { rel: 'alternate', hreflang: 'en', href: `${SITE_URL}/en${pathname}` },
         ]}
         canonical={currentPageURL}
         openGraph={{

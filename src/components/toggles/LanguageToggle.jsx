@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { setCookie } from 'cookies-next';
 
 const LanguageToggle = () => {
-    const { locale, push, pathname, asPath, query } = useRouter();
+    const { locale, push, pathname, query } = useRouter();
     const [language, setLanguage] = useState(locale);
 
     useEffect(() => {
@@ -14,8 +14,8 @@ const LanguageToggle = () => {
     const toggleLanguage = () => {
         const newLanguage = language === 'id' ? 'en' : 'id';
         setLanguage(newLanguage);
-        setCookie('NEXT_LOCALE', newLanguage); // Update the cookie
-        push({ pathname, query }, asPath, { locale: newLanguage });
+        setCookie('NEXT_LOCALE', newLanguage);
+        push({ pathname, query }, pathname, { locale: newLanguage });
     };
 
     return (
