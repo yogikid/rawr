@@ -1,15 +1,13 @@
 const metaDescription = 'Dwi Wijaya is a Full-Stack Developer, specializes in building efficient, scalable web & apps with seamless user experiences. Let’s bring your vision to life!';
 const metaImage = 'https://dwiwijaya.com/og-image.png';
 
-const getDefaultSEOConfig = (locale, currentPageURL) => ({
+const getDefaultSEOConfig = (locale) => ({
   title: 'Dwi Wijaya - Personal Website',
   defaultTitle: 'Dwi Wijaya - Personal Website',
-  canonical: currentPageURL,
   description: metaDescription,
   openGraph: {
     title: 'Dwi Wijaya - Personal Website',
     description: metaDescription,
-    url: currentPageURL,
     type: 'profile',
     siteName: 'Dwi Wijaya',
     locale: locale === 'id' ? 'id_ID' : 'en_US',

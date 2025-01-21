@@ -11,7 +11,7 @@ const DetailPortfolioPage = ({ portfolio }) => {
     const { locale, asPath } = useRouter();
     const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL;
     const lang = locale == 'en' ? '/en' : ''
-
+    const currentPageURL = `${SITE_URL}${lang}${asPath}`
     return (
         <>
             <NextSeo
@@ -22,6 +22,10 @@ const DetailPortfolioPage = ({ portfolio }) => {
                     { rel: 'alternate', hreflang: 'id', href: `${SITE_URL}${asPath}` },
                     { rel: 'alternate', hreflang: 'en', href: `${SITE_URL}/en${asPath}` },
                 ]}
+                canonical={currentPageURL}
+                openGraph={{
+                    url: currentPageURL,
+                }}
             />
             <BackToggle />
             <Container data-aos='fade-up'>

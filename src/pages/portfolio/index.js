@@ -13,6 +13,7 @@ const PortfolioPage = ({ portfolios }) => {
     const { locale, asPath } = useRouter();
     const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL;
     const lang = locale == 'en' ? '/en' : ''
+    const currentPageURL = `${SITE_URL}${lang}${asPath}`
 
     return (
         <>
@@ -24,6 +25,10 @@ const PortfolioPage = ({ portfolios }) => {
                     { rel: 'alternate', hreflang: 'id', href: `${SITE_URL}${asPath}` },
                     { rel: 'alternate', hreflang: 'en', href: `${SITE_URL}/en${asPath}` },
                 ]}
+                canonical={currentPageURL}
+                openGraph={{
+                    url: currentPageURL,
+                }}
             />
             <Container data-aos='fade-up'>
                 <PageHeading

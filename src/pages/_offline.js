@@ -14,6 +14,7 @@ const Fallback = () => {
   const { locale, asPath } = useRouter();
   const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL;
   const lang = locale == 'en' ? '/en' : ''
+  const currentPageURL = `${SITE_URL}${lang}${asPath}`
 
   return (
     <>
@@ -25,6 +26,10 @@ const Fallback = () => {
           { rel: 'alternate', hreflang: 'id', href: `${SITE_URL}${asPath}` },
           { rel: 'alternate', hreflang: 'en', href: `${SITE_URL}/en${asPath}` },
         ]}
+        canonical={currentPageURL}
+        openGraph={{
+          url: currentPageURL,
+        }}
       />
 
       <Blank className='text-center flex justify-center !items-center !h-[100dvh]'>
