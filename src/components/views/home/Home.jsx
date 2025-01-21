@@ -57,7 +57,7 @@ const Home = () => {
                     <i className='fad fa-rocket-launch text-primary'></i>
                     <h3 className='text-xl text-title font-medium'>{t('collaboration')}</h3>
                 </div>
-                <p className='text-subtext mt-2 mb-5'>
+                <p className='text-sm text-text mt-2 mb-5'>
                     {t('freelance')}
                 </p>
                 <div className="flex gap-2">
