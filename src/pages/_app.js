@@ -61,7 +61,7 @@ export default function App({ Component, pageProps, lastCommitDate, messages }) 
         position="top-right"
       />
 
-      <ThemeProvider attribute='class' enableSystem={false} disableTransitionOnChange={true} defaultTheme="dark">
+      <ThemeProvider attribute='class' enableSystem={false} disableTransitionOnChange={true}>
         <Layout lastUpdate={lastCommitDate}>
           <ProgressBar />
           <Component {...pageProps} />
