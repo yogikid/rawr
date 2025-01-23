@@ -3,8 +3,8 @@ const removeImports = require('next-remove-imports')();
 const nextConfig = {
   reactStrictMode: true,
   i18n: {
-    locales: ['en', 'id'], // Add your supported locales
-    defaultLocale: 'id', // Set the default locale
+    locales: ['en', 'id'],
+    defaultLocale: 'id',
   },
   images: {
     domains: [
