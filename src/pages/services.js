@@ -1,5 +1,6 @@
 import PageHeading from '@/components/common/PageHeading';
 import Container from '@/components/layouts/partials/Container'
+import FAQSection from '@/components/views/service/FAQSection';
 import Services from '@/components/views/service/Services'
 import { useTranslations } from 'next-intl';
 import { NextSeo } from 'next-seo';
@@ -34,7 +35,10 @@ const ServicesPage = () => {
                     title={t('title')}
                     description={t('subtitle')}
                 />
-                <Services />
+                <div className='flex flex-col gap-6'>
+                    <Services />
+                    <FAQSection />
+                </div>
             </Container>
         </>
     )
