@@ -68,7 +68,7 @@ const FAQSection = ({ locale }) => {
 
             <div className="flex justify-start items-center gap-2">
                 <p>{t("contactText")}</p>
-                <Link className="font-medium text-primary" href="/contact">
+                <Link className="font-medium text-primary" href="/contact" aria-label="Go to Contact Page">
                     {t("contactLink")}
                 </Link>
             </div>
