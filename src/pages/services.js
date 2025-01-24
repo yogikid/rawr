@@ -37,7 +37,7 @@ const ServicesPage = () => {
                 />
                 <div className='flex flex-col gap-6'>
                     <Services />
-                    <FAQSection />
+                    <FAQSection locale={locale} />
                 </div>
             </Container>
         </>
