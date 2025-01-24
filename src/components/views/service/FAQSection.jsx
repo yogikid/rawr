@@ -68,7 +68,7 @@ const FAQSection = ({ locale }) => {
 
             <div className="flex justify-start items-center gap-2">
                 <p>{t("contactText")}</p>
-                <Link className="font-medium" href="/contact">
+                <Link className="font-medium text-primary" href="/contact">
                     {t("contactLink")}
                 </Link>
             </div>
