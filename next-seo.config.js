@@ -88,6 +88,11 @@ const getDefaultSEOConfig = (locale) => ({
   ],
   additionalLinkTags: [
     {
+      rel: 'apple-touch-icon',
+      sizes: '180x180',
+      href: '/favicon/square-light-180.png',
+    },
+    {
       rel: 'icon',
       type: 'image/png',
       sizes: '16x16',
@@ -155,18 +160,6 @@ const getDefaultSEOConfig = (locale) => ({
       type: 'image/png',
       sizes: '512x512',
       href: '/favicon/logo2.png',
-      media: '(prefers-color-scheme: light)',
-    },
-    {
-      rel: 'apple-touch-icon',
-      sizes: '180x180',
-      href: '/favicon/dark-180.png',
-      media: '(prefers-color-scheme: dark)',
-    },
-    {
-      rel: 'apple-touch-icon',
-      sizes: '180x180',
-      href: '/favicon/light-180.png',
       media: '(prefers-color-scheme: light)',
     },
     {
