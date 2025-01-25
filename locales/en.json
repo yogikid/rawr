@@ -38,7 +38,13 @@
     "Services": {
         "title": "Services",
         "metaDesc": "Explore the specialized services Dwi Wijaya offers, from web development, app development, UI/UX, design to consulting. Tailored solutions to bring your digital vision to life.",
-        "subtitle": "Learn about the specialized services I offer to clients."
+        "subtitle": "Learn about the specialized services I offer to clients.",
+        "FAQ": {
+            "faqHeading": "Frequently Asked Questions",
+            "faqDescription": "Quick answers to common questions about my services",
+            "contactText": "Got any more question?",
+            "contactLink": "Get in touch"
+        }
     },
     "Contact": {
         "title": "Get in Touch",

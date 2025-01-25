@@ -38,7 +38,13 @@
     "Services": {
         "title": "Layanan",
         "metaDesc": "Jelajahi layanan khusus yang ditawarkan Dwi Wijaya, mulai dari pengembangan web, pengembangan aplikasi, UI/UX, design, hingga konsultasi. Solusi yang disesuaikan untuk mewujudkan visi digital Anda.",
-        "subtitle": "Temukan layanan khusus yang saya tawarkan untuk klien."
+        "subtitle": "Temukan layanan khusus yang saya tawarkan untuk klien.",
+        "FAQ": {
+            "faqHeading": "Pertanyaan yang Sering Diajukan",
+            "faqDescription": "Jawaban cepat untuk pertanyaan umum terkait layanan saya",
+            "contactText": "Punya pertanyaan lain?",
+            "contactLink": "Hubungi saya"
+        }
     },
     "Contact": {
         "title": "Hubungi Saya",

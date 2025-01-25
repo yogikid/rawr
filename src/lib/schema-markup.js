@@ -53,42 +53,5 @@ export const schemaMarkup = {
                 { "@type": "ListItem", "position": 10, "name": "Guestbook", "url": "https://dwiwijaya.com/guestbook" }
             ]
         },
-        {
-            "@type": "FAQPage",
-            "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": "What services do you offer?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "I offer web development, app development, UI/UX design, and consulting services tailored to clients' needs."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "What projects have you worked on?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "I’ve worked on various web development projects, including e-commerce sites, personal blogs, applications, UI/UX design projects, and more."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Do you offer freelance services?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Yes, I'm available for freelance projects. Feel free to reach out for availability."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "How can I get in touch with you?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "I’d love to hear about your project! You can reach out through my social media channels or send me a message via the contact form. I’ll make sure to respond within 24 hours to discuss how we can bring your vision to life."
-                    }
-                }
-            ]
-        }
     ]
 };
