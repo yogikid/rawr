@@ -38,7 +38,7 @@ const DashboardPage = ({ fallback }) => {
                         title={t('title')}
                         description={t('subtitle')}
                     />
-                    <Dashboard leetcodeEndpoint='/api/leetcode' githubEndpoint='/api/github' />
+                    <Dashboard leetcodeEndpoint='/api/leetcode' githubEndpoint='/api/github' locale={locale} />
                 </Container>
             </SWRConfig>
         </>

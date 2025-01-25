@@ -36,7 +36,7 @@ const ExperiencePage = ({ experience }) => {
                     title={t('title')}
                     description={t('subtitle')}
                 />
-                <Experience experience={experience} />
+                <Experience experience={experience} locale={locale} />
             </Container>
         </>
     )

@@ -1,4 +1,5 @@
 import { supabase } from "@/lib/supabase";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { BsGithub as GithubIcon } from "react-icons/bs";
 import { FcGoogle as GoogleIcon } from "react-icons/fc";
@@ -31,6 +32,7 @@ const signIn = async (provider) => {
     });
 };
 const ChatAuth = () => {
+    const t = useTranslations("Guestbook");
     return (
         <div className="flex flex-col border-t border-stroke">
             <div className="space-y-5 pt-3 text-start text-neutral-700 dark:text-neutral-400">
@@ -39,7 +41,7 @@ const ChatAuth = () => {
                         <SignInIcon size={16} className="min-w-4 text-start mr-[2px] mb-[2px]" />
                     </span>
                     <span className="">
-                        Please sign in to send a message. Don’t worry, your data is safe—learn more in our <Link className="text-primary underline underline-offset-2" target="_blank" rel="noopener noreferrer" href="/privacy-policy">Privacy Policy</Link>.
+                        {t('signInMessage')}  <Link className="text-primary underline underline-offset-2" target="_blank" rel="noopener noreferrer" href="/privacy-policy">{t('privacyPolicy')}</Link>.
                     </span>
                 </p>
 

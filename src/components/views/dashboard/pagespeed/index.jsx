@@ -6,7 +6,7 @@ import { fetcher } from '@/services/fetcher'
 import BadgeSection from './Badge'
 import SpeedSection from './SpeedSection'
 
-export default function PageSpeed({ style }) {
+export default function PageSpeed({ locale, style }) {
 
     const [url, setUrl] = useState(PAGESPEED_API + '/')
     const [active, setActive] = useState('/')
@@ -22,7 +22,7 @@ export default function PageSpeed({ style }) {
     return (
         <section className='pagespeed__section'>
             <BadgeSection active={active} refetch={refetch} />
-            <SpeedSection data={data} isLoading={isLoading} />
+            <SpeedSection data={data} isLoading={isLoading} locale={locale} />
         </section>
     )
 }

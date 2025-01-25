@@ -57,7 +57,9 @@
     "Guestbook": {
         "title": "Guestbook",
         "metaDesc": "Share your thoughts, suggestions, or questions in the guestbook. Let's keep the conversation going!",
-        "subtitle": "Leave whatever you like to say, suggestions, questions or anything!"
+        "subtitle": "Leave whatever you like to say, suggestions, questions or anything!",
+        "signInMessage": "Please sign in to send a message. Don’t worry, your data is safe—learn more in ",
+        "privacyPolicy": "Privacy Policy"
     },
     "Blog": {
         "title": "Blog",
@@ -72,6 +74,9 @@
         "title": "Dashboard",
         "metaDesc": "Explore the personal dashboard of Dwi Wijaya, showcasing page speed insights, GitHub contributions, and LeetCode progress.",
         "subtitle": "This is my personal website dashboard built with serverless function",
+        "pagespeedTitle": "Pagespeed Insights",
+        "githubTitle": "GitHub Contributions",
+        "leetcodeTitle": "LeetCode Statistics",
         "pagespeedSubtitle": "Page Speed Index by Google API",
         "githubSubtitle": "My contributions from last year on github.",
         "leetcodeSubtitle": "My LeetCode statistics progress and performance."

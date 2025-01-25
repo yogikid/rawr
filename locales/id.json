@@ -57,7 +57,9 @@
     "Guestbook": {
         "title": "Buku Tamu",
         "metaDesc": "Bagikan pemikiran, saran, atau pertanyaan Anda di buku tamu. Mari kita lanjutkan percakapan!",
-        "subtitle": "Tinggalkan apapun yang ingin kamu katakan, saran, pertanyaan atau apapun!"
+        "subtitle": "Tinggalkan apapun yang ingin kamu katakan, saran, pertanyaan atau apapun!",
+        "signInMessage": "Harap masuk untuk mengirim pesan. Tenang saja, data Anda aman—pelajari lebih lanjut di ",
+        "privacyPolicy": "Kebijakan Privasi"
     },
     "Blog": {
         "title": "Blog",
@@ -72,6 +74,9 @@
         "title": "Dasbor",
         "metaDesc": "Jelajahi dashboard pribadi Dwi Wijaya yang menampilkan wawasan kecepatan halaman, kontribusi GitHub, dan kemajuan LeetCode.",
         "subtitle": "Ini adalah dashboard personal website saya dibuat dengan serverless function.",
+        "pagespeedTitle": "Pagespeed Insight",
+        "githubTitle": "Kontribusi GitHub",
+        "leetcodeTitle": "Statistik LeetCode",
         "pagespeedSubtitle": "Indeks kecepatan halaman saya oleh Google API",
         "githubSubtitle": "Kontribusi saya dari tahun lalu di Github.",
         "leetcodeSubtitle": "Statistik dan kinerja kemajuan LeetCode saya."

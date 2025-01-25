@@ -15,7 +15,7 @@ import { RiGithubFill, RiSpeedUpLine } from "react-icons/ri";
 import { SiLeetcode } from "react-icons/si";
 
 
-const Dashboard = ({ githubEndpoint, leetcodeEndpoint }) => {
+const Dashboard = ({ githubEndpoint, leetcodeEndpoint, locale }) => {
   const t = useTranslations();
 
   const { data: leetcodeData } = useSWR(leetcodeEndpoint, fetcher);
@@ -27,21 +27,21 @@ const Dashboard = ({ githubEndpoint, leetcodeEndpoint }) => {
     <div className="flex flex-col space-y-10">
       <section>
         <PageSubHeading
-          title="Pagespeed Insight"
+          title={t('Dashboard.pagespeedTitle')}
           description={t('Dashboard.pagespeedSubtitle')}
-          reactIcon={<RiSpeedUpLine/>}
+          reactIcon={<RiSpeedUpLine />}
           linkText='@pagespeed'
           link='https://pagespeed.web.dev/'
           tintIcon={false}
         />
-        <PageSpeed />
+        <PageSpeed locale={locale} />
       </section>
 
       <section>
         <PageSubHeading
-          title="Contributions"
+          title={t('Dashboard.githubTitle')}
           description={t('Dashboard.githubSubtitle')}
-          reactIcon={<RiGithubFill/>}
+          reactIcon={<RiGithubFill />}
           linkText='@dwiwijaya'
           link='https://github.com/dwiwijaya'
           tintIcon={false}
@@ -60,9 +60,9 @@ const Dashboard = ({ githubEndpoint, leetcodeEndpoint }) => {
 
       <section>
         <PageSubHeading
-          title="LeetCode Statistics"
+          title={t('Dashboard.leetcodeTitle')}
           description={t('Dashboard.leetcodeSubtitle')}
-          reactIcon={<SiLeetcode size={16}/>}
+          reactIcon={<SiLeetcode size={16} />}
           linkText='@dwi-wijaya'
           link='https://leetcode.com/dwi-wijaya'
           tintIcon={false}

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BiCalendar } from 'react-icons/bi';
 
-const WorkDuration = ({ startMonth, endMonth }) => {
+const WorkDuration = ({ startMonth, endMonth, locale }) => {
     const [duration, setDuration] = useState(null);
 
     useEffect(() => {
@@ -12,25 +12,28 @@ const WorkDuration = ({ startMonth, endMonth }) => {
             let yearDiff = end.getFullYear() - start.getFullYear();
             let monthDiff = end.getMonth() - start.getMonth();
 
-            yearDiff = monthDiff < 0  && yearDiff != 0 ? yearDiff - 1 : yearDiff;
-            monthDiff = monthDiff < 0 ? 12  + monthDiff : monthDiff;
-            
+            yearDiff = monthDiff < 0 && yearDiff != 0 ? yearDiff - 1 : yearDiff;
+            monthDiff = monthDiff < 0 ? 12 + monthDiff : monthDiff;
+
             if (yearDiff === 0 && monthDiff === 0) {
-                setDuration("Less than a Month");
+                setDuration(locale == "en" ? "Less than a Month" : "Lebih dari satu bulan");
             } else if (yearDiff === 0) {
                 setDuration(`${monthDiff} Month${monthDiff > 1 ? 's' : ''}`);
             } else if (yearDiff === 1 && monthDiff === 0) {
-                setDuration("1 Year");
+                setDuration(locale == "en" ? "1 Year" : "1 Tahun");
             } else {
-                setDuration(`${yearDiff} Year${yearDiff > 1 ? 's' : ''} ${monthDiff} Month${monthDiff > 1 ? 's' : ''}`);
+                const yearLabel = locale === "en" ? "Year" + (yearDiff > 1 ? 's' : '') : "Tahun";
+                const monthLabel = locale === "en" ? "Month" + (monthDiff > 1 ? 's' : '') : "Bulan";
+                const formattedDuration = `${yearDiff} ${yearLabel} ${monthDiff} ${monthLabel}`;
+                setDuration(formattedDuration);
             }
         };
 
         calculateDuration();
-    }, [startMonth, endMonth]);
+    }, [startMonth, endMonth, locale]);
 
     return (
-        <p className='text-sm text-subtext mt-1 flex items-center gap-1'><BiCalendar className='text-primary'/>{duration}</p>
+        <p className='text-sm text-subtext mt-1 flex items-center gap-1'><BiCalendar className='text-primary' />{duration}</p>
     );
 };
 
