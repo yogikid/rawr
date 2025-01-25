@@ -15,15 +15,16 @@ const WorkDuration = ({ startMonth, endMonth, locale }) => {
             yearDiff = monthDiff < 0 && yearDiff != 0 ? yearDiff - 1 : yearDiff;
             monthDiff = monthDiff < 0 ? 12 + monthDiff : monthDiff;
 
+            const yearLabel = locale === "en" ? "Year" + (yearDiff > 1 ? 's' : '') : "Tahun";
+            const monthLabel = locale === "en" ? "Month" + (monthDiff > 1 ? 's' : '') : "Bulan";
+
             if (yearDiff === 0 && monthDiff === 0) {
-                setDuration(locale == "en" ? "Less than a Month" : "Lebih dari satu bulan");
+                setDuration(locale == "en" ? "Less than a Month" : "Kurang dari satu bulan");
             } else if (yearDiff === 0) {
-                setDuration(`${monthDiff} Month${monthDiff > 1 ? 's' : ''}`);
+                setDuration(`${monthDiff} ${monthLabel}`);
             } else if (yearDiff === 1 && monthDiff === 0) {
-                setDuration(locale == "en" ? "1 Year" : "1 Tahun");
+                setDuration(`${yearDiff} ${yearLabel}`);
             } else {
-                const yearLabel = locale === "en" ? "Year" + (yearDiff > 1 ? 's' : '') : "Tahun";
-                const monthLabel = locale === "en" ? "Month" + (monthDiff > 1 ? 's' : '') : "Bulan";
                 const formattedDuration = `${yearDiff} ${yearLabel} ${monthDiff} ${monthLabel}`;
                 setDuration(formattedDuration);
             }
