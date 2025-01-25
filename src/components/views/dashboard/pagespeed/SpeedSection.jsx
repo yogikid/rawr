@@ -36,7 +36,7 @@ export default function SpeedSection({ data, locale, isLoading, style }) {
         }
     }
 
-    if (isLoading) return <LoadingSpeedInsight style={style} />
+    if (isLoading) return <LoadingSpeedInsight locale={locale} style={style} />
 
     return (
         <div className="my-2 flex items-center justify-start text-xs gap-4 overflow-y-hidden scrollbar-hide">
