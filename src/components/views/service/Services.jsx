@@ -19,7 +19,7 @@ const Services = () => {
             >
               <section>
                 <i className={`text-5xl text-primary fad fa-${icon}`}></i>
-                <h3 className="mt-4 font-semibold">{title[locale]}</h3>
+                <p className="mt-4 font-semibold">{title[locale]}</p>
                 <p className="mt-1 text-sm font-light text-subtext">{description[locale]}</p>
               </section>
             </motion.li>

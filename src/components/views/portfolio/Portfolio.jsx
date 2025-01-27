@@ -44,13 +44,13 @@ const Portfolio = ({ portfolios }) => {
       <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-5">
         {typeof items === 'string' ? (
           // Handle case when items is a string
-          <p className="text-subtext">{items}</p>
+          <li><p className="text-subtext">{items}</p></li>
         ) : (
           // Handle case when items is an array of objects
           items.map((elem, index) => {
             const { id, thumbnail, name, category, isFeatured, excerpt, slug, type } = elem;
             return (
-              <motion.div
+              <motion.li
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -81,13 +81,13 @@ const Portfolio = ({ portfolios }) => {
                     <div className="p-5 flex flex-col h-full gap-1 bg-container border border-stroke">
                       <div className="">
                         <p className="text-subtext text-xs flex gap-1 items-center mb-1"><span className="text-primary">{PORTFOLIO_TYPES_ICON[type]}</span>{PORTFOLIO_TYPES[type]}</p>
-                        <h3 className="font-semibold group-hover/portfolio:text-primary">{name}</h3>
+                        <h2 className="font-semibold group-hover/portfolio:text-primary">{name}</h2>
                       </div>
                       <p className="text-sm overflow-hidden whitespace-normal overflow-ellipsis line-clamp-2 text-subtext">{excerpt}</p>
                     </div>
                   </div>
                 </Link>
-              </motion.div>
+              </motion.li>
             );
           })
         )}

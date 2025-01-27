@@ -20,20 +20,21 @@ const Contact = () => {
         <>
             <section className="contact__container">
                 <div className="mb-8">
-                    <h3 className="mb-4 font-semibold">{t('Contact.findSocial')}</h3>
+                    <span className="mb-4 font-semibold">{t('Contact.findSocial')}</span>
                     <ul className="flex md:flex-row gap-2 justify-center">
                         {Socials.map((social, index) => (
                             <li key={index} className='flex w-full'>
-                                <button onClick={() => window.open(social.link, '_blank')} data-umami-event={social.eventName} title={social.label} className={`w-full flex gap-2 justify-center items-center p-2 text-white rounded-md`} style={{ backgroundColor: social.background }}>
-                                    <Image src={social.icon} alt={social.label} srcSet="" />
+                                <button onClick={() => window.open(social.link, '_blank')} data-umami-event={social.eventName} title={social.label} className='w-full flex gap-2 justify-center items-center p-2 text-white rounded-md' style={{ backgroundColor: social.background }}>
+                                    <Image src={social.icon} alt={`Icon for ${social.label}`} srcSet="" />
                                     <div className="hidden md:block">{social.label}</div>
                                 </button>
                             </li>
                         ))}
                     </ul>
+
                 </div>
                 <div className="relative">
-                    <h3 className="mb-4 font-semibold">{t('Contact.orsendMsg')}</h3>
+                    <span className="mb-4 font-semibold">{t('Contact.orsendMsg')}</span>
                     <form
                         ref={formRef}
                         onSubmit={handleSubmit}
