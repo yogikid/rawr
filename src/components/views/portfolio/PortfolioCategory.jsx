@@ -9,7 +9,7 @@ const PortfolioCategory = ({ filter, active }) => {
                 <li key={index} className="category">
                     <button data-umami-event={`Click Portfolio Category - ${category.label}`} onClick={() => filter(category.slug)} title={category.label} className={`text-lg sm:text-base badge !px-4 !py-3 sm:!px-3 sm:!py-2 ${active === category.slug ? '!text-primary' : ''}`}>
                         <i className={category.icon}></i>
-                        <h3 className='hidden sm:block'>{category.label[locale]}</h3>
+                        <p className='hidden sm:block'>{category.label[locale]}</p>
                     </button>
                 </li>
             ))}
