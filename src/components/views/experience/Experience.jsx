@@ -31,7 +31,7 @@ const Experience = ({ experience, locale }) => {
                                             <time>{startMonth}</time> - {endMonth}</span>
                                         <p className='flex items-center gap-1 text-sm text-subtext mt-3'> <BiMapPin className='text-primary' /> {val.location}</p>
                                         <p className="flex items-center gap-1 text-sm text-subtext mt-1"><BiBook className='text-primary' /> {val.degree}</p>
-                                        <h3 className="mt-2 font-semibold text-lg">{val.major}</h3>
+                                        <p className="mt-2 font-semibold text-lg">{val.major}</p>
                                         <div className="flex gap-2">
                                             <a data-umami-event={`Click Education School - ${val.institution}`} href={val.link} className="timeline__text mb-1 pb-0 border-b border-[#727272] hover:border-primary hover:text-primary transition-3s">
                                                 {val.institution}
@@ -58,7 +58,7 @@ const Experience = ({ experience, locale }) => {
                                         <span className="text-sm text-subtext"><time>{startMonth}</time> - {endMonth}</span>
                                         <p className='flex items-center gap-1 text-sm text-subtext mt-3'> <BiMapPin className='text-primary' /> {val.location}</p>
                                         <WorkDuration startMonth={val.startMonth} endMonth={val.endMonth} locale={locale} />
-                                        <h3 className="mt-2 font-semibold text-lg">{val.position}</h3>
+                                        <p className="mt-2 font-semibold text-lg">{val.position}</p>
                                         <div className="flex gap-2">
                                             <a data-umami-event={`Click Career Company - ${val.institution}`} href="" className="timeline__text mb-1 pb-0 border-b border-[#727272] hover:border-primary hover:text-primary transition-3s">
                                                 {val.institution}
