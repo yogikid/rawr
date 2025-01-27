@@ -20,7 +20,10 @@ const Contact = () => {
         <>
             <section className="contact__container">
                 <div className="mb-8">
-                    <span className="mb-4 font-semibold">{t('Contact.findSocial')}</span>
+                    <p className="mb-4 font-semibold">
+                        <i className="fa-sm fad fa-user-group mr-2"></i>
+                        {t('Contact.findSocial')}
+                    </p>
                     <ul className="flex md:flex-row gap-2 justify-center">
                         {Socials.map((social, index) => (
                             <li key={index} className='flex w-full'>
@@ -34,7 +37,10 @@ const Contact = () => {
 
                 </div>
                 <div className="relative">
-                    <span className="mb-4 font-semibold">{t('Contact.orsendMsg')}</span>
+                    <p className="mb-5 font-semibold">
+                        <i className="fa-sm fad fa-envelope-open-text mr-2"></i>
+                        {t('Contact.orsendMsg')}
+                    </p>
                     <form
                         ref={formRef}
                         onSubmit={handleSubmit}
