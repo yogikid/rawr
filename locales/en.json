@@ -102,21 +102,22 @@
     "Portfolio": {
         "title": "Portfolio",
         "metaDesc": "Browse the portfolio of Dwi Wijaya, showcasing his latest projects and creative achievements in web development, app development, UI/UX design, Design and more.",
-        "subtitle": "Explore my latest projects and creations."
+        "subtitle": "Explore my latest projects and creations.",
+        "noPortfolio": "Apologies, there are currently no portfolios available for the {category} category."
     },
     "Privacy": {
         "title": "Privacy Policy",
-        "metaDesc": "Understand the privacy practices of Dwi Wijaya's website, including data collection, usage, and security measures.",
-        "subtitle": "This privacy policy explains how we collect, use, and protect your information.",
-        "information_collected": "We collect information that you provide to us directly, such as your name and email address.",
-        "usage": "We use this information to improve our services and communicate with you.",
-        "security": "We take the security of your information seriously and implement measures to protect it.",
-        "contact": "If you have any questions, please contact us at ",
+        "metaDesc": "Understand how I handle privacy on this website, including data collection, usage, and security measures.",
+        "subtitle": "This privacy policy explains how I collect, use, and protect your information.",
+        "information_collected": "I collect information that you provide to me directly, such as your name and email address.",
+        "usage": "I use this information to improve my services and communicate with you.",
+        "security": "I take the security of your information seriously and implement measures to protect it.",
+        "contact": "If you have any questions, please contact me at ",
         "subtitles": {
-            "information_collected": "Information We Collect",
+            "information_collected": "Information I Collect",
             "usage": "Usage of Information",
             "security": "Security of Your Information",
-            "contact": "Contact Us"
+            "contact": "Contact Me"
         }
     },
     "Offline": {

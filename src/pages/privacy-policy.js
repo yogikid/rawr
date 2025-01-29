@@ -64,7 +64,7 @@ const PrivacyPolicyPage = () => {
                             <HiShieldCheck className="text-red-500 text-xl mb-1" />
                             <h2 className="text-xl text-text font-semibold">{t('subtitles.contact')}  </h2>
                         </div>
-                        <p className="text-subtext-700">{t('contact')} <a href='mailto:dev.dwiwijaya@gmail.com' className='text-primary'>dev.dwiwijaya@gmail.com</a>. </p>
+                        <p className="text-subtext-700">{t('contact')} <a href='mailto:hello@dwiwijaya.com' className='text-primary'>hello@dwiwijaya.com</a>. </p>
                     </div>
                 </div>
             </Container>

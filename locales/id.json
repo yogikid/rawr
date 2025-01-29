@@ -102,21 +102,22 @@
     "Portfolio": {
         "title": "Portofolio",
         "metaDesc": "Telusuri portofolio Dwi Wijaya yang menampilkan proyek terbaru dan pencapaian kreatifnya dalam pengembangan web, pengembangan aplikasi, desain UI/UX, Design dan lainnya.",
-        "subtitle": "Jelajahi proyek dan karya terbaru saya."
+        "subtitle": "Jelajahi proyek dan karya terbaru saya.",
+        "noPortfolio": "Maaf, saat ini belum ada portfolio untuk kategori {category}"
     },
     "Privacy": {
         "title": "Kebijakan Privasi",
-        "metaDesc": "Pahami praktik privasi di situs web Dwi Wijaya, termasuk pengumpulan data, penggunaan, dan langkah-langkah keamanan.",
-        "subtitle": "Kebijakan privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi Anda.",
-        "information_collected": "Kami mengumpulkan informasi yang Anda berikan kepada kami secara langsung, seperti nama dan alamat email Anda.",
-        "usage": "Kami menggunakan informasi ini untuk meningkatkan layanan kami dan berkomunikasi dengan Anda.",
-        "security": "Kami sangat memperhatikan keamanan informasi Anda dan menerapkan langkah-langkah untuk melindunginya.",
-        "contact": "Jika Anda memiliki pertanyaan, silakan hubungi kami di ",
+        "metaDesc": "Pahami bagaimana saya mengelola privasi di situs web ini, termasuk pengumpulan data, penggunaan, dan langkah-langkah keamanan.",
+        "subtitle": "Kebijakan privasi ini menjelaskan bagaimana saya mengumpulkan, menggunakan, dan melindungi informasi Anda.",
+        "information_collected": "Saya mengumpulkan informasi yang Anda berikan secara langsung, seperti nama dan alamat email Anda.",
+        "usage": "Saya menggunakan informasi ini untuk meningkatkan layanan dan berkomunikasi dengan Anda.",
+        "security": "Saya sangat menjaga keamanan informasi Anda dan menerapkan langkah-langkah untuk melindunginya.",
+        "contact": "Jika Anda memiliki pertanyaan, silakan hubungi saya di ",
         "subtitles": {
-            "information_collected": "Informasi yang Kami Kumpulkan",
+            "information_collected": "Informasi yang Saya Kumpulkan",
             "usage": "Penggunaan Informasi",
             "security": "Keamanan Informasi Anda",
-            "contact": "Hubungi Kami"
+            "contact": "Hubungi Saya"
         }
     },
     "Offline": {
