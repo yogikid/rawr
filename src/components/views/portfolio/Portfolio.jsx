@@ -7,10 +7,12 @@ import { motion } from "framer-motion";
 import Image from "@/components/elements/Image";
 import { useRouter } from "next/router";
 import { BiRightArrowAlt } from "react-icons/bi";
+import { useTranslations } from "next-intl";
 
 const Portfolio = ({ portfolios }) => {
-  const [items, setItems] = useState(portfolios);
   const [activeCategory, setActiveCategory] = useState("all");
+  const [items, setItems] = useState(portfolios);
+  const t = useTranslations("Portfolio");
   const { locale } = useRouter();
 
   const filterItems = (categoryItem) => {
@@ -19,11 +21,7 @@ const Portfolio = ({ portfolios }) => {
     } else {
       const updatedItems = portfolios.filter((curElem) => curElem.category === categoryItem);
       if (updatedItems.length === 0) {
-        setItems(
-          locale === "en"
-            ? `Apologies, there are currently no portfolios available for the "${categoryItem}" category.`
-            : `Maaf, saat ini tidak ada portfolio untuk kategori "${categoryItem}".`
-        );
+        setItems(t(`noPortfolio`, { category: categoryItem }));
       } else {
         setItems(updatedItems);
       }
