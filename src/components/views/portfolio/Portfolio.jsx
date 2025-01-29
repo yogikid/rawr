@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Pin from "@/assets/pin.svg";
 import { PORTFOLIO_TYPES, PORTFOLIO_TYPES_ICON } from "@/constants/data/portfolio";
+import { portfolioCategory as portfolioCategoryData } from '@/constants/data/portfolioCategory';
 import PortfolioCategory from "./PortfolioCategory";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -12,22 +13,47 @@ import { useTranslations } from "next-intl";
 const Portfolio = ({ portfolios }) => {
   const [activeCategory, setActiveCategory] = useState("all");
   const [items, setItems] = useState(portfolios);
+  const [noPortfolioMessage, setNoPortfolioMessage] = useState(null);
   const t = useTranslations("Portfolio");
   const { locale } = useRouter();
 
   const filterItems = (categoryItem) => {
+    setActiveCategory(categoryItem);
+
     if (categoryItem === "all") {
       setItems(portfolios);
+      setNoPortfolioMessage(null);
     } else {
       const updatedItems = portfolios.filter((curElem) => curElem.category === categoryItem);
+
       if (updatedItems.length === 0) {
-        setItems(t(`noPortfolio`, { category: categoryItem }));
+        setNoPortfolioMessage(getNoPortfolioMessage(categoryItem));
       } else {
         setItems(updatedItems);
+        setNoPortfolioMessage(null);
       }
     }
-    setActiveCategory(categoryItem);
   };
+
+  const getNoPortfolioMessage = (categoryItem) => {
+    const categoryData = portfolioCategoryData.find((cat) => cat.slug === categoryItem);
+    const categoryLabel = categoryData ? categoryData.label[locale] : categoryItem;
+    return t("noPortfolio", { category: categoryLabel });
+  };
+
+  useEffect(() => {
+    // Re-run filter when the language (locale) changes
+    if (activeCategory !== "all") {
+      const updatedItems = portfolios.filter((curElem) => curElem.category === activeCategory);
+
+      if (updatedItems.length === 0) {
+        setNoPortfolioMessage(getNoPortfolioMessage(activeCategory));
+      } else {
+        setItems(updatedItems);
+        setNoPortfolioMessage(null);
+      }
+    }
+  }, [locale, activeCategory, portfolios, t]);
 
   const IconCategory = {
     code: "fad fa-code-simple",
@@ -42,10 +68,11 @@ const Portfolio = ({ portfolios }) => {
         <PortfolioCategory filter={filterItems} active={activeCategory} />
       </nav>
 
-      {typeof items === "string" ? (
+      {/* Handle case when no portfolio is available */}
+      {noPortfolioMessage ? (
         <p className="text-subtext">
           <i className="fad fa-exclamation-circle mr-2"></i>
-          {items}
+          {noPortfolioMessage}
         </p>
       ) : (
         <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-5">
