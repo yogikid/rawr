@@ -13,14 +13,36 @@ export const PORTFOLIO_CATEGORIES_ICON = {
     others: <BiCustomize />,
 }
 export const PORTFOLIO_TYPES = {
-    office: "Office Project",
-    personal: "Personal Project",
-    team: "Team Project",
-    client: "Client Project",
-    open_source: "Open Source Project",
-    research: "Research Project",
-    academic: "Academic Project",
-}
+    office: {
+        en: "Office Project",
+        id: "Proyek Kantor"
+    },
+    personal: {
+        en: "Personal Project",
+        id: "Proyek Pribadi"
+    },
+    team: {
+        en: "Team Project",
+        id: "Proyek Tim"
+    },
+    client: {
+        en: "Client Project",
+        id: "Proyek Klien"
+    },
+    open_source: {
+        en: "Open Source Project",
+        id: "Proyek Sumber Terbuka"
+    },
+    research: {
+        en: "Research Project",
+        id: "Proyek Penelitian"
+    },
+    academic: {
+        en: "Academic Project",
+        id: "Proyek Akademik"
+    }
+};
+
 export const PORTFOLIO_TYPES_ICON = {
     office: <BiBuilding/>,
     personal: <BiUser/>,
