@@ -112,7 +112,7 @@ const Portfolio = ({ portfolios }) => {
                           quality={100}
                         />
                         <div className="flex gap-1 absolute top-0 left-0 w-full h-full bg-black opacity-0 transition-opacity duration-300 justify-center items-center text-white group-hover/portfolio:opacity-80">
-                          View Project <BiRightArrowAlt />
+                          {t("seePortfolio")}<BiRightArrowAlt />
                         </div>
                       </div>
                     </div>
