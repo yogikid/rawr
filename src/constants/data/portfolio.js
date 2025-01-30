@@ -1,11 +1,28 @@
 import { BiBook, BiBriefcase, BiBuilding, BiCodeAlt, BiCustomize, BiGroup, BiLogoFlask, BiPalette, BiPen, BiUser } from "react-icons/bi";
 
 export const PORTFOLIO_CATEGORIES = {
-    code: "Code",
-    uiux: "UI-UX",
-    design: "Design",
-    other: "Other",
+    code: {
+        en: "Code",
+        id: "Kode"
+    },
+    uiux: {
+        en: "UI-UX",
+        id: "UI-UX"
+    },
+    design: {
+        en: "Design",
+        id: "Desain"
+    },
+    product: {
+        en: "Product",
+        id: "Produk"
+    },
+    other: {
+        en: "Other",
+        id: "Lainnya"
+    }
 };
+
 export const PORTFOLIO_CATEGORIES_ICON = {
     code: <BiCodeAlt/>,
     uiux: <BiPalette/>,
