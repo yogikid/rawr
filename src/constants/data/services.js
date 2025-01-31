@@ -15,7 +15,7 @@ export const ServicesData = [
     id: 1,
     icon: "palette",
     title: {
-      en: "UI/UX design",
+      en: "UI/UX Design",
       id: "Desain UI/UX",
     },
     description: {
