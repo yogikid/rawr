@@ -35,7 +35,7 @@ const GuestbookPage = ({ fallback }) => {
                         title={t('title')}
                         description={t('subtitle')}
                     />
-                    <Guestbook />
+                    <Guestbook locale={locale} />
                 </Container>
             </SWRConfig>
         </>
