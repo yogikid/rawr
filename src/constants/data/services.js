@@ -15,7 +15,7 @@ export const ServicesData = [
     id: 1,
     icon: "palette",
     title: {
-      en: "UI/UX design",
+      en: "UI/UX Design",
       id: "Desain UI/UX",
     },
     description: {
@@ -25,14 +25,14 @@ export const ServicesData = [
   },
   {
     id: 3,
-    icon: "pen-nib",
+    icon: "bullhorn",
     title: {
-      en: "Design",
-      id: "Desain",
+      en: "Digital Marketing",
+      id: "Pemasaran Digital",
     },
     description: {
-      en: "I create impactful visuals and branding that leave a lasting impression on your audience.",
-      id: "Saya menciptakan desain visual dan branding yang berkesan dan meninggalkan dampak kuat pada audiens.",
+      en: "I craft effective strategies to improve your online presence and drive measurable results.",
+      id: "Saya merancang strategi efektif untuk meningkatkan kehadiran online dan hasil yang terukur jelas.",
     }
   },
   {

@@ -103,7 +103,8 @@
         "title": "Portfolio",
         "metaDesc": "Browse the portfolio of Dwi Wijaya, showcasing his latest projects and creative achievements in web development, app development, UI/UX design, Design and more.",
         "subtitle": "Explore my latest projects and creations.",
-        "noPortfolio": "Apologies, there are currently no portfolios available for the {category} category."
+        "noPortfolio": "Apologies, there are currently no portfolios available for the {category} category.",
+        "seePortfolio": "See Project"
     },
     "Privacy": {
         "title": "Privacy Policy",

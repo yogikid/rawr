@@ -35,7 +35,7 @@ const PortfolioPage = ({ portfolios }) => {
                     title={t('title')}
                     description={t('subtitle')}
                 />
-                <Portfolio portfolios={portfolios} />
+                <Portfolio portfolios={portfolios} locale={locale} />
             </Container>
         </>
     )

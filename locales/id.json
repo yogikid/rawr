@@ -103,7 +103,8 @@
         "title": "Portofolio",
         "metaDesc": "Telusuri portofolio Dwi Wijaya yang menampilkan proyek terbaru dan pencapaian kreatifnya dalam pengembangan web, pengembangan aplikasi, desain UI/UX, Design dan lainnya.",
         "subtitle": "Jelajahi proyek dan karya terbaru saya.",
-        "noPortfolio": "Maaf, saat ini belum ada portfolio untuk kategori {category}"
+        "noPortfolio": "Maaf, saat ini belum ada portfolio untuk kategori {category}",
+        "seePortfolio": "Lihat Proyek"
     },
     "Privacy": {
         "title": "Kebijakan Privasi",

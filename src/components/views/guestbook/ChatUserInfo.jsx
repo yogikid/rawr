@@ -1,7 +1,7 @@
 import { supabase } from "@/lib/supabase";
 import { HiOutlineLogout as SignOutIcon } from "react-icons/hi";
 
-const ChatUserInfo = ({ session }) => {
+const ChatUserInfo = ({ session, locale }) => {
     const userName = session?.name ?? null;
     const userEmail = session?.email ?? null;
     const signOut = async () => {
@@ -10,7 +10,7 @@ const ChatUserInfo = ({ session }) => {
     return session ? (
         <div className={`ml-1 flex flex-col items-start gap-2 text-sm md:flex-row md:items-center`}>
             <div className="flex flex-wrap gap-1 text-neutral-500">
-                <p>Signed in as</p>
+                <p>{locale == 'en' ? 'Signed in as' : 'Masuk sebagai'}</p>
                 <p className="font-medium">{userName}</p>
                 <p>({userEmail})</p>
             </div>
@@ -22,7 +22,7 @@ const ChatUserInfo = ({ session }) => {
                     data-umami-event="Sign Out from Chat Page"
                 >
                     <SignOutIcon size={16} className="cursor-pointer text-red-500" />
-                    <span>Sign Out</span>
+                    <span>{locale == 'en' ? 'Sign Out' : 'Keluar'}</span>
                 </div>
             </>
         </div>

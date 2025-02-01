@@ -15,7 +15,7 @@ const MDEditorPreview = dynamic(
     { ssr: false }
 );
 
-const DetailPortfolio = ({ portfolio }) => {
+const DetailPortfolio = ({ portfolio, locale }) => {
 
     return (
         <article className=''>
@@ -26,12 +26,12 @@ const DetailPortfolio = ({ portfolio }) => {
             <div className="flex item-center gap-2 justify-center sm:justify-normal">
                 {portfolio.demoLink &&
                     <a data-umami-event={`Click Live Demo - ${portfolio.name}`} href={portfolio.demoLink} className="badge text-sm mb-5">
-                        <BiLinkExternal /> Live Demo
+                        <BiLinkExternal /> {locale == 'en' ? 'Live Demo' : 'Demo Langsung'}
                     </a>
                 }
                 {portfolio.githubLink &&
                     <a data-umami-event={`Click Source Code - ${portfolio.name}`} href={portfolio.githubLink} className={`badge text-sm mb-5`}>
-                        <BsGithub /> Source Code
+                        <BsGithub /> {locale == 'en' ? 'Source Code' : 'Kode Sumber'}
                     </a>
                 }
             </div>
@@ -63,9 +63,8 @@ const DetailPortfolio = ({ portfolio }) => {
                 source={portfolio.content}
                 className="md:p-4 rounded-lg mb-3"
             />
-            {portfolio.category}
-            <p className='text-sm text-subtext flex items-center gap-2'><BiChevronRight /> Category:  {PORTFOLIO_CATEGORIES_ICON[portfolio.category]} {PORTFOLIO_CATEGORIES[portfolio.category]}</p>
-            <p className='text-sm text-subtext flex items-center gap-2'><BiChevronRight /> Type: {PORTFOLIO_TYPES_ICON[portfolio.type]} {PORTFOLIO_TYPES[portfolio.type]} </p>
+            <p className='text-sm text-subtext flex items-center gap-2'><BiChevronRight /> {locale == 'en' ? 'Category' : 'Kategori'}:  {PORTFOLIO_CATEGORIES_ICON[portfolio.category]} {PORTFOLIO_CATEGORIES[portfolio.category][locale]}</p>
+            <p className='text-sm text-subtext flex items-center gap-2'><BiChevronRight /> {locale == 'en' ? 'Type' : 'Jenis'}: {PORTFOLIO_TYPES_ICON[portfolio.type]} {PORTFOLIO_TYPES[portfolio.type][locale]} </p>
         </article>
     )
 }

@@ -4,10 +4,9 @@ import { FiSend as SendIcon } from "react-icons/fi";
 
 import ChatUserInfo from "./ChatUserInfo";
 
-const ChatInput = ({ onSendMessage, session }) => {
+const ChatInput = ({ onSendMessage, session, locale }) => {
     const [message, setMessage] = useState("");
     const [isSending, setIsSending] = useState(false);
-
 
     const handleSendMessage = async (e) => {
         e.preventDefault();
@@ -37,7 +36,7 @@ const ChatInput = ({ onSendMessage, session }) => {
                     type="text"
                     value={message}
                     onChange={handleChange}
-                    placeholder="Type a message..."
+                    placeholder={locale == "en" ? "Drop your thoughts here..." : "Tulis kesanmu di sini..."}
                     className="flex-grow bg-container rounded-md border p-2 focus:outline-none dark:border-stroke"
                     disabled={isSending}
                     autoFocus
@@ -47,7 +46,6 @@ const ChatInput = ({ onSendMessage, session }) => {
                     onClick={handleSendMessage}
                     className={
                         `ml-2 rounded-md btn !p-[.65rem] ${!message.trim() && "!bg-container !border-stroke !text-subtext cursor-not-allowed "}`
-
                     }
                     disabled={isSending || !message.trim()}
                     data-umami-event="Chat Widget: Send Chat"
@@ -55,7 +53,7 @@ const ChatInput = ({ onSendMessage, session }) => {
                     <SendIcon size={18} />
                 </button>
             </form>
-            <ChatUserInfo session={session} />
+            <ChatUserInfo session={session} locale={locale} />
         </>
     );
 };

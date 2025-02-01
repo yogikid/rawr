@@ -8,7 +8,7 @@ import { sendEmailNotification } from '@/services/EmailService';
 import { fetcher } from '@/services/fetcher';
 import useSWR from 'swr';
 
-export default function Guestbook() {
+export default function Guestbook({ locale }) {
     const { data: messages } = useSWR('/api/guestbook', fetcher);
     const [session, setSession] = useState(null);
 
@@ -76,7 +76,7 @@ export default function Guestbook() {
                 session={session}
             />
             {session ? (
-                <ChatInput onSendMessage={handleSendMessage} session={session} />
+                <ChatInput onSendMessage={handleSendMessage} session={session} locale={locale} />
             ) : (
                 <ChatAuth />
             )}

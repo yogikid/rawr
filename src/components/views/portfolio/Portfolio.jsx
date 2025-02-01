@@ -10,12 +10,11 @@ import { useRouter } from "next/router";
 import { BiRightArrowAlt } from "react-icons/bi";
 import { useTranslations } from "next-intl";
 
-const Portfolio = ({ portfolios }) => {
+const Portfolio = ({ portfolios, locale }) => {
   const [activeCategory, setActiveCategory] = useState("all");
   const [items, setItems] = useState(portfolios);
   const [noPortfolioMessage, setNoPortfolioMessage] = useState(null);
   const t = useTranslations("Portfolio");
-  const { locale } = useRouter();
 
   const filterItems = (categoryItem) => {
     setActiveCategory(categoryItem);
@@ -112,7 +111,7 @@ const Portfolio = ({ portfolios }) => {
                           quality={100}
                         />
                         <div className="flex gap-1 absolute top-0 left-0 w-full h-full bg-black opacity-0 transition-opacity duration-300 justify-center items-center text-white group-hover/portfolio:opacity-80">
-                          View Project <BiRightArrowAlt />
+                          {t("seePortfolio")}<BiRightArrowAlt />
                         </div>
                       </div>
                     </div>
@@ -120,7 +119,7 @@ const Portfolio = ({ portfolios }) => {
                       <div>
                         <p className="text-subtext text-xs flex gap-1 items-center mb-1">
                           <span className="text-primary">{PORTFOLIO_TYPES_ICON[type]}</span>
-                          {PORTFOLIO_TYPES[type]}
+                          {PORTFOLIO_TYPES[type][locale]}
                         </p>
                         <h2 className="font-semibold group-hover/portfolio:text-primary">
                           {name}

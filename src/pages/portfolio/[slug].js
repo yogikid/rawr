@@ -33,7 +33,7 @@ const DetailPortfolioPage = ({ portfolio }) => {
             />
             <BackToggle />
             <Container data-aos='fade-up'>
-                <DetailPortfolio portfolio={portfolio} />
+                <DetailPortfolio portfolio={portfolio} locale={locale} />
             </Container>
         </>
     )
