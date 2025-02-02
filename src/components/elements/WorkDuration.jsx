@@ -34,7 +34,7 @@ const WorkDuration = ({ startMonth, endMonth, locale }) => {
     }, [startMonth, endMonth, locale]);
 
     return (
-        <p className='text-sm text-subtext mt-1 flex items-center gap-1'><BiCalendar className='text-primary' />{duration}</p>
+        <p className='text-sm text-subtext  flex items-center gap-1'><BiCalendar className='text-primary' />{duration}</p>
     );
 };
 
