@@ -63,8 +63,8 @@ const Dashboard = ({ githubEndpoint, leetcodeEndpoint, locale }) => {
           title={t('Dashboard.leetcodeTitle')}
           description={t('Dashboard.leetcodeSubtitle')}
           reactIcon={<SiLeetcode size={16} />}
-          linkText='@dwi-wijaya'
-          link='https://leetcode.com/dwi-wijaya'
+          linkText='@dwiwijaya'
+          link='https://leetcode.com/dwiwijaya'
           tintIcon={false}
         />
         <Letcode data={leetcodeData} />
