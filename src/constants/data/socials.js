@@ -30,7 +30,7 @@ export const Socials = [
         reactIcon : <RiLinkedinLine/>,
         boxIcon: 'linked-in',
         background: '#3b82f6',
-        link: 'https://www.linkedin.com/in/dwi-wijaya/',
+        link: 'https://www.linkedin.com/in/dwiwijaya/',
         eventName: 'Social: Linkedin',
         label: 'Linkedin',
     },
