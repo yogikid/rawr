@@ -17,21 +17,21 @@ const OneTapComponent = () => {
     }
 
     useEffect(() => {
-        const initializeGoogleOneTap = () => {
-            // console.log('Initializing Google One Tap')
-            window.addEventListener('load', async () => {
-                const [nonce, hashedNonce] = await generateNonce()
-                console.log('Nonce: ', nonce, hashedNonce)
-                // check if there's already an existing session before initializing the one-tap UI
-                const { data, error } = await supabase.auth.getSession()
-                if (error) {
-                    console.error('Error getting session', error)
-                }
-                if (data.session) {
-                    router.push('/guestbook')
-                    return
-                }
-                /* global google */
+        const initializeGoogleOneTap = async () => {
+            const [nonce, hashedNonce] = await generateNonce()
+            // console.log('Nonce: ', nonce, hashedNonce)
+            // check if there's already an existing session before initializing the one-tap UI
+            const { data, error } = await supabase.auth.getSession()
+            if (error) {
+                console.error('Error getting session:', error)
+                return
+            }
+            if (data.session) {
+                router.push('/guestbook')
+                return
+            }
+            /* global google */
+            if (typeof window !== 'undefined' && window.google && google.accounts) {
                 google.accounts.id.initialize({
                     client_id: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID,
                     callback: async (response) => {
@@ -43,29 +43,30 @@ const OneTapComponent = () => {
                                 nonce,
                             })
                             if (error) throw error
-                            console.log('Session data: ', data)
-                            console.log('Successfully logged in with Google One Tap')
                             // redirect to protected page
+
                             router.push('/guestbook')
                         } catch (error) {
-                            console.error('Error logging in with Google One Tap', error)
+                            console.error('Error logging in with Google One Tap:', error)
                         }
                     },
                     nonce: hashedNonce,
-                    // with chrome's removal of third-party cookiesm, we need to use FedCM instead (https://developers.google.com/identity/gsi/web/guides/fedcm-migration)
                     use_fedcm_for_prompt: true,
+                    auto_select: false, // Tambahan: pastikan pengguna bisa pilih akun baru
                 })
-                google.accounts.id.prompt() // Display the One Tap UI
-            })
+                google.accounts.id.prompt()
+            }
         }
-        initializeGoogleOneTap()
-        return () => window.removeEventListener('load', initializeGoogleOneTap)
-    }, [])
 
+        initializeGoogleOneTap()
+    }, [])
 
     return (
         <>
-            <Script src="https://accounts.google.com/gsi/client" />
+            <Script
+                src="https://accounts.google.com/gsi/client"
+                strategy="afterInteractive"
+            />
             <div id="oneTap" className="fixed top-0 right-0 z-[100]" />
         </>
     )
