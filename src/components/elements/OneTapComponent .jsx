@@ -46,7 +46,7 @@ const OneTapComponent = () => {
                             console.log('Session data: ', data)
                             console.log('Successfully logged in with Google One Tap')
                             // redirect to protected page
-                            router.push('/')
+                            router.push('/guestbook')
                         } catch (error) {
                             console.error('Error logging in with Google One Tap', error)
                         }
