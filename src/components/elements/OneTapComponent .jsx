@@ -28,7 +28,7 @@ const OneTapComponent = () => {
                     // console.error('Error getting session', error)
                 }
                 if (data.session) {
-                    router.push('/guestbook')
+                    router.push('/')
                     return
                 }
                 /* global google */
@@ -53,7 +53,6 @@ const OneTapComponent = () => {
                     },
                     nonce: hashedNonce,
                     // with chrome's removal of third-party cookiesm, we need to use FedCM instead (https://developers.google.com/identity/gsi/web/guides/fedcm-migration)
-                    // auto_select: false,
                     use_fedcm_for_prompt: true,
                 })
                 google.accounts.id.prompt() // Display the One Tap UI
