@@ -1,6 +1,6 @@
 import { supabase } from "@/lib/supabase";
 import ChatItem from "./ChatItem";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useLayoutEffect } from "react";
 
 export const GuestbookMessages = ({ initialMessages, onDeleteMessage, session }) => {
     const [messages, setMessages] = useState(initialMessages || []);
@@ -15,6 +15,10 @@ export const GuestbookMessages = ({ initialMessages, onDeleteMessage, session })
             scrollableContainerRef.current.scrollTop = scrollableContainerRef.current.scrollHeight;
         }
     };
+
+    useLayoutEffect(() => {
+        scrollToBottom();
+    }, [messages]);
 
     // Subscribe to changes in the "guestbook" table
     useEffect(() => {
