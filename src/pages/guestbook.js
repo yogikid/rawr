@@ -1,4 +1,5 @@
 import PageHeading from "@/components/common/PageHeading";
+import OneTapComponent from "@/components/elements/OneTapComponent ";
 import Container from "@/components/layouts/partials/Container";
 import Guestbook from "@/components/views/guestbook/Guestbook";
 import { fetcher } from "@/services/fetcher";
@@ -29,6 +30,7 @@ const GuestbookPage = ({ fallback }) => {
                     url: currentPageURL,
                 }}
             />
+            <OneTapComponent/>
             <SWRConfig value={{ fallback }}>
                 <Container data-aos='fade-up'>
                     <PageHeading
