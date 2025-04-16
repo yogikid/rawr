@@ -32,7 +32,16 @@ const DashboardPage = ({ fallback }) => {
                     url: currentPageURL,
                 }}
             />
-            <SWRConfig value={{ fallback }}>
+            <SWRConfig 
+                value={{ 
+                    fallback, 
+                    revalidateOnFocus: false,
+                    revalidateOnReconnect: false,
+                    revalidateIfStale: false, 
+                    shouldRetryOnError: false
+                }}
+                
+            >
                 <Container data-aos='fade-up'>
                     <PageHeading
                         title={t('title')}
@@ -47,8 +56,7 @@ const DashboardPage = ({ fallback }) => {
 
 export default DashboardPage;
 
-export const getStaticProps = async () => {
-
+export const getServerSideProps = async () => {
     const githubContribution = await getGithubUser('personal');
     const leetcodeStats = await getLeetcode();
 
@@ -59,6 +67,6 @@ export const getStaticProps = async () => {
                 '/api/leetcode': leetcodeStats?.data,
             },
         },
-        revalidate: 1,
     };
 };
+
