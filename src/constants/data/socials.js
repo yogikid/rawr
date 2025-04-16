@@ -1,6 +1,5 @@
-import { RiChatDeleteLine, RiGithubFill, RiGithubLine, RiInstagramFill, RiInstagramLine, RiLinkedinFill, RiLinkedinLine, RiTelegram2Fill, RiTelegramLine, RiWhatsappLine } from 'react-icons/ri'
+import { RiChatDeleteLine, RiGithubFill, RiInstagramFill, RiLinkedinFill, RiTelegram2Fill } from 'react-icons/ri'
 import { MdOutlineAlternateEmail } from 'react-icons/md'
-import { RiTelegram2Line } from "react-icons/ri";
 
 export const Socials = [
     {
@@ -25,17 +24,17 @@ export const Socials = [
         label: 'Linkedin',
     },
     {
-        reactIcon : <RiTelegram2Fill size={16}/>,
-        background: '#075e54',
-        link: 'https://t.me/dwiiwijaya',
-        eventName: 'Contact: Telegram',
-        label: 'Telegram',
-    },
-    {
         reactIcon : <RiGithubFill size={16}/>,
         background: '#000',
         link: 'https://github.com/dwiwijaya',
         eventName: 'Social: Github',
         label: 'Github',
+    },
+    {
+        reactIcon : <RiTelegram2Fill size={16}/>,
+        background: '#0088cc',
+        link: 'https://t.me/dwiiwijaya',
+        eventName: 'Contact: Telegram',
+        label: 'Telegram',
     },
 ]
