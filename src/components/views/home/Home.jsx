@@ -5,7 +5,6 @@ import HomeSocials from './HomeSocials'
 import Image from '@/components/elements/Image'
 import Router from 'next/router'
 import { useTranslations } from 'next-intl'
-import { BiCode, BiCodeAlt } from 'react-icons/bi'
 
 const Home = () => {
     const t = useTranslations('Home');
