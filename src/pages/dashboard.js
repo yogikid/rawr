@@ -56,7 +56,7 @@ const DashboardPage = ({ fallback }) => {
 
 export default DashboardPage;
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
     const githubContribution = await getGithubUser('personal');
     const leetcodeStats = await getLeetcode();
 
@@ -67,6 +67,8 @@ export const getServerSideProps = async () => {
                 '/api/leetcode': leetcodeStats?.data,
             },
         },
+        revalidate: 3600, // ISR: regenerate every 1 hour
     };
 };
+
 
