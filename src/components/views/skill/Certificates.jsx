@@ -46,15 +46,13 @@ const settings = {
 const Certificates = ({ certificates }) => {
   return (
     <section className="p-6">
-      <ol>
-        <Slider {...settings}>
-          {certificates.map((certificate, index) => (
-            <li key={index}>
-              <Image rounded='rounded-md bg-container' alt={certificate.name} width={1000} height={200} src={certificate.image} loading='lazy' />
-            </li>
-          ))}
-        </Slider>
-      </ol>
+      <Slider {...settings}>
+        {certificates.map((certificate, index) => (
+          <div key={index}>
+            <Image rounded='rounded-md bg-container' alt={certificate.name} width={1000} height={200} src={certificate.image} loading='lazy' />
+          </div>
+        ))}
+      </Slider>
     </section>
   )
 }
