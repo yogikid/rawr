@@ -108,7 +108,9 @@ const Portfolio = ({ portfolios, locale }) => {
                           width={999}
                           height={999}
                           className="aspect-thumbnail object-cover"
-                          quality={100}
+                          // quality={100}
+                          priority={index === 0}    // kalau ini gambar pertama
+                          loading={index === 0 ? undefined : "lazy"}
                         />
                         <div className="flex gap-1 absolute top-0 left-0 w-full h-full bg-black opacity-0 transition-opacity duration-300 justify-center items-center text-white group-hover/portfolio:opacity-80">
                           {t("seePortfolio")}<BiRightArrowAlt />
