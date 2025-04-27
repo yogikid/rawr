@@ -27,7 +27,7 @@ const Contact = () => {
                     <ul className="flex md:flex-row gap-2 justify-center">
                         {Socials.map((social, index) => (
                             <li key={index} className='flex w-full'>
-                                <button onClick={() => window.open(social.link, '_blank')} data-umami-event={social.eventName} title={social.label} className='w-full flex gap-2 justify-center items-center p-2 text-white rounded-md' style={{ backgroundColor: social.background }}>
+                                <button onClick={() => window.open(social.link, '_blank')} data-umami-event={social.eventName} title={social.label} className='w-full flex gap-2 justify-center items-center p-3 text-white rounded-md' style={{ backgroundColor: social.background }}>
                                     {social.reactIcon}
                                     <div className="hidden md:block">{social.label}</div>
                                 </button>
