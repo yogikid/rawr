@@ -8,9 +8,8 @@ import Link from "next/link";
 
 const FAQSection = ({ locale }) => {
     const t = useTranslations("Services.FAQ");
-    console.log(locale)
     const faqData = FAQ_DATA[locale];
-    const [expandedIndex, setExpandedIndex] = useState(null);
+    const [expandedIndex, setExpandedIndex] = useState(0);
 
     const toggleExpand = (index) => {
         setExpandedIndex(expandedIndex === index ? -1 : index);
