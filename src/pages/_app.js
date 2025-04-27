@@ -29,10 +29,14 @@ export default function App({ Component, pageProps, lastCommitDate, messages }) 
   const seoConfig = getDefaultSEOConfig(router.locale);
   useEffect(() => {
     Aos.init({
-      duration: 800,
-      delay: 50,
+      duration: 400,
+      delay: 0,
+      once: true,
+      easing: 'ease-out',
+      offset: 50,
     });
   }, []);
+  
 
   return <>
     <NextIntlClientProvider
