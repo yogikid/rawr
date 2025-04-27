@@ -49,7 +49,7 @@ const Certificates = ({ certificates }) => {
       <Slider {...settings}>
         {certificates.map((certificate, index) => (
           <div key={index}>
-            <Image rounded='rounded-md bg-container' alt={certificate.name} width={1000} height={200} src={certificate.image} loading='lazy' />
+            <Image rounded='rounded-md bg-container' alt={certificate.name} width={1000} height={200} src={certificate.image} priority={index === 0} loading={index === 0 ? undefined : "lazy"} />
           </div>
         ))}
       </Slider>
