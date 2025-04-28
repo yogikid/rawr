@@ -6,15 +6,26 @@ const nextConfig = {
     locales: ['en', 'id'],
     defaultLocale: 'id',
   },
+  experimental: {
+    optimizePackageImports: [
+      'react-icons',
+      'framer-motion',
+      'react-slick',
+      '@supabase/supabase-js'
+    ]
+  },
   images: {
     domains: [
-      'firebasestorage.googleapis.com', 
+      'firebasestorage.googleapis.com',
       'lh3.googleusercontent.com',
       'avatars.githubusercontent.com',
       'dwiwijaya.com'
     ],
   },
 };
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+})
 
 const withPWA = require('next-pwa')({
   dest: 'public',
@@ -22,4 +33,4 @@ const withPWA = require('next-pwa')({
   skipWaiting: true,
 });
 
-module.exports = withPWA(removeImports(nextConfig));
+module.exports = withBundleAnalyzer(withPWA(removeImports(nextConfig)));
