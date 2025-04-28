@@ -8,6 +8,11 @@ import { useTranslations } from 'next-intl'
 
 const Home = () => {
     const t = useTranslations('Home');
+    const infoItems = [
+        { label: t('openToOpportunities'), icon: 'fa-briefcase' },
+        { label: t('motto'), icon: 'fa-quote-right' },
+        { label: t('based'), icon: 'fa-street-view' }
+    ];
     return (
         <div className='absolute -top-[175%] w-[calc(100%-40px)] '>
             <div className="flex justify-between gap-4 items-end  mb-8">
@@ -35,18 +40,12 @@ const Home = () => {
                 </div>
 
                 <div className="flex flex-col space-y-1">
-                    <p className='w-fit cursor-pointer text-subtext gap-2 text-sm flex items-center hover:text-primary transition-all duration-100'>
-                        <span className="text-primary">-</span> {t('openToOpportunities')}
-                        <i className="text-primary fad fa-bolt"></i>
-                    </p>
-                    <p className='w-fit cursor-pointer text-subtext gap-2 text-sm flex items-center hover:text-primary transition-all duration-100'>
-                        <span className="text-primary">-</span> {t('motto')}
-                        <i className="text-primary fad fa-quote-right"></i>
-                    </p>
-                    <p className='w-fit cursor-pointer text-subtext gap-2 text-sm flex items-center hover:text-primary transition-all duration-100'>
-                        <span className="text-primary">-</span> {t('based')}
-                        <i className="text-primary fad fa-location-dot"></i>
-                    </p>
+                    {infoItems.map((item, index) => (
+                        <p key={index} className='group w-fit cursor-pointer text-subtext gap-2 text-sm flex items-center hover:text-primary transition-all duration-100'>
+                            <span className="text-primary">-</span> {item.label}
+                            <i className={`group-hover:rotate-12 group-hover:scale-110 transition-all duration-100 text-primary fad ${item.icon}`}></i>
+                        </p>
+                    ))}
                 </div>
             </div>
             <HomeSocials />

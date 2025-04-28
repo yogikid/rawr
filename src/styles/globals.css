@@ -211,7 +211,8 @@ html {
 
 .btn:hover i {
   transform: rotate(-10deg);
-  transition: all .3s;
+  transition: ease-out .2s;
+  scale: 1.05;
 }
 
 ::-webkit-scrollbar {
