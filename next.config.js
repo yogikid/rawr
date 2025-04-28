@@ -28,8 +28,7 @@ const nextConfig = {
     if (!isServer) {
       config.optimization.splitChunks = {
         chunks: 'all',
-        maxSize: 100000, // 100KB limit per chunk
-        automaticNameDelimiter: '-', // Default is '-'
+        maxSize: 50000, // 50KB limit per chunk
       };
     }
     return config;
