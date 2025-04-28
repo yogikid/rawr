@@ -59,7 +59,7 @@ const OneTapComponent = () => {
         }
 
         initializeGoogleOneTap()
-    }, [])
+    }, [router])
 
     return (
         <>

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Pin from "@/assets/pin.svg";
 import { PORTFOLIO_TYPES, PORTFOLIO_TYPES_ICON } from "@/constants/data/portfolio";
 import { portfolioCategory as portfolioCategoryData } from '@/constants/data/portfolioCategory';
@@ -34,11 +34,12 @@ const Portfolio = ({ portfolios, locale }) => {
     }
   };
 
-  const getNoPortfolioMessage = (categoryItem) => {
+  const getNoPortfolioMessage = useCallback((categoryItem) => {
     const categoryData = portfolioCategoryData.find((cat) => cat.slug === categoryItem);
     const categoryLabel = categoryData ? categoryData.label[locale] : categoryItem;
     return t("noPortfolio", { category: categoryLabel });
-  };
+  }, [locale, t]); 
+  
 
   useEffect(() => {
     // Re-run filter when the language (locale) changes
@@ -52,7 +53,7 @@ const Portfolio = ({ portfolios, locale }) => {
         setNoPortfolioMessage(null);
       }
     }
-  }, [locale, activeCategory, portfolios, t]);
+  }, [locale, activeCategory, portfolios, t, getNoPortfolioMessage]);
 
   const IconCategory = {
     code: "fad fa-code-simple",
