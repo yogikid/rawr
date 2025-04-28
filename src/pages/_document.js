@@ -12,7 +12,7 @@ export default function Document() {
         <script defer src="https://analytics.dwiwijaya.com/script.js" data-website-id="7e71a6f6-f863-400e-806f-1af37e845ad1"/>
         <link
           rel="preload"
-          href="/webfont/fa-duotone-900.woff2"
+          href="/webfonts/fa-duotone-900.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
