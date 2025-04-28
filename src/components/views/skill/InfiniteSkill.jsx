@@ -1,4 +1,3 @@
-import { skillData } from "@/constants/data/skills";
 import SkillItem from "./SkillItem";
 
 const SkillsCategory = ({ data, animationTime, reverseAnimation }) => {

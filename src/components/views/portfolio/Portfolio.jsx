@@ -6,7 +6,6 @@ import PortfolioCategory from "./PortfolioCategory";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Image from "@/components/elements/Image";
-import { useRouter } from "next/router";
 import { BiRightArrowAlt } from "react-icons/bi";
 import { useTranslations } from "next-intl";
 

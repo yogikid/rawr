@@ -1,11 +1,7 @@
 import React from "react";
 import useSWR from "swr";
-import { getGithubUser } from "@/services/GithubServices";
 import PageSpeed from "./pagespeed";
 import { fetcher } from "@/services/fetcher";
-import { LEETCODE_API } from "@/constants/leetcode";
-import { GITHUB_ACCOUNTS } from "@/constants/github";
-import PageHeading from "@/components/common/PageHeading";
 import PageSubHeading from "@/components/common/PageSubHeading";
 import Letcode from "./leetcode/Leetcode";
 import Overview from "./contributions/Overview";

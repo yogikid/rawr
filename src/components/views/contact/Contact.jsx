@@ -1,10 +1,8 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import useEmailService from '@/services/EmailService';
 import { Socials } from '@/constants/data/socials';
-import Image from 'next/image';
-import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import { BiLoader, BiLoaderAlt, BiMailSend } from 'react-icons/bi';
+import { BiLoaderAlt, BiMailSend } from 'react-icons/bi';
 
 const Contact = () => {
     const t = useTranslations();

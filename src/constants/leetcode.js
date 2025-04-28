@@ -1,5 +1,4 @@
-export const LEETCODE_ACCOUNTS =
-{
+export const LEETCODE_ACCOUNTS = {
     username: "dwiwijaya",
     endpoint: "/api/leetcode",
 };

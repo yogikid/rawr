@@ -1,12 +1,11 @@
-import ThemeToggle from "@/components/toggles/ThemeToggle";
-import Overlay from "@/components/layouts/partials/Overlay";
-import Sidebar from "@/components/layouts/partials/Sidebar";
 import { ThemeProvider } from "next-themes";
 import { Onest } from 'next/font/google'
 import { Toaster } from "react-hot-toast";
 import { useEffect } from "react";
 import "@/styles/globals.css";
-import "@/styles/css/fa.min.css";
+import "@/styles/vendor/fa.min.css";
+import "@/styles/vendor/slick.css"
+import "@/styles/vendor/markdown.css"
 import 'aos/dist/aos.css';
 import Aos from "aos";
 import dynamic from "next/dynamic";

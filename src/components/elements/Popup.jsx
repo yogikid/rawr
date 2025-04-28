@@ -1,4 +1,3 @@
-// components/Popup.js
 import { motion, AnimatePresence } from "framer-motion";
 
 const Popup = ({ isVisible, children }) => {

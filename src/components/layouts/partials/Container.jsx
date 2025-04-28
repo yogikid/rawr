@@ -1,6 +1,3 @@
-import { ReactNode } from 'react';
-import Overlay from './Overlay';
-
 const Container = ({ children, className = '', ...others }) => {
   return (
     

@@ -1,6 +1,5 @@
 import { supabase } from '@/lib/supabase';
 import { useEffect, useState } from 'react';
-import { GuestbookForm } from './GuestbookForm';
 import { GuestbookMessages } from './GuestbookMessages';
 import ChatAuth from './ChatAuth';
 import ChatInput from './ChatInput';

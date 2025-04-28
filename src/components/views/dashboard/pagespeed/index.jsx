@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react'
 import useSwr from 'swr'
 import { PAGESPEED_API } from '@/constants/pagespeed'

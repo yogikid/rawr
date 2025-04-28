@@ -1,5 +1,4 @@
 export const certificatesData = [
-   
     {
         title: "The Complete Web Development Bootcamp",
         organizationL: "Udemy - ",

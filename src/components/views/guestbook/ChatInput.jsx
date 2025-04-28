@@ -1,5 +1,4 @@
-import clsx from "clsx";
-import { ChangeEvent, FormEvent, useRef, useState } from "react";
+import { useState } from "react";
 import { FiSend as SendIcon } from "react-icons/fi";
 
 import ChatUserInfo from "./ChatUserInfo";

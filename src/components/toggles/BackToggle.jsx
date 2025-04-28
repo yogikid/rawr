@@ -1,5 +1,3 @@
-// BackToggle.js
-
 import { useRouter } from "next/router";
 
 const BackToggle = () => {

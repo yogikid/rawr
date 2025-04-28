@@ -1,5 +1,3 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-
 import { getGithubUser } from '@/services/GithubServices';
 
 export default async function handler(req, res) {

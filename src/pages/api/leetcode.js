@@ -1,5 +1,3 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-
 import { getLeetcode } from '@/services/LeetcodeService';
 
 export default async function handler(req,res) {

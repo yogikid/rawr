@@ -1,6 +1,4 @@
 import React from 'react'
-import PageHeading from '../../common/PageHeading';
-import { _Experience, experienceData } from '@/constants/data/experience';
 import WorkDuration from '@/components/elements/WorkDuration';
 import { motion } from "framer-motion";
 import { SlGraduation, SlBriefcase } from 'react-icons/sl';

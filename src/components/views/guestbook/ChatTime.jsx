@@ -1,8 +1,6 @@
 import { format, formatDistanceToNow, isToday } from 'date-fns';
 import { useEffect, useState } from 'react';
 
-
-
 const ChatTime = ({ datetime }) => {
     const [formattedTime, setFormattedTime] = useState(
         formatDistanceToNow(new Date(datetime), { addSuffix: true }),

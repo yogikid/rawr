@@ -5,7 +5,6 @@ import { MENU_ITEMS } from '@/constants/data/menu';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
 import Router, { useRouter } from 'next/router';
 import { usePathname } from 'next/navigation';
 import ThemeToggle from '../../toggles/ThemeToggle';
