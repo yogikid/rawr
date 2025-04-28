@@ -16,8 +16,8 @@
       "purpose": "any"
     },
     {
-      "src": "/favicon/light-192.png",
-      "sizes": "192x192",
+      "src": "/favicon/light-180.png",
+      "sizes": "180x180",
       "type": "image/png",
       "purpose": "any"
     },
@@ -37,7 +37,7 @@
     },
     {
       "src": "images/screenshot-mobile.png",
-      "sizes": "815x380",
+      "sizes": "380x815",
       "type": "image/png"
     }
   ],
