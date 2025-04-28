@@ -1,6 +1,7 @@
 const removeImports = require('next-remove-imports')();
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  crossOrigin: 'anonymous',
   reactStrictMode: true,
   i18n: {
     locales: ['en', 'id'],
