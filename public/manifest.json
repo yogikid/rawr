@@ -20,6 +20,12 @@
       "sizes": "512x512",
       "purpose": "any",
       "type": "image/png"
+    },
+    {
+      "src": "images/screenshot-desktop.png",
+      "sizes": "1268x916",
+      "type": "image/png",
+      "form_factor": "wide"
     }
   ],
   "start_url": "/",
