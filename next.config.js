@@ -23,10 +23,22 @@ const nextConfig = {
       'dwiwijaya.com'
     ],
   },
+  webpack(config, { isServer }) {
+    // Customizing splitChunks configuration for client-side bundle
+    if (!isServer) {
+      config.optimization.splitChunks = {
+        chunks: 'all',
+        maxSize: 100000, // 100KB limit per chunk
+        automaticNameDelimiter: '-', // Default is '-'
+      };
+    }
+    return config;
+  },
 };
+
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
-})
+});
 
 const withPWA = require('next-pwa')({
   dest: 'public',
