@@ -34,10 +34,10 @@ const LanguageToggle = () => {
                         style={{ content: '""', zIndex: 1 }}
                     />
                     <p className={`z-10 p-3 justify-center leading-4 flex items-center gap-2 text-slate-500 ${language == 'id' ? '!text-slate-800 dark:!text-slate-300' : ''}`}>
-                        <i className="fa-duotone fal-xl fa-solid fa-language"></i>ID
+                        <i className="fa-duotone fa-language"></i>ID
                     </p>
                     <p className={`z-10 p-3 justify-center leading-4 flex items-center gap-2 text-slate-500 ${language == 'en' ? '!text-slate-800 dark:!text-slate-300' : ''}`}>
-                        <i className="fa-duotone fal-xl fa-solid fa-language"></i>EN
+                        <i className="fa-duotone fa-language"></i>EN
                     </p>
                 </div>
             </label>

@@ -37,15 +37,15 @@ const Home = () => {
                 <div className="flex flex-col space-y-1">
                     <p className='w-fit cursor-pointer text-subtext gap-2 text-sm flex items-center hover:text-primary transition-all duration-100'>
                         <span className="text-primary">-</span> {t('openToOpportunities')}
-                        <i className="text-primary fal fa-bolt"></i>
+                        <i className="text-primary fad fa-bolt"></i>
                     </p>
                     <p className='w-fit cursor-pointer text-subtext gap-2 text-sm flex items-center hover:text-primary transition-all duration-100'>
                         <span className="text-primary">-</span> {t('motto')}
-                        <i className="text-primary fal fa-quote-right"></i>
+                        <i className="text-primary fad fa-quote-right"></i>
                     </p>
                     <p className='w-fit cursor-pointer text-subtext gap-2 text-sm flex items-center hover:text-primary transition-all duration-100'>
                         <span className="text-primary">-</span> {t('based')}
-                        <i className="text-primary fal fa-location-dot"></i>
+                        <i className="text-primary fad fa-location-dot"></i>
                     </p>
                 </div>
             </div>
