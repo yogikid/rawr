@@ -23,12 +23,12 @@ const nextConfig = {
       'dwiwijaya.com'
     ],
   },
-  webpack(config, { isServer }) {
+  webpack(config, { isServer, dev }) {
     // Customizing splitChunks configuration for client-side bundle
-    if (!isServer) {
+    if (!dev && !isServer) {
       config.optimization.splitChunks = {
         chunks: 'all',
-        maxSize: 50000, // 50KB limit per chunk
+        maxSize: 50000, // 50KB per chunk
       };
     }
     return config;
