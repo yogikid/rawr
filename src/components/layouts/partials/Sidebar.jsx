@@ -1,35 +1,32 @@
-import React, { useEffect, useRef, useState } from 'react';
-import LogoDark from '@/assets/logo-dark.svg';
-import LogoLight from '@/assets/logo-light.svg';
+import { useEffect, useState } from 'react';
 import { MENU_ITEMS } from '@/constants/data/menu';
-import Image from 'next/image';
 import { useTheme } from 'next-themes';
-import Link from 'next/link';
-import Router, { useRouter } from 'next/router';
+import { useRouter } from 'next/router';
 import { usePathname } from 'next/navigation';
-import ThemeToggle from '../../toggles/ThemeToggle';
-import LanguageToggle from '../../toggles/LanguageToggle';
 import { useSwipeable } from 'react-swipeable';
 import { useTranslations } from 'next-intl';
+import Logo from './Logo';
+import Link from 'next/link';
+import LanguageToggle from '../../toggles/LanguageToggle';
+import LastUpdated from './LastUpdated';
+import Footer from './Footer';
+import ThemeToggle from '../../toggles/ThemeToggle';
 
 const Sidebar = ({ className, lastUpdate }) => {
-    const [mounted, setMounted] = useState(false)
     const [toggle, setToggle] = useState(false);
+    const { locale } = useRouter();
     const { theme } = useTheme();
-    const sidebarRef = useRef(null);
     const pathname = usePathname()
     const t = useTranslations();
-    const { locale } = useRouter();
-    useEffect(() => {
-        setMounted(true)
-    }, [])
+
     const formatDate = (date) => {
-        return new Intl.DateTimeFormat(locale, {
+        return new Date(date).toLocaleDateString(locale, {
             day: 'numeric',
             month: 'short',
-            year: 'numeric',
-        }).format(date);
+            year: 'numeric'
+        })
     };
+
     useEffect(() => {
         const sidebarElement = document.querySelector('.sidebar');
 
@@ -83,45 +80,24 @@ const Sidebar = ({ className, lastUpdate }) => {
         touchEventOptions: { passive: true },
     });
 
-    if (!mounted) {
-        return null
-    }
-
     return (
         <>
             <div  {...handlersOpen} className="w-6 h-full absolute top-0 left-0 lg:hidden z-10" />
             <aside {...handlersClose} className={`sidebar ${className} ${toggle && '!left-0'} max-h-[100dvh] min-h-[100dvh] scrollbar-hide overflow-x-auto fixed -left-64 lg:left-0 top-0 bg-container border border-stroke pl-0 p-6 w-64 flex flex-col gap-8 justify-between text-center transition-3s z-10 lg:z-0 shadow-sm`}>
                 <div className="flex flex-col gap-8">
                     <header className="ml-6 flex flex-col gap-8">
-                        <button
-                            data-umami-event={`Click Logo`}
-                            onClick={() => { setToggle(false); Router.push('/'); }}
-                            aria-label='go home'
-                            className="w-fit mt-2 "
-                        >
-                            <Image width={70} src={theme == 'dark' ? LogoDark : LogoLight} alt="Dwi-logo" />
-                        </button>
-                        <div className="text-left mt-4 sm:mt-8">
-                            <h2 className='text-2xl mb-2 leading-6 font-se'>{t('Sidebar.welcome')}</h2>
-                            <time className="text-sm text-subtext">
-                                {t("Sidebar.lastupdate")} : {new Date(lastUpdate).toLocaleDateString(locale, {
-                                    day: 'numeric',
-                                    month: 'short',
-                                    year: 'numeric'
-                                })}
-                            </time>
-                        </div>
-
+                        <Logo theme={theme} setToggle={setToggle} />
+                        <LastUpdated lastUpdate={formatDate(lastUpdate)} t={t} />
                         <div className="flex gap-2 flex-col">
                             <ThemeToggle />
                             <LanguageToggle handleClick={() => setToggle(false)} />
                         </div>
                     </header>
                     <nav className="nav">
-                        <div className="nav__menu p-6 bg-background rounded-l-none rounded-2xl">
+                        <div className="p-6 bg-background rounded-l-none rounded-2xl">
                             <ul className="flex flex-col items-center">
                                 {MENU_ITEMS.map((item, index) => (
-                                    <li key={index} className='nav__item w-full group py-2'>
+                                    <li key={index} className='w-full group py-2'>
                                         <Link tabIndex={0} aria-label={item.label[locale]} onClick={() => setToggle(false)} href={item.href} title={item.label[locale]} className={`${pathname === item.href ? '!text-primary' : ''} hover:text-primary  text-text   h-full transition-300 flex items-center justify-between`}>
                                             <span className='flex items-center gap-3'><i className={`${item.iconClass} min-w-5 flex justify-center items-center group-hover:-rotate-[8deg] duration-300 transition-all`}></i> {item.label[locale]}</span> {pathname === item.href && <i className="fad fa-arrow-right animate-pulse"></i>}
                                         </Link>
@@ -131,9 +107,7 @@ const Sidebar = ({ className, lastUpdate }) => {
                         </div>
                     </nav>
                 </div>
-                <footer className="nav__footer text-left pl-6">
-                    <span className="text-subtext text-sm transform rotate-180 ">&copy; {new Date().getFullYear()} Dwi-wijaya</span>
-                </footer>
+                <Footer />
                 <div onClick={() => setToggle(!toggle)} className={`toggle lg:-left-64 left-5 sidebar__toggle ${toggle ? '!left-[17rem]' : ''}`}>
                     <i className="fa-duotone fa-bars text-primary"></i>
                 </div>
