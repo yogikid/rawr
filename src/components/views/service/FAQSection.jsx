@@ -1,10 +1,11 @@
+import Link from "next/link";
 import { useState } from "react";
-import { useTranslations } from "next-intl";
-import { FAQ_DATA } from "@/constants/data/faq";
 import { motion } from "framer-motion";
 import { FAQPageJsonLd } from "next-seo";
+import { useTranslations } from "next-intl";
+
+import { FAQ_DATA } from "@/constants/data/faq";
 import PageSubHeading from "@/components/common/PageSubHeading";
-import Link from "next/link";
 
 const FAQSection = ({ locale }) => {
     const t = useTranslations("Services.FAQ");

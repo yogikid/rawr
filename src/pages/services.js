@@ -1,11 +1,11 @@
-import PageHeading from '@/components/common/PageHeading';
-import Container from '@/components/layouts/partials/Container'
-import FAQSection from '@/components/views/service/FAQSection';
-import Services from '@/components/views/service/Services'
+import { useRouter } from 'next/router';
 import { useTranslations } from 'next-intl';
 import { NextSeo } from 'next-seo';
-import { useRouter } from 'next/router';
-import React from 'react'
+
+import Container from '@/components/layouts/partials/Container'
+import FAQSection from '@/components/views/service/FAQSection';
+import PageHeading from '@/components/common/PageHeading';
+import Services from '@/components/views/service/Services'
 
 const ServicesPage = () => {
 

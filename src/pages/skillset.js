@@ -1,12 +1,12 @@
-import PageHeading from '@/components/common/PageHeading';
-import Container from '@/components/layouts/partials/Container';
-import Skill from '@/components/views/skill/Skill';
-import { fetcher } from '@/services/fetcher';
+import { useRouter } from 'next/router';
 import { useTranslations } from 'next-intl';
 import { NextSeo } from 'next-seo';
-import { useRouter } from 'next/router';
-import React from 'react'
 
+import { fetcher } from '@/services/fetcher';
+
+import Skill from '@/components/views/skill/Skill';
+import PageHeading from '@/components/common/PageHeading';
+import Container from '@/components/layouts/partials/Container';
 
 const SkillsetPage = ({ skills, certificates }) => {
 

@@ -1,5 +1,5 @@
-import AnimateCounter from "@/components/elements/AnimateCounter";
 import React from "react";
+import AnimateCounter from "@/components/elements/AnimateCounter";
 
 const Number = ({ className, value }) => (
     <AnimateCounter

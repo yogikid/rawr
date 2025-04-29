@@ -1,14 +1,13 @@
 
 
-import dynamic from 'next/dynamic';
 import Image from 'next/image';
-import Link from 'next/link'
-import React, { useState } from 'react'
+import dynamic from 'next/dynamic';
+import { BsGithub } from 'react-icons/bs';
+import { BiChevronRight, BiLinkExternal } from 'react-icons/bi';
+
+import { PORTFOLIO_CATEGORIES, PORTFOLIO_TYPES } from '@/constants/data/portfolio';
 import "@uiw/react-md-editor/markdown-editor.css";
 import "@uiw/react-markdown-preview/markdown.css";
-import { PORTFOLIO_CATEGORIES, PORTFOLIO_CATEGORIES_ICON, PORTFOLIO_TYPES, PORTFOLIO_TYPES_ICON } from '@/constants/data/portfolio';
-import { BiChevronRight, BiLinkExternal } from 'react-icons/bi';
-import { BsGithub } from 'react-icons/bs';
 
 const MDEditorPreview = dynamic(
     () => import("@uiw/react-markdown-preview").then((module) => module.default),
@@ -16,7 +15,7 @@ const MDEditorPreview = dynamic(
 );
 
 const DetailPortfolio = ({ portfolio, locale }) => {
-
+    console.log(locale)
     return (
         <article className=''>
             <h1 className='text-2xl font-medium'>{portfolio.name}</h1>
@@ -63,8 +62,8 @@ const DetailPortfolio = ({ portfolio, locale }) => {
                 source={portfolio.content}
                 className="md:p-4 rounded-lg mb-3"
             />
-            <p className='text-sm text-subtext flex items-center gap-2'><BiChevronRight /> {locale == 'en' ? 'Category' : 'Kategori'}:  {PORTFOLIO_CATEGORIES_ICON[portfolio.category]} {PORTFOLIO_CATEGORIES[portfolio.category][locale]}</p>
-            <p className='text-sm text-subtext flex items-center gap-2'><BiChevronRight /> {locale == 'en' ? 'Type' : 'Jenis'}: {PORTFOLIO_TYPES_ICON[portfolio.type]} {PORTFOLIO_TYPES[portfolio.type][locale]} </p>
+            <p className='text-sm text-subtext flex items-center gap-2'><BiChevronRight /> {locale == 'en' ? 'Category' : 'Kategori'}:  {PORTFOLIO_CATEGORIES[portfolio.category].reactIcon} {PORTFOLIO_CATEGORIES[portfolio.category].label[locale]}</p>
+            <p className='text-sm text-subtext flex items-center gap-2'><BiChevronRight /> {locale == 'en' ? 'Type' : 'Jenis'}: {PORTFOLIO_TYPES[portfolio.type].icon} {PORTFOLIO_TYPES[portfolio.type][locale]} </p>
         </article>
     )
 }

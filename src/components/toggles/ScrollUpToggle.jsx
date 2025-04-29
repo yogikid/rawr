@@ -1,4 +1,3 @@
-import React from 'react'
 import { BiUpArrowAlt } from 'react-icons/bi';
 
 const ScrollUpToggle = () => {

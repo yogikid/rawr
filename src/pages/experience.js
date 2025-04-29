@@ -1,12 +1,11 @@
+import { useRouter } from 'next/router';
+import { useTranslations } from 'next-intl';
+import { NextSeo } from 'next-seo';
+
+import { fetcher } from '@/services/fetcher';
 import PageHeading from '@/components/common/PageHeading';
 import Container from '@/components/layouts/partials/Container'
 import Experience from '@/components/views/experience/Experience'
-import { fetcher } from '@/services/fetcher';
-import { useTranslations } from 'next-intl';
-import { NextSeo } from 'next-seo';
-import { useRouter } from 'next/router';
-import React from 'react'
-
 
 const ExperiencePage = ({ experience }) => {
 

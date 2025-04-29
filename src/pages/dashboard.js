@@ -1,12 +1,14 @@
+import { useRouter } from 'next/router';
+import { useTranslations } from 'next-intl';
 import { NextSeo } from 'next-seo';
 import { SWRConfig } from 'swr';
+
 import { getGithubUser } from '@/services/GithubServices';
 import { getLeetcode } from '@/services/LeetcodeService';
+
 import Container from '@/components/layouts/partials/Container';
 import Dashboard from '@/components/views/dashboard/Dashboard';
 import PageHeading from '@/components/common/PageHeading';
-import { useRouter } from 'next/router';
-import { useTranslations } from 'next-intl';
 
 
 const DashboardPage = ({ fallback }) => {

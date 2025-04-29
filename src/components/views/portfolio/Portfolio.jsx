@@ -1,13 +1,15 @@
 import { useCallback, useEffect, useState } from "react";
-import Pin from "@/assets/pin.svg";
-import { PORTFOLIO_TYPES, PORTFOLIO_TYPES_ICON } from "@/constants/data/portfolio";
-import { portfolioCategory as portfolioCategoryData } from '@/constants/data/portfolioCategory';
-import PortfolioCategory from "./PortfolioCategory";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import Image from "@/components/elements/Image";
-import { BiRightArrowAlt } from "react-icons/bi";
 import { useTranslations } from "next-intl";
+import { BiRightArrowAlt } from "react-icons/bi";
+
+import { PORTFOLIO_CATEGORIES, PORTFOLIO_TYPES } from "@/constants/data/portfolio";
+
+import Pin from "@/assets/pin.svg";
+import Image from "@/components/elements/Image";
+
+import PortfolioCategory from "./PortfolioCategory";
 
 const Portfolio = ({ portfolios, locale }) => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -34,11 +36,10 @@ const Portfolio = ({ portfolios, locale }) => {
   };
 
   const getNoPortfolioMessage = useCallback((categoryItem) => {
-    const categoryData = portfolioCategoryData.find((cat) => cat.slug === categoryItem);
+    const categoryData = PORTFOLIO_CATEGORIES[categoryItem];
     const categoryLabel = categoryData ? categoryData.label[locale] : categoryItem;
     return t("noPortfolio", { category: categoryLabel });
-  }, [locale, t]); 
-  
+  }, [locale, t]);
 
   useEffect(() => {
     // Re-run filter when the language (locale) changes
@@ -63,11 +64,8 @@ const Portfolio = ({ portfolios, locale }) => {
 
   return (
     <>
-      <nav>
-        <PortfolioCategory filter={filterItems} active={activeCategory} />
-      </nav>
+      <PortfolioCategory filter={filterItems} active={activeCategory} />
 
-      {/* Handle case when no portfolio is available */}
       {noPortfolioMessage ? (
         <p className="text-subtext">
           <i className="fad fa-exclamation-circle mr-2"></i>
@@ -120,7 +118,7 @@ const Portfolio = ({ portfolios, locale }) => {
                     <div className="p-5 flex flex-col h-full gap-1 bg-container border border-stroke">
                       <div>
                         <p className="text-subtext text-xs flex gap-1 items-center mb-1">
-                          <span className="text-primary">{PORTFOLIO_TYPES_ICON[type]}</span>
+                          <span className="text-primary">{PORTFOLIO_TYPES[type].icon}</span>
                           {PORTFOLIO_TYPES[type][locale]}
                         </p>
                         <h2 className="font-semibold group-hover/portfolio:text-primary">

@@ -1,10 +1,11 @@
 import Link from 'next/link'
-import React from 'react'
-import Profile from '@/assets/avatar-profile.webp'
-import HomeSocials from './HomeSocials'
-import Image from '@/components/elements/Image'
 import Router from 'next/router'
 import { useTranslations } from 'next-intl'
+
+import Profile from '@/assets/avatar-profile.webp'
+import Image from '@/components/elements/Image'
+
+import HomeSocials from './HomeSocials'
 
 const Home = () => {
     const t = useTranslations('Home');

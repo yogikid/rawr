@@ -1,4 +1,3 @@
-import React from 'react'
 import Sidebar from './partials/Sidebar'
 import Overlay from './partials/Overlay'
 

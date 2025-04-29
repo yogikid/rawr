@@ -1,5 +1,3 @@
-import React from "react";
-
 const PageSubHeading = ({ title, description, icon, link, linkText, tintIcon = true, reactIcon }) => {
   return (
     <>

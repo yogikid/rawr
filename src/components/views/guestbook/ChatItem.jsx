@@ -1,10 +1,10 @@
-import { useState, useRef, useEffect } from 'react';
-import { supabase } from '@/lib/supabase';
 import Image from 'next/image';
+import { useState, useRef, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { FiTrash2 as DeleteIcon } from 'react-icons/fi';
-import { MdAdminPanelSettings as AdminIcon } from 'react-icons/md';
+import { MdAdminPanelSettings } from 'react-icons/md';
+import { supabase } from '@/lib/supabase';
 import ChatTime from './ChatTime';
-import { motion, AnimatePresence } from 'framer-motion'; // Import framer-motion
 
 const ChatItem = ({
   id,
@@ -128,7 +128,7 @@ const ChatItem = ({
             </div>
             {email === authorEmail && (
               <div className='text-medium flex items-center gap-0.5 rounded-full bg-orange-600 dark:bg-orange-700 px-1.5 py-0.5 text-violet-50'>
-                <AdminIcon size={13} />
+                <MdAdminPanelSettings size={13} />
                 <span className=' text-[10px]'>Author</span>
               </div>
             )}

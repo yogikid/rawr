@@ -1,6 +1,6 @@
-import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { setCookie } from 'cookies-next';
+import { useRouter } from 'next/router';
 
 const LanguageToggle = () => {
     const { locale, push, pathname, query } = useRouter();

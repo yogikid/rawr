@@ -1,8 +1,8 @@
-import React from 'react'
-import WorkDuration from '@/components/elements/WorkDuration';
-import { motion } from "framer-motion";
 import { SlGraduation, SlBriefcase } from 'react-icons/sl';
 import { BiMapPin, BiBook } from 'react-icons/bi';
+import { motion } from "framer-motion";
+
+import WorkDuration from '@/components/elements/WorkDuration';
 
 const Experience = ({ experience, locale }) => {
 

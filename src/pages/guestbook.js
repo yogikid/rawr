@@ -1,12 +1,14 @@
-import PageHeading from "@/components/common/PageHeading";
+import { useRouter } from "next/router";
+import { useTranslations } from "next-intl";
+import { NextSeo } from "next-seo";
+import { SWRConfig } from "swr";
+
+import { fetcher } from "@/services/fetcher";
+
 import OneTapComponent from "@/components/elements/OneTapComponent ";
 import Container from "@/components/layouts/partials/Container";
 import Guestbook from "@/components/views/guestbook/Guestbook";
-import { fetcher } from "@/services/fetcher";
-import { useTranslations } from "next-intl";
-import { NextSeo } from "next-seo";
-import { useRouter } from "next/router";
-import { SWRConfig } from "swr";
+import PageHeading from "@/components/common/PageHeading";
 
 const GuestbookPage = ({ fallback }) => {
     const t = useTranslations('Guestbook');

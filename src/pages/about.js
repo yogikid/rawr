@@ -1,9 +1,10 @@
-import PageHeading from "@/components/common/PageHeading";
-import Container from "@/components/layouts/partials/Container"
-import About from "@/components/views/about/About"
+import { useRouter } from "next/router";
 import { useTranslations } from "next-intl";
 import { NextSeo } from "next-seo";
-import { useRouter } from "next/router";
+
+import Container from "@/components/layouts/partials/Container"
+import PageHeading from "@/components/common/PageHeading";
+import About from "@/components/views/about/About"
 
 const AboutPage = () => {
 

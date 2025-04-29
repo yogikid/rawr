@@ -1,6 +1,6 @@
+import { useEffect, useState, useRef, useLayoutEffect } from "react";
 import { supabase } from "@/lib/supabase";
 import ChatItem from "./ChatItem";
-import { useEffect, useState, useRef, useLayoutEffect } from "react";
 
 export const GuestbookMessages = ({ initialMessages, onDeleteMessage, session }) => {
     const [messages, setMessages] = useState(initialMessages || []);

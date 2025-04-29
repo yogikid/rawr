@@ -1,4 +1,4 @@
-import { RiChatDeleteLine, RiGithubFill, RiInstagramFill, RiLinkedinFill, RiTelegram2Fill } from 'react-icons/ri'
+import { RiGithubFill, RiInstagramFill, RiLinkedinFill, RiTelegram2Fill } from 'react-icons/ri'
 import { MdOutlineAlternateEmail } from 'react-icons/md'
 
 export const Socials = [

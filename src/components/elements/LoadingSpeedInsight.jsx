@@ -1,4 +1,3 @@
-import React from 'react';
 import { BiDotsHorizontalRounded } from 'react-icons/bi';
 
 export default function LoadingSpeedInsight({ locale, style }) {

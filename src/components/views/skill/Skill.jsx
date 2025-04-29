@@ -1,8 +1,7 @@
-import React from 'react'
-import InfiniteSkill from './InfiniteSkill'
-import PageSubHeading from '@/components/common/PageSubHeading'
-import Certificates from './Certificates'
 import { useTranslations } from 'next-intl'
+import PageSubHeading from '@/components/common/PageSubHeading'
+import InfiniteSkill from './InfiniteSkill'
+import Certificates from './Certificates'
 
 const Skill = ({skills,certificates}) => {
     const t = useTranslations();

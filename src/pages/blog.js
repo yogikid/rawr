@@ -1,9 +1,10 @@
+import { useRouter } from "next/router";
+import { NextSeo } from "next-seo";
+import { useTranslations } from "next-intl";
+
 import PageHeading from "@/components/common/PageHeading"
 import Container from "@/components/layouts/partials/Container"
 import Blog from "@/components/views/blog/Blog"
-import { useTranslations } from "next-intl";
-import { NextSeo } from "next-seo";
-import { useRouter } from "next/router";
 
 
 const BlogPage = () => {

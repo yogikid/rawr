@@ -1,11 +1,10 @@
-import PageHeading from '@/components/common/PageHeading';
-import Container from '@/components/layouts/partials/Container';
+import { useRouter } from 'next/router';
+import { HiShieldCheck } from 'react-icons/hi';
 import { useTranslations } from 'next-intl';
 import { NextSeo } from 'next-seo';
-import Head from 'next/head';
-import { useRouter } from 'next/router';
-import { HiShieldCheck } from 'react-icons/hi'; // Menggunakan ikon shield dari React Icons
-import React from 'react';
+
+import PageHeading from '@/components/common/PageHeading';
+import Container from '@/components/layouts/partials/Container';
 
 const PrivacyPolicyPage = () => {
     const t = useTranslations('Privacy');

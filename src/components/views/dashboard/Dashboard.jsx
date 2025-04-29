@@ -1,15 +1,16 @@
-import React from "react";
-import useSWR from "swr";
-import PageSpeed from "./pagespeed";
-import { fetcher } from "@/services/fetcher";
-import PageSubHeading from "@/components/common/PageSubHeading";
-import Letcode from "./leetcode/Leetcode";
-import Overview from "./contributions/Overview";
-import Calendar from "./contributions/Calendar";
-import { useTranslations } from "next-intl";
 import { RiGithubFill, RiSpeedUpLine } from "react-icons/ri";
 import { SiLeetcode } from "react-icons/si";
+import { useTranslations } from "next-intl";
 
+import PageSubHeading from "@/components/common/PageSubHeading";
+import { fetcher } from "@/services/fetcher";
+
+import Overview from "./contributions/Overview";
+import Calendar from "./contributions/Calendar";
+import Letcode from "./leetcode/Leetcode";
+
+import PageSpeed from "./pagespeed";
+import useSWR from "swr";
 
 const Dashboard = ({ githubEndpoint, leetcodeEndpoint, locale }) => {
   const t = useTranslations();

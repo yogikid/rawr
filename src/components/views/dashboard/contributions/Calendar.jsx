@@ -1,8 +1,8 @@
-"use client"
-import clsx from "clsx";
-import { motion } from "framer-motion";
-import { useRouter } from "next/router";
 import { useRef, useState } from "react";
+import { useRouter } from "next/router";
+import { motion } from "framer-motion";
+import clsx from "clsx";
+
 const Calendar = ({ style, data }) => {
     const { locale } = useRouter();
 

@@ -1,9 +1,10 @@
-import { supabase } from "@/lib/supabase";
-import { useTranslations } from "next-intl";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { HiOutlineLogin as SignInIcon } from "react-icons/hi";
 import { BsGithub as GithubIcon } from "react-icons/bs";
 import { FcGoogle as GoogleIcon } from "react-icons/fc";
-import { HiOutlineLogin as SignInIcon } from "react-icons/hi";
+
+import { supabase } from "@/lib/supabase";
 
 
 const Providers = [

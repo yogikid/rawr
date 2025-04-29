@@ -1,10 +1,6 @@
-import { Inter } from "next/font/google";
-import Homepage from "@/components/views//home/Home";
-import { NextSeo } from "next-seo";
-import Toolbar from "@/components/views/home/toolbar/Toolbar";
 import { useRouter } from "next/router";
-
-const inter = Inter({ subsets: ["latin"] });
+import { NextSeo } from "next-seo";
+import Homepage from "@/components/views/home/Home";
 
 export default function Home() {
 

@@ -1,5 +1,5 @@
-import { animate } from 'framer-motion';
 import { useEffect, useRef } from 'react';
+import { animate } from 'framer-motion';
 
 const AnimateCounter = ({ total, ...rest }) => {
     const countRef = useRef(null);

@@ -1,5 +1,5 @@
-import NextImage from 'next/image';
 import { useState } from 'react';
+import NextImage from 'next/image';
 
 const Image = ({ alt, src, className, rounded, ...rest }) => {
   const [isLoading, setLoading] = useState(true);

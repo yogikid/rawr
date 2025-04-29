@@ -1,7 +1,6 @@
-import { ServicesData } from "@/constants/data/services";
-import PageHeading from "../../common/PageHeading";
-import { motion } from "framer-motion";
 import { useRouter } from "next/router";
+import { motion } from "framer-motion";
+import { ServicesData } from "@/constants/data/services";
 
 const Services = () => {
   const { locale } = useRouter();

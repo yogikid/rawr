@@ -1,5 +1,3 @@
-import React from 'react'
-
 const LastUpdated = ({ t, lastUpdate }) => {
     return (
         <div className="text-left mt-4 sm:mt-8">

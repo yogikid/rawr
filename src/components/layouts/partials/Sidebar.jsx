@@ -1,16 +1,18 @@
 import { useEffect, useState } from 'react';
-import { MENU_ITEMS } from '@/constants/data/menu';
-import { useTheme } from 'next-themes';
-import { useRouter } from 'next/router';
-import { usePathname } from 'next/navigation';
 import { useSwipeable } from 'react-swipeable';
-import { useTranslations } from 'next-intl';
-import Logo from './Logo';
+import { usePathname } from 'next/navigation';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import { useTheme } from 'next-themes';
+
+import { MENU_ITEMS } from '@/constants/data/menu';
+
 import LanguageToggle from '../../toggles/LanguageToggle';
+import ThemeToggle from '../../toggles/ThemeToggle';
 import LastUpdated from './LastUpdated';
 import Footer from './Footer';
-import ThemeToggle from '../../toggles/ThemeToggle';
+import Logo from './Logo';
 
 const Sidebar = ({ className, lastUpdate }) => {
     const [toggle, setToggle] = useState(false);

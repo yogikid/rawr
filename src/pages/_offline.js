@@ -1,8 +1,7 @@
+import { useRouter } from 'next/router';
 import { useTranslations } from 'next-intl';
 import { NextSeo } from 'next-seo';
-import Head from 'next/head';
-import { useRouter } from 'next/router';
-import React from 'react';
+
 import Blank from '@/components/layouts/partials/Blank';
 
 const Fallback = () => {

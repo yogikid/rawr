@@ -1,8 +1,9 @@
-import React, { useRef } from 'react'
+import { BiLoaderAlt, BiMailSend } from 'react-icons/bi';
+import { useTranslations } from 'next-intl';
+import { useRef } from 'react'
+
 import useEmailService from '@/services/EmailService';
 import { Socials } from '@/constants/data/socials';
-import { useTranslations } from 'next-intl';
-import { BiLoaderAlt, BiMailSend } from 'react-icons/bi';
 
 const Contact = () => {
     const t = useTranslations();

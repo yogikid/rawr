@@ -1,7 +1,6 @@
-import Container from '@/components/layouts/partials/Container'
-import { NextSeo } from 'next-seo'
 import Link from 'next/link'
-import React from 'react'
+import { NextSeo } from 'next-seo'
+import Container from '@/components/layouts/partials/Container'
 
 const Custom500 = () => {
     return (

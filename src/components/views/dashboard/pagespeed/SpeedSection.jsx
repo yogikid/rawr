@@ -1,6 +1,5 @@
-import CircleProgress from '@/components/elements/CircleProgress'
 import LoadingSpeedInsight from '@/components/elements/LoadingSpeedInsight'
-import React from 'react'
+import CircleProgress from '@/components/elements/CircleProgress'
 
 export default function SpeedSection({ data, locale, isLoading, style }) {
     const categories = data?.lighthouseResult?.categories || {}

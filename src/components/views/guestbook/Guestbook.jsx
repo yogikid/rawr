@@ -1,11 +1,13 @@
-import { supabase } from '@/lib/supabase';
 import { useEffect, useState } from 'react';
-import { GuestbookMessages } from './GuestbookMessages';
-import ChatAuth from './ChatAuth';
-import ChatInput from './ChatInput';
+import useSWR from 'swr';
+
 import { sendEmailNotification } from '@/services/EmailService';
 import { fetcher } from '@/services/fetcher';
-import useSWR from 'swr';
+import { supabase } from '@/lib/supabase';
+
+import { GuestbookMessages } from './GuestbookMessages';
+import ChatInput from './ChatInput';
+import ChatAuth from './ChatAuth';
 
 export default function Guestbook({ locale }) {
     const { data: messages } = useSWR('/api/guestbook', fetcher);

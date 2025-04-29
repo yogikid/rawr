@@ -1,6 +1,3 @@
-import { ReactNode } from 'react';
-import Overlay from './Overlay';
-
 const Blank = ({ children, className = '', ...others }) => {
   return (
     

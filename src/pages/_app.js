@@ -1,24 +1,30 @@
-import { ThemeProvider } from "next-themes";
-import { Onest } from 'next/font/google'
-import { Toaster } from "react-hot-toast";
 import { useEffect } from "react";
-import "@/styles/globals.css";
-import "@/styles/vendor/fa.min-1.css";
-import "@/styles/vendor/fa.min-2.css";
-import "@/styles/vendor/slick.css"
-import "@/styles/vendor/markdown.css"
-import 'aos/dist/aos.css';
-import Aos from "aos";
 import dynamic from "next/dynamic";
+import { useRouter } from "next/router";
+import { Onest } from 'next/font/google';
+import { ThemeProvider } from "next-themes";
+import { NextIntlClientProvider } from 'next-intl';
+
+import { Toaster } from "react-hot-toast";
 import { DefaultSeo } from "next-seo";
+import Aos from "aos";
+
 import { getLastCommitDate } from "@/services/GithubServices";
 import Layout from "@/components/layouts/Layout";
-import { NextIntlClientProvider } from 'next-intl';
-import { useRouter } from "next/router";
+
+import "@/styles/vendor/fa.min-1.css";
+import "@/styles/vendor/fa.min-2.css";
+import "@/styles/vendor/markdown.css";
+import "@/styles/vendor/slick.css";
+import "@/styles/globals.css";
+import "aos/dist/aos.css";
+
 import getDefaultSEOConfig from "../../next-seo.config";
+
 const onest = Onest({
   subsets: ['latin'],
-})
+});
+
 const ProgressBar = dynamic(
   () => import('../components/elements/ProgressBar'),
   { ssr: false }

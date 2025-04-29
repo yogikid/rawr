@@ -1,9 +1,7 @@
-import React from 'react'
-import { MENU_ITEMS } from '@/constants/data/menu'
-import clsx from 'clsx'
 import { useRouter } from 'next/router';
+import clsx from 'clsx'
 
-
+import { MENU_ITEMS } from '@/constants/data/menu'
 
 export default function BadgeSection({ active, refetch }) {
     const { locale } = useRouter();

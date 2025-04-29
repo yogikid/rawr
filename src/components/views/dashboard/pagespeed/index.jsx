@@ -1,9 +1,11 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import useSwr from 'swr'
+
 import { PAGESPEED_API } from '@/constants/pagespeed'
 import { fetcher } from '@/services/fetcher'
-import BadgeSection from './Badge'
+
 import SpeedSection from './SpeedSection'
+import BadgeSection from './Badge'
 
 export default function PageSpeed({ locale, style }) {
 
