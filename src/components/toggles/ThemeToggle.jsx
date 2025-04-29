@@ -32,7 +32,7 @@ const ThemeToggle = () => {
                 />
                 <div className="slider bg-background peer-checked:bg-background grid grid-cols-2 rounded-2xl justify-between items-center w-full h-full relative">
                     <span
-                        className={`absolute left-0 w-1/2 h-full bg-container border border-stroke rounded-xl transform ${currentTheme === "dark" ? 'translate-x-full' : ''}`}
+                        className={`absolute w-1/2 h-full border border-stroke rounded-xl transform ${mounted && 'bg-container'} ${currentTheme === "dark" ? 'right-0 ' : 'left-0 '}`}
                         style={{ content: '""', zIndex: 1 }}
                     />
                     <p className={`z-10 p-3 justify-center leading-4 flex items-center gap-2 text-slate-500 ${currentTheme === 'light' ? '!text-slate-800' : ''}`}>
