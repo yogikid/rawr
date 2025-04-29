@@ -3,7 +3,8 @@ import { Onest } from 'next/font/google'
 import { Toaster } from "react-hot-toast";
 import { useEffect } from "react";
 import "@/styles/globals.css";
-import "@/styles/vendor/fa.min.css";
+import "@/styles/vendor/fa.min-1.css";
+import "@/styles/vendor/fa.min-2.css";
 import "@/styles/vendor/slick.css"
 import "@/styles/vendor/markdown.css"
 import 'aos/dist/aos.css';
