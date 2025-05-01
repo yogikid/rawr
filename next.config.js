@@ -24,18 +24,23 @@ const nextConfig = {
     ],
   },
   webpack(config, { isServer, dev }) {
-    // Customizing splitChunks configuration for client-side bundle
     if (!dev && !isServer) {
-      config.optimization.splitChunks.cacheGroups = {
-        styles: {
-          name: 'styles',
-          test: (module) =>
-            module.type === 'css/mini-extract' || /\.css$/.test(module.nameForCondition?.() || ''),
-          chunks: 'all',
-          enforce: true,
+      config.optimization.splitChunks = {
+        chunks: 'all',
+        cacheGroups: {
+          // CSS chunk splitting
+          styles: {
+            name: 'styles',
+            test: (module) =>
+              module.type === 'css/mini-extract',
+            chunks: 'all',
+            enforce: true,
+            maxSize: 50000, // 50KB
+          },
         },
-      }
+      };
     }
+
     return config;
   },
 };
