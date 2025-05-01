@@ -9,7 +9,7 @@ const Image = ({ alt, src, className, rounded, ...rest }) => {
       className={`overflow-hidden ${isLoading ? 'animate-pulse' : ''} ${rounded} relative`}
     >
       <NextImage
-        className={`duration-700 ease-in-out ${className} ${isLoading ? 'scale-[1.02] blur-xl grayscale' : 'scale-100 blur-0 grayscale-0'}`}
+        className={`duration-200 ease-in-out ${className} ${isLoading ? 'scale-[1.02] blur-xl grayscale' : 'scale-100 blur-0 grayscale-0'}`}
         src={src}
         alt={alt}
         loading="lazy"
