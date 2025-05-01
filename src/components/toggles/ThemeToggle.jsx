@@ -1,11 +1,9 @@
-import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
-const ThemeToggle = () => {
+const ThemeToggle = ({t}) => {
     const { theme, setTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
-    const t = useTranslations();
 
     useEffect(() => {
         const timeout = setTimeout(() => {

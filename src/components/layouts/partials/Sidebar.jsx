@@ -91,7 +91,7 @@ const Sidebar = ({ className, lastUpdate }) => {
                         <Logo theme={theme} setToggle={setToggle} />
                         <LastUpdated lastUpdate={formatDate(lastUpdate)} t={t} />
                         <div className="flex gap-2 flex-col">
-                            <ThemeToggle />
+                            <ThemeToggle t={t} />
                             <LanguageToggle handleClick={() => setToggle(false)} />
                         </div>
                     </header>
