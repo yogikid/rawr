@@ -21,6 +21,7 @@ const Home = () => {
                     <Image
                         src={Profile}
                         alt="Dwi Wijaya"
+                        loading="eager"
                         className="rounded-2xl"
                     />
                 </div>
