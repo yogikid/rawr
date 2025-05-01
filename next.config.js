@@ -26,10 +26,15 @@ const nextConfig = {
   webpack(config, { isServer, dev }) {
     // Customizing splitChunks configuration for client-side bundle
     if (!dev && !isServer) {
-      config.optimization.splitChunks = {
-        chunks: 'all',
-        maxSize: 50000, // 50KB per chunk
-      };
+      config.optimization.splitChunks.cacheGroups = {
+        styles: {
+          name: 'styles',
+          test: (module) =>
+            module.type === 'css/mini-extract' || /\.css$/.test(module.nameForCondition?.() || ''),
+          chunks: 'all',
+          enforce: true,
+        },
+      }
     }
     return config;
   },
