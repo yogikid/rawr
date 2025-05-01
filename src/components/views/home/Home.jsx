@@ -23,6 +23,7 @@ const Home = () => {
                         alt="Dwi Wijaya"
                         loading="eager"
                         className="rounded-2xl"
+                        priority={true}
                     />
                 </div>
             </div>
