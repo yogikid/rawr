@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
 import Homepage from "@/components/views/home/Home";
+import Head from "next/head";
 
 export default function Home() {
 
@@ -22,6 +23,9 @@ export default function Home() {
           url: `${SITE_URL}${lang}`,
         }}
       />
+      <Head>
+        <link rel="preload" href="endless-clouds.svg" as="image"/>
+      </Head>
       {/* <Toolbar /> */}
       <div className="group-[.sidebar-expanded]/main:blur-[1px] z-[-1] bg-container border border-b border-stroke top-0 left-0 w-full h-[24vh] bg-endless-clouds"></div>
       <section data-section className="group-[.sidebar-expanded]/main:blur-[2px] relative p-[15px] pl-5 mx-auto max-w-[1024px]">

@@ -23,7 +23,7 @@ module.exports = {
       },
       backgroundImage: {
         'dots': 'var(--dots)',
-        'endless-clouds': "url('../assets/endless-clouds.svg')"
+        'endless-clouds': "url('/endless-clouds.svg')"
       },
       gridTemplateColumns: {
         '3fr': 'repeat(3, 140px)',
