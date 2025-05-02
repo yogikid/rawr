@@ -88,85 +88,33 @@ const getDefaultSEOConfig = (locale) => ({
   ],
   additionalLinkTags: [
     {
-      rel: 'apple-touch-icon',
-      sizes: '180x180',
-      href: '/favicon/square-light-180.png',
-    },
-    {
       rel: 'icon',
       type: 'image/png',
       sizes: '16x16',
       href: '/favicon/light-16.png',
-      media: '(prefers-color-scheme: dark)',
     },
     {
       rel: 'icon',
       type: 'image/png',
       sizes: '32x32',
       href: '/favicon/light-32.png',
-      media: '(prefers-color-scheme: dark)',
     },
     {
       rel: 'icon',
       type: 'image/png',
       sizes: '48x48',
       href: '/favicon/light-48.png',
-      media: '(prefers-color-scheme: dark)',
     },
     {
-      rel: 'icon',
-      type: 'image/png',
+      rel: 'apple-touch-icon',
       sizes: '180x180',
       href: '/favicon/light-180.png',
-      media: '(prefers-color-scheme: dark)',
-    },
-    {
-      rel: 'icon',
-      type: 'image/png',
-      sizes: '512x512',
-      href: '/favicon/light-512.png',
-      media: '(prefers-color-scheme: dark)',
-    },
-    {
-      rel: 'icon',
-      type: 'image/png',
-      sizes: '16x16',
-      href: '/favicon/dark-16.png',
-      media: '(prefers-color-scheme: light)',
-    },
-    {
-      rel: 'icon',
-      type: 'image/png',
-      sizes: '32x32',
-      href: '/favicon/dark-32.png',
-      media: '(prefers-color-scheme: light)',
-    },
-    {
-      rel: 'icon',
-      type: 'image/png',
-      sizes: '48x48',
-      href: '/favicon/dark-48.png',
-      media: '(prefers-color-scheme: light)',
-    },
-    {
-      rel: 'icon',
-      type: 'image/png',
-      sizes: '180x180',
-      href: '/favicon/dark-180.png',
-      media: '(prefers-color-scheme: light)',
-    },
-    {
-      rel: 'icon',
-      type: 'image/png',
-      sizes: '512x512',
-      href: '/favicon/dark-512.png',
-      media: '(prefers-color-scheme: light)',
     },
     {
       rel: 'manifest',
       href: '/manifest.json',
     },
-  ],
+  ]
 });
 
 export default getDefaultSEOConfig;
