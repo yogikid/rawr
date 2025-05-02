@@ -24,7 +24,7 @@ export default function Home() {
         }}
       />
       <Head>
-        <link rel="preload" href="endless-clouds.svg" as="image"/>
+        <link rel="preload" href="endless-clouds.svg" as="image" crossOrigin="anonymous"/>
       </Head>
       {/* <Toolbar /> */}
       <div className="group-[.sidebar-expanded]/main:blur-[1px] z-[-1] bg-container border border-b border-stroke top-0 left-0 w-full h-[24vh] bg-endless-clouds"></div>
