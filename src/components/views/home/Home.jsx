@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Router from 'next/router'
 import { useTranslations } from 'next-intl'
 
-import Profile from '@/assets/avatar-profile.webp'
+import Profile from '@/assets/avatar-profile.jpg'
 import Image from '@/components/elements/Image'
 
 import HomeSocials from './HomeSocials'
