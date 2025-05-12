@@ -1,3 +1,4 @@
+import dynamic from 'next/dynamic';
 import { useRouter } from "next/router";
 import { useTranslations } from "next-intl";
 import { NextSeo } from "next-seo";
@@ -5,7 +6,10 @@ import { SWRConfig } from "swr";
 
 import { fetcher } from "@/services/fetcher";
 
-import OneTapComponent from "@/components/elements/OneTapComponent ";
+const OneTapComponent = dynamic(() => import('@/components/elements/OneTapComponent '), {
+    ssr: false,
+});
+
 import Container from "@/components/layouts/partials/Container";
 import Guestbook from "@/components/views/guestbook/Guestbook";
 import PageHeading from "@/components/common/PageHeading";
@@ -32,8 +36,15 @@ const GuestbookPage = ({ fallback }) => {
                     url: currentPageURL,
                 }}
             />
-            <OneTapComponent/>
-            <SWRConfig value={{ fallback }}>
+            {/* <OneTapComponent /> */}
+            <SWRConfig value={{
+                fallback,
+                revalidateOnFocus: false,
+                revalidateOnReconnect: false,
+                revalidateIfStale: false,
+                shouldRetryOnError: false
+            }}
+            >
                 <Container data-aos='fade-up'>
                     <PageHeading
                         title={t('title')}
@@ -57,6 +68,6 @@ export const getStaticProps = async () => {
                 '/api/guestbook': messages,
             },
         },
-        revalidate: 1,
+        revalidate: 3600, // ISR: regenerate every 1 hour
     };
 };
