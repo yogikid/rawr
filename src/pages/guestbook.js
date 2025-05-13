@@ -6,13 +6,10 @@ import { SWRConfig } from "swr";
 
 import { fetcher } from "@/services/fetcher";
 
-const OneTapComponent = dynamic(() => import('@/components/elements/OneTapComponent '), {
-    ssr: false,
-});
-
 import Container from "@/components/layouts/partials/Container";
 import Guestbook from "@/components/views/guestbook/Guestbook";
 import PageHeading from "@/components/common/PageHeading";
+import OneTapComponent from '@/components/elements/OneTapComponent ';
 
 const GuestbookPage = ({ fallback }) => {
     const t = useTranslations('Guestbook');
@@ -36,7 +33,7 @@ const GuestbookPage = ({ fallback }) => {
                     url: currentPageURL,
                 }}
             />
-            {/* <OneTapComponent /> */}
+            <OneTapComponent />
             <SWRConfig value={{
                 fallback,
                 revalidateOnFocus: false,
