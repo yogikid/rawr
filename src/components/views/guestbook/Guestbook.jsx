@@ -15,13 +15,13 @@ export default function Guestbook({ locale }) {
 
     useEffect(() => {
         supabase.auth.getSession().then(({ data: { session } }) => {
-            setSession(session);
+            setSession(session?.user ?? null);
         });
 
         const {
             data: { subscription },
         } = supabase.auth.onAuthStateChange((_event, session) => {
-            setSession(session);
+            setSession(session?.user ?? null);
         });
 
         return () => {
@@ -73,7 +73,7 @@ export default function Guestbook({ locale }) {
             // console.log("Message deleted:", data);
         }
     };
-
+console.log(session)
     return (
         <>
             <div className="flex flex-col flex-1">
