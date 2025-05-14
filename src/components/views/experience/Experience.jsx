@@ -1,13 +1,16 @@
 import { SlGraduation, SlBriefcase } from 'react-icons/sl';
 import { BiMapPin, BiBook } from 'react-icons/bi';
 import { motion } from "framer-motion";
+import dayjs from 'dayjs'
+import 'dayjs/locale/id'
+import 'dayjs/locale/en'
 
 import WorkDuration from '@/components/elements/WorkDuration';
 
 const Experience = ({ experience, locale }) => {
 
-    const formatDate = (date, options, locale) => {
-        return new Intl.DateTimeFormat(locale, options).format(new Date(date));
+    const formatDate = (date, format = 'DD MMMM YYYY') => {
+        return dayjs(date).locale(locale).format(format)
     };
 
     const educations = experience.filter(exp => exp.type === "education");
@@ -22,8 +25,8 @@ const Experience = ({ experience, locale }) => {
                     transition={{ duration: 0.05, delay: 1 * 0.1 }} className="grid card relative !px-8 !py-6">
                     <ol>
                         {educations.map((val, id) => {
-                            const startMonth = formatDate(val.startMonth, { year: 'numeric', month: 'short' }, locale);
-                            const endMonth = val.endMonth ? formatDate(val.endMonth, { year: 'numeric', month: 'short' }, locale) : locale == "en" ? "Present" : "Sekarang";
+                            const startMonth = formatDate(val.startMonth, 'MMM YYYY');
+                            const endMonth = val.endMonth ? formatDate(val.endMonth, 'MMM YYYY') : locale == "en" ? "Present" : "Sekarang";
                             const lastIndex = id === educations.length - 1;
                             return (
                                 <li key={id} className={`relative pl-8 md:pl-12 timeline flex flex-col gap-3 ${lastIndex ? '' : 'pb-8'}`}>
@@ -53,8 +56,8 @@ const Experience = ({ experience, locale }) => {
                     transition={{ duration: 0.05, delay: 2 * 0.1 }} className="grid card relative !px-8 !py-6">
                     <ol>
                         {works.map((val, id) => {
-                            const startMonth = formatDate(val.startMonth, { year: 'numeric', month: 'short' }, locale);
-                            const endMonth = val.endMonth ? formatDate(val.endMonth, { year: 'numeric', month: 'short' }, locale) : locale == "en" ? "Present" : "Sekarang";
+                            const startMonth = formatDate(val.startMonth, 'MMM YYYY');
+                            const endMonth = val.endMonth ? formatDate(val.endMonth, 'MMM YYYY') : locale == "en" ? "Present" : "Sekarang";
                             const lastIndex = id === works.length - 1;
                             return (
                                 <li key={id} className={`relative pl-8 md:pl-12 timeline flex flex-col gap-3 ${lastIndex ? '' : 'pb-8'}`}>

@@ -50,6 +50,6 @@ export const getStaticProps = async () => {
         props: {
             experience
         },
-        revalidate: 1,
+        revalidate: 3600,
     };
 };
