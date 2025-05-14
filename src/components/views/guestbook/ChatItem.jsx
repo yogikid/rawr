@@ -148,7 +148,7 @@ const ChatItem = ({
             <p className='leading-5 text-sm xs:text-base'>{modifiedMessage}</p>
 
             {/* Reactions Section */}
-            <div className={`hidden group-hover:flex ${session && 'mt-2'} ${showEmojiPopup && '!flex mb-1'} ${Object.keys(currentReactions).length !== 0 && '!flex mt-2 mb-1'} items-center gap-2`}>
+            <div className={`${session && 'mt-2'} ${showEmojiPopup && '!flex'} ${Object.keys(currentReactions).length !== 0 && '!flex mt-2'} items-center gap-2`}>
               {session && (
                 <div className='relative'>
                   <motion.button whileTap={{ scale: 1.05 }} className="text-sm text-subtext h-[24px] flex item-center justify-center items-center" onClick={toggleEmojiPopup}>
