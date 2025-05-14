@@ -14,13 +14,18 @@ export default function Guestbook({ locale }) {
     const [session, setSession] = useState(null);
 
     useEffect(() => {
-        const session = supabase.auth.getSession();
-        setSession(session?.session ?? null);
-        const { data: authListener } = supabase.auth.onAuthStateChange((event, session) => {
-            setSession(session?.user ?? null);
+        supabase.auth.getSession().then(({ data: { session } }) => {
+            setSession(session);
+        });
+
+        const {
+            data: { subscription },
+        } = supabase.auth.onAuthStateChange((_event, session) => {
+            setSession(session);
         });
 
         return () => {
+            subscription.unsubscribe();
         };
     }, []);
 
@@ -71,6 +76,7 @@ export default function Guestbook({ locale }) {
 
     return (
         <>
+            <div className="flex flex-col flex-1">
             <GuestbookMessages
                 initialMessages={messages}
                 onDeleteMessage={handleDeleteMessage}
@@ -82,6 +88,7 @@ export default function Guestbook({ locale }) {
             ) : (
                 <ChatAuth />
             )}
+            </div>
         </>
     );
 }
