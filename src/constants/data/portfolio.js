@@ -46,15 +46,6 @@ export const PORTFOLIO_CATEGORIES = {
             id: 'Produk',
         }
     },
-    'other' : {
-        classIcon: 'fad fa-grid-2-plus',
-        reactIcon: <BiCustomize />,
-        slug: 'other',
-        label: {
-            en: 'Other',
-            id: 'Lainnya',
-        }
-    }
 };
 
 export const PORTFOLIO_TYPES = {
