@@ -51,22 +51,29 @@ export const GuestbookMessages = ({ initialMessages, onDeleteMessage, session, l
         };
     }, [session]);
 
+    const maxHeightSection = 130 + 36 + 40 + 40 + 92; // Padding section + title + subtitle + divider + footer
+    const maxHeight = `calc(100svh - ${maxHeightSection}px)`;
+
     return (
-        <section className="rounded-lg px-1">
+        <div className="rounded-lg px-1">
             <ol
                 ref={scrollableContainerRef}
-                className="space-y-5 overflow-y-auto pb-4 max-h-[50svh] scrollbar- sm:max-h-[55svh] overflow-auto pr-2"
+                className="space-y-5 overflow-y-auto pb-4 overflow-auto pr-2"
+                style={{ maxHeight }}
             >
                 {messages.map((msg, index) => (
                     <ChatItem
                         key={index}
                         locale={locale}
-                        onDelete={onDeleteMessage} {...msg}
+                        onDelete={onDeleteMessage}
+                        {...msg}
                         session={session}
                         onPopupToggle={handlePopupToggle}
-                        isActivePopup={activePopup === msg.id} />
+                        isActivePopup={activePopup === msg.id}
+                    />
                 ))}
             </ol>
-        </section>
+        </div>
     );
+
 };
