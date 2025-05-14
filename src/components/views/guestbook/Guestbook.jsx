@@ -75,6 +75,7 @@ export default function Guestbook({ locale }) {
                 initialMessages={messages}
                 onDeleteMessage={handleDeleteMessage}
                 session={session}
+                locale={locale}
             />
             {session ? (
                 <ChatInput onSendMessage={handleSendMessage} session={session} locale={locale} />

@@ -7,6 +7,7 @@ import { supabase } from '@/lib/supabase';
 import ChatTime from './ChatTime';
 
 const ChatItem = ({
+  locale,
   id,
   avatar,
   name,
@@ -19,14 +20,39 @@ const ChatItem = ({
   onPopupToggle,
   isActivePopup,
 }) => {
+
+  const translations = {
+    en: {
+      great: 'Great!',
+      strong: 'Stay Strong!',
+      wellDone: 'Well Done!',
+      loved: 'Loved it!',
+      awesome: 'Awesome!',
+      inspiring: 'Inspiring!',
+    },
+    id: {
+      great: 'Keren!',
+      strong: 'Tetap Semangat!',
+      wellDone: 'Kerja Bagus!',
+      loved: 'Suka banget!',
+      awesome: 'Mantap!',
+      inspiring: 'Menginspirasi!',
+    }
+  };
+
+  const getLabel = (key, locale) => {
+    return translations[locale]?.[key] || translations['en'][key];
+  };
+
   const availableReactions = [
-    { emoji: '😄', label: 'Great!' },
-    { emoji: '💪', label: 'Stay Strong!' },
-    { emoji: '👏', label: 'Well Done!' },
-    { emoji: '❤️', label: 'Loved it!' },
-    { emoji: '🔥', label: 'Awesome!' },
-    { emoji: '✨', label: 'Inspiring!' },
+    { emoji: '😄', label: getLabel('great', locale) },
+    { emoji: '💪', label: getLabel('strong', locale) },
+    { emoji: '👏', label: getLabel('wellDone', locale) },
+    { emoji: '❤️', label: getLabel('loved', locale) },
+    { emoji: '🔥', label: getLabel('awesome', locale) },
+    { emoji: '✨', label: getLabel('inspiring', locale) },
   ];
+
 
   const [showEmojiPopup, setShowEmojiPopup] = useState(false);
   const [currentReactions, setCurrentReactions] = useState(reactions || {});
@@ -124,7 +150,7 @@ const ChatItem = ({
               {name}
             </div>
             <div className='hidden md:flex'>
-              <ChatTime datetime={created_at} />
+              <ChatTime locale={locale} datetime={created_at} />
             </div>
             {email === authorEmail && (
               <div className='text-medium flex items-center gap-0.5 rounded-full bg-orange-600 dark:bg-orange-700 px-1.5 py-0.5 text-violet-50'>
@@ -221,7 +247,7 @@ const ChatItem = ({
           </div>
         </div>
         <div className='flex md:hidden'>
-          <ChatTime datetime={created_at} />
+          <ChatTime locale={locale} datetime={created_at} />
         </div>
       </div>
     </li>

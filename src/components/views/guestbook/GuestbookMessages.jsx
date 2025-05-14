@@ -2,7 +2,7 @@ import { useEffect, useState, useRef, useLayoutEffect } from "react";
 import { supabase } from "@/lib/supabase";
 import ChatItem from "./ChatItem";
 
-export const GuestbookMessages = ({ initialMessages, onDeleteMessage, session }) => {
+export const GuestbookMessages = ({ initialMessages, onDeleteMessage, session, locale }) => {
     const [messages, setMessages] = useState(initialMessages || []);
     const scrollableContainerRef = useRef(null);  // Ref untuk container yang di-scroll
     const [activePopup, setActivePopup] = useState(null);
@@ -60,6 +60,7 @@ export const GuestbookMessages = ({ initialMessages, onDeleteMessage, session })
                 {messages.map((msg, index) => (
                     <ChatItem
                         key={index}
+                        locale={locale}
                         onDelete={onDeleteMessage} {...msg}
                         session={session}
                         onPopupToggle={handlePopupToggle}
