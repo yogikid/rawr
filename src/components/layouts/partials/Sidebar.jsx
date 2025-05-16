@@ -96,7 +96,7 @@ const Sidebar = ({ className, lastUpdate }) => {
                         </div>
                     </header>
                     <nav className="nav">
-                        <div className="p-6 bg-background rounded-l-none rounded-2xl">
+                        <div className="px-6 py-4 bg-background rounded-l-none rounded-2xl">
                             <ul className="flex flex-col items-center">
                                 {MENU_ITEMS.map((item, index) => (
                                     <li key={index} className='w-full group py-2'>
