@@ -10,7 +10,7 @@ import HomeSocials from './HomeSocials'
 const Home = () => {
     const t = useTranslations('Home');
     const infoItems = [
-        { label: t('openToOpportunities'), icon: 'fa-briefcase' },
+        // { label: t('openToOpportunities'), icon: 'fa-briefcase' },
         { label: t('motto'), icon: 'fa-quote-right' },
         { label: t('based'), icon: 'fa-street-view' }
     ];
